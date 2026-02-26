@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priser — BygMedAI</title>
+  <meta name="description" content="Faste priser, ingen overraskelser. Hjemmeside fra 10.000 kr. AI-assistent fra 5.000 kr. Se hvad der er inkluderet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0C0C12; --surface: #1A1A2E; --surface2: #12121C; --gold: #C9A96E; --gold-light: #D4B87A; --gold-bg: #C9A96E15; --text: #E8E8ED; --text-muted: #888899; --text-dim: #555566; --green: #22C55E; --blue: #3B82F6; --radius: 12px; --max-w: 1100px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    nav { padding: 20px 0; border-bottom: 1px solid #1A1A2E; position: sticky; top: 0; background: var(--bg); z-index: 100; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 800; } .logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; } .nav-links a:hover { color: var(--gold); } .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--bg) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .btn-primary { background: linear-gradient(135deg, var(--gold), #B8943F); color: var(--bg); padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #C9A96E33; }
+    .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; display: inline-block; transition: all 0.2s; }
+    .btn-outline:hover { background: var(--gold-bg); }
+
+    .page-header { padding: 60px 0 40px; text-align: center; }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: 40px; margin-bottom: 12px; }
+    .page-header p { color: var(--text-muted); font-size: 17px; max-width: 560px; margin: 0 auto; }
+
+    /* Pricing table */
+    .pricing-section { padding: 40px 0 60px; }
+    .price-table { width: 100%; border-collapse: collapse; margin-bottom: 48px; }
+    .price-table th { text-align: left; padding: 14px 16px; font-size: 13px; color: var(--text-muted); border-bottom: 2px solid var(--gold); text-transform: uppercase; letter-spacing: 0.5px; }
+    .price-table th.highlight { background: var(--gold-bg); color: var(--gold); }
+    .price-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid #1A1A2E; }
+    .price-table td.highlight { background: var(--gold-bg); }
+    .price-table tr:hover td { background: #1A1A2E44; }
+    .price-table tr:hover td.highlight { background: var(--gold-bg); }
+    .price-table .feature-name { font-weight: 600; color: var(--text); }
+    .price-table .check { color: var(--green); font-weight: 700; }
+    .price-table .cross { color: #444; }
+    .price-table .price-row td { font-size: 24px; font-weight: 800; color: var(--gold); border-bottom: 2px solid #2A2A3E; padding-top: 20px; }
+    .price-table .price-row .feature-name { font-size: 14px; color: var(--text-muted); font-weight: 400; }
+
+    /* Add-ons */
+    .addons { padding: 40px 0 60px; background: var(--surface2); }
+    .addon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 32px; }
+    .addon-card { background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #2A2A3E; display: flex; justify-content: space-between; align-items: start; }
+    .addon-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .addon-card p { font-size: 13px; color: var(--text-muted); }
+    .addon-price { font-size: 18px; font-weight: 800; color: var(--gold); white-space: nowrap; }
+
+    /* FAQ */
+    .faq { padding: 60px 0; }
+    .faq h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; }
+    .faq-item { max-width: 700px; margin: 0 auto 20px; background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #2A2A3E; }
+    .faq-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; cursor: pointer; }
+    .faq-item p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    footer { padding: 40px 0; border-top: 1px solid #1A1A2E; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 12px; color: var(--text-dim); } footer a { color: var(--text-muted); } footer a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .price-table { font-size: 12px; }
+      .price-table th, .price-table td { padding: 8px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">Byg<span>Med</span>AI</a>
+      <div class="nav-links">
+        <a href="services.html">Tjenester</a>
+        <a href="priser.html" class="active">Priser</a>
+        <a href="om.html">Om os</a>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Faste priser, ingen overraskelser</h1>
+      <p>Du ved hvad du betaler inden vi starter. Alle priser er ekskl. moms. Ingen skjulte gebyrer, ingen timepris der løber.</p>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th style="width:35%;">Inkluderet</th>
+            <th style="width:17%;">Small</th>
+            <th class="highlight" style="width:17%;">Medium ⭐</th>
+            <th style="width:17%;">Large</th>
+            <th style="width:14%;">AI-Assistent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="price-row">
+            <td class="feature-name">Pris</td>
+            <td>10.000 kr</td>
+            <td class="highlight">15.000 kr</td>
+            <td>25.000 kr</td>
+            <td>5-10.000 kr</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Levering</td>
+            <td>5-7 dage</td>
+            <td class="highlight">7-10 dage</td>
+            <td>10-15 dage</td>
+            <td>3-5 dage</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Antal sider</td>
+            <td>1 (landing page)</td>
+            <td class="highlight">Op til 5</td>
+            <td>Op til 10</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Mobil-optimeret</td>
+            <td class="check">✓</td>
+            <td class="highlight check">✓</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Kontaktformular</td>
+            <td class="check">✓</td>
+            <td class="highlight check">✓</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">SEO-optimering</td>
+            <td>Grundlag</td>
+            <td class="highlight">Fuld pakke</td>
+            <td>Fuld pakke + schema</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Google Analytics</td>
+            <td class="cross">—</td>
+            <td class="highlight check">✓</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Blog / nyheder</td>
+            <td class="cross">—</td>
+            <td class="highlight cross">—</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Avancerede animationer</td>
+            <td class="cross">—</td>
+            <td class="highlight cross">—</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Booking-integration</td>
+            <td class="cross">—</td>
+            <td class="highlight cross">—</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Cookie-consent</td>
+            <td class="cross">—</td>
+            <td class="highlight cross">—</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Kildekode + dokumentation</td>
+            <td class="check">✓</td>
+            <td class="highlight check">✓</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Hosting-guide</td>
+            <td class="check">✓</td>
+            <td class="highlight check">✓</td>
+            <td class="check">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="feature-name">CLAUDE.md (AI memory)</td>
+            <td class="cross">—</td>
+            <td class="highlight cross">—</td>
+            <td class="cross">—</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td class="feature-name">1t personlig træning</td>
+            <td class="cross">—</td>
+            <td class="highlight cross">—</td>
+            <td class="cross">—</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td class="feature-name">30 dages email-support</td>
+            <td class="check">✓</td>
+            <td class="highlight check">✓</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="text-align: center;">
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary" style="margin-right: 16px;">Book gratis samtale →</a>
+        <a href="services.html" class="btn-outline">Se detaljeret beskrivelse →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="addons">
+    <div class="container">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 8px;">Tilvalg</h2>
+      <p style="color: var(--text-muted); font-size: 15px;">Kan tilføjes til enhver pakke.</p>
+      <div class="addon-grid">
+        <div class="addon-card">
+          <div><h4>🤖 AI-Assistent</h4><p>Skræddersyet Claude Cowork opsætning til din side</p></div>
+          <div class="addon-price">5-10K</div>
+        </div>
+        <div class="addon-card">
+          <div><h4>🌍 Flersproget (DA/EN)</h4><p>Dansk + engelsk version af hele siden</p></div>
+          <div class="addon-price">+3.000 kr</div>
+        </div>
+        <div class="addon-card">
+          <div><h4>📧 Nyhedsbrev-integration</h4><p>Mailchimp, Sendinblue eller lignende setup</p></div>
+          <div class="addon-price">+2.000 kr</div>
+        </div>
+        <div class="addon-card">
+          <div><h4>📅 Booking-system</h4><p>Calendly, Cal.com eller lignende integration</p></div>
+          <div class="addon-price">+1.500 kr</div>
+        </div>
+        <div class="addon-card">
+          <div><h4>🎨 Logo-design</h4><p>Simpelt, professionelt logo genereret med AI</p></div>
+          <div class="addon-price">+2.000 kr</div>
+        </div>
+        <div class="addon-card">
+          <div><h4>📝 Indholdsproduktion</h4><p>AI-skrevet tekst tilpasset din branche og tone</p></div>
+          <div class="addon-price">+2.500 kr</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <h2>Ofte stillede spørgsmål</h2>
+      <div class="faq-item">
+        <h3>Hvad hvis jeg ikke er tilfreds med resultatet?</h3>
+        <p>Du godkender designet inden vi bygger. Og du får op til 2 feedback-runder inkluderet i prisen. Er du stadig ikke tilfreds, finder vi en løsning sammen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Koster hosting noget?</h3>
+        <p>Nej — vi bygger til gratis hosting via GitHub Pages eller Netlify. Du betaler kun for dit domæne (~100 kr/år). Vi hjælper med opsætningen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Kan jeg selv ændre i siden bagefter?</h3>
+        <p>Ja! Du modtager al kildekode. Kan du kode, kan du ændre alt selv. Kan du ikke kode, kan du tilkøbe en AI-assistent der gør det for dig på dansk.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Hvad koster AI-assistenten løbende?</h3>
+        <p>Vores opsætning er en engangspris. Du skal selv have et Claude Pro-abonnement ($20/md ≈ 140 kr/md). Det er den eneste løbende udgift.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Er det ikke risikabelt at bruge AI?</h3>
+        <p>AI skriver koden, men et menneske med 18+ års erfaring kvalitetssikrer hvert trin. Du får professionelt resultat — bare hurtigere og billigere.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Alle priser er ekskl. moms?</h3>
+        <p>Ja, alle priser er ekskl. moms (25%). En Small-pakke koster altså 12.500 kr inkl. moms.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 60px 0; text-align: center;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, var(--gold-bg), #C9A96E08); border: 1px solid #C9A96E44; border-radius: 20px; padding: 48px 40px; max-width: 700px; margin: 0 auto;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 12px;">Klar til at komme i gang?</h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 24px;">30 minutters gratis samtale. Vi finder den rigtige pakke til dig.</p>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary">Book gratis samtale →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BygMedAI — Et projekt af <a href="https://stevenwensley.com" target="_blank">Steven Wensley</a></p>
+      <p><a href="om.html">Om os</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

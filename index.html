@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BygMedAI — Professionelle hjemmesider bygget med AI</title>
+  <meta name="description" content="Få en professionel hjemmeside fra 10.000 kr. Vi bruger AI til at bygge den — derfor får du den hurtigere og billigere. Med fuld dokumentation og overdragelse.">
+  <meta property="og:title" content="BygMedAI — Professionelle hjemmesider bygget med AI">
+  <meta property="og:description" content="Hjemmesider fra 10.000 kr. AI-bygget, menneske-styret. Med dokumentation til overdragelse.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0C0C12; --surface: #1A1A2E; --surface2: #12121C;
+      --gold: #C9A96E; --gold-light: #D4B87A; --gold-bg: #C9A96E15;
+      --text: #E8E8ED; --text-muted: #888899; --text-dim: #555566;
+      --green: #22C55E; --blue: #3B82F6; --red: #EF4444;
+      --radius: 12px; --max-w: 1100px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav { padding: 20px 0; border-bottom: 1px solid #1A1A2E; position: sticky; top: 0; background: var(--bg); z-index: 100; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 800; }
+    .logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--bg) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* Hero */
+    .hero { padding: 100px 0 80px; text-align: center; }
+    .hero-badge { display: inline-flex; gap: 8px; align-items: center; background: var(--gold-bg); border: 1px solid #C9A96E33; padding: 8px 20px; border-radius: 30px; font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 32px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 .gold { color: var(--gold); }
+    .hero p { font-size: 19px; color: var(--text-muted); line-height: 1.6; max-width: 600px; margin: 0 auto 40px; }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: linear-gradient(135deg, var(--gold), #B8943F); color: var(--bg); padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 700; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #C9A96E33; }
+    .btn-secondary { background: transparent; border: 1px solid #333; color: var(--text); padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Stats */
+    .stats { display: flex; justify-content: center; gap: 48px; padding: 48px 0; border-top: 1px solid #1A1A2E; border-bottom: 1px solid #1A1A2E; margin: 0; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 36px; font-weight: 800; color: var(--gold); }
+    .stat-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+    /* USPs */
+    .usps { padding: 80px 0; }
+    .usps h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 48px; }
+    .usp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .usp-card { background: var(--surface); border-radius: var(--radius); padding: 28px; border: 1px solid #2A2A3E; transition: border-color 0.2s; }
+    .usp-card:hover { border-color: var(--gold); }
+    .usp-icon { font-size: 28px; margin-bottom: 16px; }
+    .usp-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .usp-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* Process */
+    .process { padding: 80px 0; background: var(--surface2); }
+    .process h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 48px; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto; }
+    .step { text-align: center; position: relative; }
+    .step-num { width: 48px; height: 48px; background: var(--gold); color: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; margin: 0 auto 16px; }
+    .step h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .step p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* Products preview */
+    .products-preview { padding: 80px 0; }
+    .products-preview h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 16px; }
+    .products-preview > .container > p { text-align: center; color: var(--text-muted); margin-bottom: 48px; font-size: 16px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .product-card { background: var(--surface); border-radius: 16px; padding: 32px; border: 1px solid #2A2A3E; }
+    .product-card.featured { border-color: var(--gold); position: relative; }
+    .product-card.featured::before { content: "MEST POPULÆR"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--bg); padding: 4px 16px; border-radius: 20px; font-size: 11px; font-weight: 800; letter-spacing: 0.5px; }
+    .product-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+    .product-card .price { font-size: 28px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+    .product-card .price span { font-size: 14px; color: var(--text-muted); font-weight: 400; }
+    .product-card ul { list-style: none; margin-bottom: 24px; }
+    .product-card li { padding: 6px 0; font-size: 14px; color: var(--text-muted); display: flex; align-items: start; gap: 10px; }
+    .product-card li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .product-card .btn-primary { width: 100%; text-align: center; padding: 14px; font-size: 15px; }
+
+    /* Transparency */
+    .transparency { padding: 80px 0; background: var(--surface2); }
+    .transparency h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 16px; }
+    .transparency > .container > p { text-align: center; color: var(--text-muted); margin-bottom: 48px; font-size: 16px; max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 48px; }
+    .trans-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 800px; margin: 0 auto; }
+    .trans-item { display: flex; gap: 16px; }
+    .trans-icon { font-size: 24px; flex-shrink: 0; }
+    .trans-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .trans-item p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* CTA */
+    .cta-section { padding: 80px 0; text-align: center; }
+    .cta-box { background: linear-gradient(135deg, var(--gold-bg), #C9A96E08); border: 1px solid #C9A96E44; border-radius: 20px; padding: 60px 40px; max-width: 700px; margin: 0 auto; }
+    .cta-box h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 12px; }
+    .cta-box p { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; line-height: 1.6; }
+
+    /* Footer */
+    footer { padding: 40px 0; border-top: 1px solid #1A1A2E; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 12px; color: var(--text-dim); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .nav-links { gap: 16px; }
+      .hero { padding: 60px 0 40px; }
+      .stats { gap: 24px; }
+      .trans-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="logo">Byg<span>Med</span>AI</div>
+      <div class="nav-links">
+        <a href="services.html">Tjenester</a>
+        <a href="priser.html">Priser</a>
+        <a href="om.html">Om os</a>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">🤖 Ærligt om AI — bedre for din pengepung</div>
+      <h1>Professionelle hjemmesider<br><span class="gold">bygget med AI</span></h1>
+      <p>Vi bruger AI til at bygge din hjemmeside — derfor får du den hurtigere, billigere og med fuld dokumentation til overdragelse. Ingen skjulte tricks.</p>
+      <div class="hero-btns">
+        <a href="priser.html" class="btn-primary">Se priser fra 10.000 kr →</a>
+        <a href="services.html" class="btn-secondary">Hvad får du?</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container" style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap;">
+      <div class="stat"><div class="stat-num">10K</div><div class="stat-label">Hjemmeside fra</div></div>
+      <div class="stat"><div class="stat-num">5-10</div><div class="stat-label">Dages levering</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Dit ejerskab</div></div>
+      <div class="stat"><div class="stat-num">AI</div><div class="stat-label">Transparent metode</div></div>
+    </div>
+  </section>
+
+  <section class="usps">
+    <div class="container">
+      <h2>Hvorfor BygMedAI?</h2>
+      <div class="usp-grid">
+        <div class="usp-card">
+          <div class="usp-icon">⚡</div>
+          <h3>Hurtigere end traditionelt</h3>
+          <p>AI skriver koden, vi styrer kvaliteten. Det der normalt tager uger, leverer vi på dage. Samme professionelle resultat — uden den traditionelle tidsplan.</p>
+        </div>
+        <div class="usp-card">
+          <div class="usp-icon">💰</div>
+          <h3>Ærlig pris, ingen overraskelser</h3>
+          <p>Fordi AI gør det tunge løft, kan vi holde prisen lav. Fra 10.000 kr for en professionel hjemmeside. Fast pris — ikke timepris der løber.</p>
+        </div>
+        <div class="usp-card">
+          <div class="usp-icon">📦</div>
+          <h3>Du ejer alt — med dokumentation</h3>
+          <p>Fuld kildekode, dokumentation og overdragelses&shy;guide. Du er aldrig låst til os. Tag din side med og host den hvor du vil.</p>
+        </div>
+        <div class="usp-card">
+          <div class="usp-icon">🤖</div>
+          <h3>Din egen AI-assistent (tilvalg)</h3>
+          <p>Vi kan sætte en skræddersyet AI-assistent op, der kender din side og kan opdatere den løbende. Som at have en webudvikler på speed-dial — uden timelønnen.</p>
+        </div>
+        <div class="usp-card">
+          <div class="usp-icon">🔍</div>
+          <h3>Åben om metoden</h3>
+          <p>Vi gemmer ikke at vi bruger AI. Tværtimod — vi bruger det som en styrke. Du får indsigt i præcis hvordan din side er bygget og hvordan den vedligeholdes.</p>
+        </div>
+        <div class="usp-card">
+          <div class="usp-icon">🇩🇰</div>
+          <h3>Dansk support, personlig service</h3>
+          <p>AI bygger, mennesker rådgiver. Du får altid personlig kontakt med en erfaren konsulent der forstår din forretning og dine behov.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <h2>Sådan foregår det</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Gratis samtale</h3>
+          <p>Vi taler om din forretning, dit behov og hvilken pakke der passer. 30 min, ingen binding.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>AI bygger</h3>
+          <p>Vores AI-system bygger din side baseret på dine input. Vi kvalitets&shy;sikrer hvert trin.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Du godkender</h3>
+          <p>Du ser resultatet, giver feedback, og vi justerer til du er tilfreds.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Overdragelse</h3>
+          <p>Du modtager alt: kode, dokumentation, hosting-guide. Din side, dit ejerskab.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-preview">
+    <div class="container">
+      <h2>To produkter, ét mål</h2>
+      <p>Alt hvad en lille virksomhed behøver for at komme online — og blive der.</p>
+      <div class="product-grid">
+        <div class="product-card featured">
+          <h3>🌐 Hjemmeside</h3>
+          <div class="price">Fra 10.000 kr <span>/ fast pris</span></div>
+          <ul>
+            <li>Professionelt design tilpasset din forretning</li>
+            <li>Mobil-optimeret og hurtig</li>
+            <li>SEO-grundlag inkluderet</li>
+            <li>Fuld kildekode og dokumentation</li>
+            <li>Overdragelses-guide til selvhosting</li>
+            <li>Vælg mellem S, M og L pakker</li>
+          </ul>
+          <a href="services.html" class="btn-primary">Se pakker →</a>
+        </div>
+        <div class="product-card">
+          <h3>🤖 AI-Assistent</h3>
+          <div class="price">Fra 5.000 kr <span>/ opsætning</span></div>
+          <ul>
+            <li>Din egen Claude Cowork-opsætning</li>
+            <li>Skræddersyet til din hjemmeside</li>
+            <li>Kan opdatere indhold, billeder, tekst</li>
+            <li>Dokumenteret prompt-strategi (CLAUDE.md)</li>
+            <li>Træning i brug (1 times session)</li>
+            <li>Uafhængig af os efter opsætning</li>
+          </ul>
+          <a href="services.html#ai-assistent" class="btn-primary" style="background: transparent; border: 2px solid var(--gold); color: var(--gold);">Læs mere →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="transparency">
+    <div class="container">
+      <h2>Vores transparens-løfte</h2>
+      <p>Vi tror på at ærlighed om AI skaber bedre resultater — for dig og for os.</p>
+      <div class="trans-grid">
+        <div class="trans-item">
+          <div class="trans-icon">📋</div>
+          <div>
+            <h3>Fuld dokumentation</h3>
+            <p>Hver linje kode er dokumenteret. Du ved præcis hvad din side indeholder og hvordan den virker.</p>
+          </div>
+        </div>
+        <div class="trans-item">
+          <div class="trans-icon">🔓</div>
+          <div>
+            <h3>Ingen vendor lock-in</h3>
+            <p>Din kode, dit domæne, din hosting. Vi bygger med standard-teknologier du kan tage med overalt.</p>
+          </div>
+        </div>
+        <div class="trans-item">
+          <div class="trans-icon">🤝</div>
+          <div>
+            <h3>Ærlig prissætning</h3>
+            <p>Fast pris, ikke timepris. Du ved hvad du betaler inden vi starter. Ingen skjulte gebyrer.</p>
+          </div>
+        </div>
+        <div class="trans-item">
+          <div class="trans-icon">🧠</div>
+          <div>
+            <h3>AI + menneske = bedst</h3>
+            <p>AI er værktøjet, ikke beslutningstageren. Hvert projekt styres af en erfaren konsulent med 18+ års erfaring.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Klar til at komme i gang?</h2>
+        <p>Book en gratis 30-minutters samtale. Vi gennemgår dit behov og finder den rigtige løsning — helt uforpligtende.</p>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary">Book gratis samtale →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BygMedAI — Et projekt af <a href="https://stevenwensley.com" target="_blank">Steven Wensley</a></p>
+      <p><a href="om.html">Om os</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a> &nbsp;·&nbsp; <a href="https://stevenwensley.com" target="_blank">stevenwensley.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

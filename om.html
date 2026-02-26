@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om os — BygMedAI</title>
+  <meta name="description" content="BygMedAI er skabt af Steven Wensley — senior konsulent med 18+ års erfaring. Vi bruger AI åbent og ærligt til at bygge bedre hjemmesider.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0C0C12; --surface: #1A1A2E; --surface2: #12121C; --gold: #C9A96E; --gold-light: #D4B87A; --gold-bg: #C9A96E15; --text: #E8E8ED; --text-muted: #888899; --text-dim: #555566; --green: #22C55E; --blue: #3B82F6; --radius: 12px; --max-w: 1100px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    nav { padding: 20px 0; border-bottom: 1px solid #1A1A2E; position: sticky; top: 0; background: var(--bg); z-index: 100; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 800; } .logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; } .nav-links a:hover { color: var(--gold); } .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--bg) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .btn-primary { background: linear-gradient(135deg, var(--gold), #B8943F); color: var(--bg); padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #C9A96E33; }
+
+    .page-header { padding: 60px 0 40px; text-align: center; }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: 40px; margin-bottom: 12px; }
+    .page-header p { color: var(--text-muted); font-size: 17px; max-width: 560px; margin: 0 auto; }
+
+    /* About section */
+    .about { padding: 40px 0 60px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
+    .about-card { background: var(--surface); border-radius: 16px; padding: 32px; border: 1px solid #2A2A3E; text-align: center; }
+    .about-avatar { width: 120px; height: 120px; border-radius: 50%; background: var(--gold-bg); border: 3px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto 16px; }
+    .about-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+    .about-card .title { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
+    .about-card .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .about-card .links a { font-size: 12px; color: var(--text-muted); padding: 6px 14px; border: 1px solid #2A2A3E; border-radius: 6px; transition: all 0.2s; }
+    .about-card .links a:hover { border-color: var(--gold); color: var(--gold); }
+    .about-text h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 16px; }
+    .about-text p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
+    .about-text p strong { color: var(--text); }
+
+    /* Values */
+    .values { padding: 60px 0; background: var(--surface2); }
+    .values h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .value-card { background: var(--surface); border-radius: 12px; padding: 28px; border: 1px solid #2A2A3E; }
+    .value-card .icon { font-size: 28px; margin-bottom: 12px; }
+    .value-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .value-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* How it works */
+    .method { padding: 60px 0; }
+    .method h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 16px; }
+    .method > .container > p { text-align: center; color: var(--text-muted); font-size: 15px; max-width: 600px; margin: 0 auto 40px; }
+    .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px; margin: 0 auto; }
+    .method-item { background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #2A2A3E; }
+    .method-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .method-item p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* Contact */
+    .contact { padding: 60px 0; background: var(--surface2); }
+    .contact h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto; }
+    .contact-card { background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #2A2A3E; text-align: center; }
+    .contact-card .icon { font-size: 28px; margin-bottom: 12px; }
+    .contact-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .contact-card p { font-size: 13px; color: var(--text-muted); }
+    .contact-card a { color: var(--gold); font-weight: 600; }
+
+    footer { padding: 40px 0; border-top: 1px solid #1A1A2E; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 12px; color: var(--text-dim); } footer a { color: var(--text-muted); } footer a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">Byg<span>Med</span>AI</a>
+      <div class="nav-links">
+        <a href="services.html">Tjenester</a>
+        <a href="priser.html">Priser</a>
+        <a href="om.html" class="active">Om os</a>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Mennesket bag maskinen</h1>
+      <p>AI bygger. Mennesker rådgiver. Ærlighed driver os.</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-avatar">SW</div>
+          <h3>Steven Wensley</h3>
+          <div class="title">Grundlægger, BygMedAI</div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">Senior konsulent med 18+ års erfaring i programledelse, digital transformation og AI-implementering.</p>
+          <div class="links">
+            <a href="https://stevenwensley.com" target="_blank">stevenwensley.com</a>
+            <a href="https://linkedin.com/in/stevenwensley" target="_blank">LinkedIn</a>
+            <a href="mailto:steven.wensley@gmail.com">Email</a>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2>Hvorfor BygMedAI?</h2>
+          <p>Jeg har bygget min egen hjemmeside — <strong>stevenwensley.com</strong> — med præcis de samme AI-værktøjer jeg tilbyder jer. 9 sider, 5 interaktive tools, deployed og vedligeholdt med AI.</p>
+          <p>Det fungerer. Det er hurtigere. Det er billigere. Og kvaliteten er professionel.</p>
+          <p>Små virksomheder fortjener <strong>professionelle hjemmesider uden professionelle priser</strong>. Ved at bruge AI åbent og ærligt kan vi levere det — med fuld dokumentation, så du aldrig er låst til os.</p>
+          <p>Jeg har <strong>18+ års erfaring</strong> med programledelse i pharma, finans og teknologi. Jeg forstår forretning, ikke kun kode. Det betyder at din side ikke bare ser godt ud — den understøtter dine mål.</p>
+          <p>BygMedAI er ikke et traditionelt bureau. Det er en ny model: <strong>AI som værktøj, mennesker som rådgivere, ærlighed som princip.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="container">
+      <h2>Vores principper</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="icon">🔍</div>
+          <h3>Radikal transparens</h3>
+          <p>Vi fortæller præcis hvad der er bygget med AI og hvad der er lavet af mennesker. Ingen "magiske" processer — bare ærligt arbejde med moderne værktøjer.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">🔓</div>
+          <h3>Dit ejerskab, altid</h3>
+          <p>Du ejer alt vi laver. Kode, design, dokumentation. Vi bygger med standard-teknologier du kan tage med overalt. Ingen vendor lock-in, nogensinde.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">🤝</div>
+          <h3>Fair priser, fast aftale</h3>
+          <p>Fast pris fra start. Ingen timeregnskab der løber, ingen "scope creep"-tillæg. Du ved hvad du betaler inden vi starter.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">📦</div>
+          <h3>Overdragelse, ikke afhængighed</h3>
+          <p>Vores mål er at gøre dig uafhængig af os. Fuld dokumentation, hosting-guide og træning — så du kan klare dig selv eller bruge hvem du vil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="method">
+    <div class="container">
+      <h2>Sådan bruger vi AI</h2>
+      <p>Her er vores faktiske workflow — ingen hemmeligheder.</p>
+      <div class="method-grid">
+        <div class="method-item">
+          <h4>🧠 Menneske: Strategi</h4>
+          <p>Vi taler med dig om din forretning, dine mål og din målgruppe. Vi definerer struktur, tone og indhold.</p>
+        </div>
+        <div class="method-item">
+          <h4>🤖 AI: Kode-generation</h4>
+          <p>Claude Cowork bygger HTML, CSS og JavaScript baseret på vores specifikationer. Hurtigere end manuelt, med konsistent kvalitet.</p>
+        </div>
+        <div class="method-item">
+          <h4>🧠 Menneske: Kvalitetssikring</h4>
+          <p>Vi gennemgår al kode, tester på alle enheder og sikrer at alt fungerer perfekt.</p>
+        </div>
+        <div class="method-item">
+          <h4>🤖 AI: Dokumentation</h4>
+          <p>AI genererer teknisk dokumentation, design-guide og hosting-vejledning — kommenteret og struktureret.</p>
+        </div>
+        <div class="method-item">
+          <h4>🧠 Menneske: Feedback-runder</h4>
+          <p>Du ser resultatet, giver feedback, og vi justerer. Op til 2 runder inkluderet i prisen.</p>
+        </div>
+        <div class="method-item">
+          <h4>🤖 + 🧠 Overdragelse</h4>
+          <p>Vi overdrager alt: kode, docs, hosting-guide. Og hvis du vil, sætter vi din egen AI-assistent op til fremtiden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="icon">📧</div>
+          <h4>Email</h4>
+          <p><a href="mailto:steven.wensley@gmail.com">steven.wensley@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="icon">📞</div>
+          <h4>Telefon</h4>
+          <p><a href="tel:+4553886061">+45 5388 6061</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="icon">📅</div>
+          <h4>Book et møde</h4>
+          <p><a href="https://calendly.com/steven-wensley/30min" target="_blank">Calendly (30 min, gratis)</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 60px 0; text-align: center;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, var(--gold-bg), #C9A96E08); border: 1px solid #C9A96E44; border-radius: 20px; padding: 48px 40px; max-width: 700px; margin: 0 auto;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 12px;">Lad os tale om din hjemmeside</h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 24px;">30 minutter, ingen binding, ingen salgstrick. Bare en ærlig samtale om hvad du har brug for.</p>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary">Book gratis samtale →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BygMedAI — Et projekt af <a href="https://stevenwensley.com" target="_blank">Steven Wensley</a></p>
+      <p><a href="services.html">Tjenester</a> &nbsp;·&nbsp; <a href="priser.html">Priser</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
