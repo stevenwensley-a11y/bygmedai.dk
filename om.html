@@ -30,7 +30,8 @@
     .about { padding: 40px 0 60px; }
     .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
     .about-card { background: var(--surface); border-radius: 16px; padding: 32px; border: 1px solid #2A2A3E; text-align: center; }
-    .about-avatar { width: 120px; height: 120px; border-radius: 50%; background: var(--gold-bg); border: 3px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto 16px; }
+    .about-avatar { width: 180px; height: 180px; border-radius: 50%; background: var(--gold-bg); border: 3px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto 16px; overflow: hidden; }
+    .about-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .about-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
     .about-card .title { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
     .about-card .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -104,10 +105,10 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-card">
-          <div class="about-avatar">SW</div>
+          <div class="about-avatar"><img src="assets/steven-wensley.jpg" alt="Steven Wensley — grundlægger af BygMedAI" onerror="this.style.display='none';this.parentElement.innerHTML='SW';"></div>
           <h3>Steven Wensley</h3>
           <div class="title">Grundlægger, BygMedAI</div>
-          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">Senior konsulent med 18+ års erfaring i programledelse, digital transformation og AI-implementering.</p>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">Dansk/britisk, bosat på Islands Brygge i København. Far til fire. Senior konsulent med 18+ års erfaring i programledelse, digital transformation og AI-implementering i pharma, finans og tech. Når jeg ikke bygger hjemmesider, løber jeg langs havnen eller forsøger at følge med mine børn.</p>
           <div class="links">
             <a href="https://stevenwensley.com" target="_blank">stevenwensley.com</a>
             <a href="https://linkedin.com/in/stevenwensley" target="_blank">LinkedIn</a>
