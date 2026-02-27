@@ -104,6 +104,16 @@
     .success-screen h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 12px; }
     .success-screen p { color: var(--text-muted); font-size: 17px; max-width: 480px; margin: 0 auto 32px; line-height: 1.6; }
 
+    /* Trust badges */
+    .trust-bar { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); }
+    .trust-item .icon { font-size: 18px; }
+    .value-props { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 700px; margin: 0 auto 40px; }
+    .value-prop { background: var(--surface); border: 1px solid #2A2A3E; border-radius: var(--radius); padding: 16px; text-align: center; }
+    .value-prop .vp-icon { font-size: 24px; margin-bottom: 6px; }
+    .value-prop .vp-title { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+    .value-prop .vp-desc { font-size: 12px; color: var(--text-muted); }
+
     /* Footer */
     footer { border-top: 1px solid #1A1A2E; padding: 30px 0; text-align: center; margin-top: 60px; }
     footer p { font-size: 13px; color: var(--text-dim); }
@@ -116,6 +126,8 @@
       .radio-cards { grid-template-columns: 1fr; }
       .nav-links a:not(.nav-cta) { display: none; }
       .btn-row { flex-direction: column-reverse; }
+      .value-props { grid-template-columns: 1fr; max-width: 320px; }
+      .trust-bar { gap: 16px; }
     }
   </style>
 </head>
@@ -138,6 +150,32 @@
     <div class="container">
       <h1>Fortæl os om din <span class="gold">drømmehjemmeside</span></h1>
       <p>Udfyld denne briefing — det tager ca. 5 minutter. Vi vender tilbage inden for 24 timer med et uforpligtende tilbud.</p>
+
+      <!-- Trust badges -->
+      <div class="trust-bar" style="margin-top: 24px;">
+        <div class="trust-item"><span class="icon">⏱️</span> Ca. 5 minutter</div>
+        <div class="trust-item"><span class="icon">🔒</span> 100% uforpligtende</div>
+        <div class="trust-item"><span class="icon">⚡</span> Svar inden 24 timer</div>
+      </div>
+
+      <!-- Value propositions -->
+      <div class="value-props">
+        <div class="value-prop">
+          <div class="vp-icon">📋</div>
+          <div class="vp-title">Skræddersyet tilbud</div>
+          <div class="vp-desc">Baseret på dine behov — ikke en skabelon</div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">💰</div>
+          <div class="vp-title">Fast pris, ingen overraskelser</div>
+          <div class="vp-desc">Du ved præcis hvad det koster</div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">🚀</div>
+          <div class="vp-title">Hurtig levering</div>
+          <div class="vp-desc">Din side klar på 5-15 dage</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -459,6 +497,23 @@
     <div class="success-icon">🎉</div>
     <h2>Tak for din briefing!</h2>
     <p>Vi har modtaget dine svar og vender tilbage inden for 24 timer med et uforpligtende tilbud tilpasset dine behov.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 500px; margin: 0 auto 32px; text-align: center;">
+      <div style="padding: 16px; background: var(--surface); border-radius: 12px; border: 1px solid #2A2A3E;">
+        <div style="font-size: 24px; margin-bottom: 4px;">📧</div>
+        <div style="font-size: 12px; color: var(--text-muted);">Tilbud inden 24t</div>
+      </div>
+      <div style="padding: 16px; background: var(--surface); border-radius: 12px; border: 1px solid #2A2A3E;">
+        <div style="font-size: 24px; margin-bottom: 4px;">💬</div>
+        <div style="font-size: 12px; color: var(--text-muted);">Gratis opfølgning</div>
+      </div>
+      <div style="padding: 16px; background: var(--surface); border-radius: 12px; border: 1px solid #2A2A3E;">
+        <div style="font-size: 24px; margin-bottom: 4px;">🚀</div>
+        <div style="font-size: 12px; color: var(--text-muted);">Levering på 5-15 dage</div>
+      </div>
+    </div>
+
+    <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 24px;">Vil du fremskynde processen? Book en gratis samtale allerede nu:</p>
     <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-next" style="display: inline-block; text-decoration: none;">Book en gratis samtale nu →</a>
     <p style="margin-top: 20px; font-size: 14px;"><a href="/" style="color: var(--gold);">← Tilbage til forsiden</a></p>
   </div>
