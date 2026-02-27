@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
+  <title>AI-bygget vs. WordPress — fordele og ulemper — BygMedAI</title>
+  <meta name="description" content="WordPress driver 40% af nettet, men er det stadig det bedste valg? Vi sammenligner AI-bygget kode med WordPress for små virksomheder i Danmark.">
+  <meta property="og:title" content="AI-bygget vs. WordPress — fordele og ulemper">
+  <meta property="og:description" content="En ærlig sammenligning af WordPress og AI-bygget kode for små virksomheder.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0C0C12; --surface: #1A1A2E; --surface2: #12121C; --gold: #C9A96E; --gold-light: #D4B87A; --gold-bg: #C9A96E15; --text: #E8E8ED; --text-muted: #888899; --text-dim: #555566; --green: #22C55E; --red: #EF4444; --radius: 12px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--gold); text-decoration: none; } a:hover { text-decoration: underline; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    nav { padding: 20px 0; border-bottom: 1px solid #1A1A2E; position: sticky; top: 0; background: var(--bg); z-index: 100; }
+    nav .container-wide { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 800; color: var(--text); } .logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; } .nav-links a:hover { color: var(--gold); text-decoration: none; }
+    .nav-cta { background: var(--gold) !important; color: var(--bg) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .btn-primary { background: linear-gradient(135deg, var(--gold), #B8943F); color: var(--bg); padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; text-decoration: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #C9A96E33; text-decoration: none; }
+
+    .article-header { padding: 60px 0 32px; }
+    .article-header .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .article-header .breadcrumb a { color: var(--text-muted); } .article-header .breadcrumb a:hover { color: var(--gold); }
+    .article-meta { display: flex; gap: 16px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+    .article-meta span { font-size: 13px; color: var(--text-muted); }
+    .article-tag { background: var(--gold-bg); color: var(--gold); padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .article-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 40px); line-height: 1.2; margin-bottom: 16px; }
+    .article-header .lead { font-size: 18px; color: var(--text-muted); line-height: 1.7; }
+
+    .article-body { padding-bottom: 60px; }
+    .article-body h2 { font-size: 24px; font-weight: 800; margin: 40px 0 16px; }
+    .article-body h3 { font-size: 18px; font-weight: 700; margin: 28px 0 12px; }
+    .article-body p { font-size: 16px; line-height: 1.8; color: var(--text-muted); margin-bottom: 16px; }
+    .article-body strong { color: var(--text); }
+    .article-body ul, .article-body ol { margin: 0 0 20px 24px; }
+    .article-body li { font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 6px; }
+
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+    .comp-card { background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #2A2A3E; }
+    .comp-card h3 { font-size: 17px; font-weight: 800; margin: 0 0 16px; display: flex; align-items: center; gap: 8px; }
+    .comp-card ul { list-style: none; margin: 0; padding: 0; }
+    .comp-card li { padding: 6px 0; font-size: 14px; color: var(--text-muted); display: flex; gap: 8px; line-height: 1.5; }
+    .comp-card li .pro { color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .comp-card li .con { color: var(--red); font-weight: 700; flex-shrink: 0; }
+
+    .verdict { background: var(--gold-bg); border: 1px solid #C9A96E33; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .verdict h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--gold); }
+    .verdict p { color: var(--text); margin-bottom: 0; }
+
+    .article-cta { text-align: center; padding: 48px 0; margin-top: 20px; border-top: 1px solid #1A1A2E; }
+    .article-cta h2 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 12px; }
+    .article-cta p { color: var(--text-muted); font-size: 15px; margin-bottom: 24px; }
+
+    .related { padding: 40px 0; border-top: 1px solid #1A1A2E; }
+    .related h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .related-card { background: var(--surface); border: 1px solid #2A2A3E; border-radius: 12px; padding: 20px; transition: border-color 0.2s; }
+    .related-card:hover { border-color: var(--gold); text-decoration: none; }
+    .related-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--text-muted); margin: 0; }
+
+    footer { padding: 40px 0; border-top: 1px solid #1A1A2E; }
+    footer .container-wide { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 12px; color: var(--text-dim); }
+    footer a { color: var(--text-muted); } footer a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container-wide">
+      <a href="/" class="logo" style="text-decoration:none;">Byg<span>Med</span>AI</a>
+      <div class="nav-links">
+        <a href="/services.html">Tjenester</a>
+        <a href="/priser.html">Priser</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/om.html">Om os</a>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <header class="article-header">
+      <div class="container">
+        <div class="breadcrumb"><a href="/blog.html">Blog</a> / AI-bygget vs. WordPress</div>
+        <div class="article-meta">
+          <span class="article-tag">Sammenligning</span>
+          <span>27. februar 2026</span>
+          <span>7 min læsetid</span>
+        </div>
+        <h1>AI-bygget vs. WordPress — fordele og ulemper</h1>
+        <p class="lead">WordPress driver omkring 40% af alle hjemmesider på nettet. Men med fremkomsten af AI-bygget kode er der et reelt alternativ for små virksomheder. Her er en ærlig sammenligning.</p>
+      </div>
+    </header>
+
+    <div class="article-body">
+      <div class="container">
+
+        <h2>Hvad mener vi med "AI-bygget"?</h2>
+        <p>Når vi siger AI-bygget, mener vi ikke at en robot spytter en skabelon ud. Vi mener at en erfaren webudvikler bruger AI-værktøjer (som Claude, GitHub Copilot og lignende) til at skrive ren, håndholdt kode markant hurtigere end traditionelt.</p>
+        <p>Resultatet er en hjemmeside bygget med standard HTML, CSS og JavaScript — uden CMS, uden database, uden plugins. Koden er let, hurtig og nem at vedligeholde.</p>
+
+        <h2>Den hurtige sammenligning</h2>
+
+        <div class="comparison-grid">
+          <div class="comp-card">
+            <h3>⚡ AI-bygget kode</h3>
+            <ul>
+              <li><span class="pro">+</span> Lynhurtig (ingen database, ingen plugins)</li>
+              <li><span class="pro">+</span> 100% ejerskab af al kode</li>
+              <li><span class="pro">+</span> Gratis hosting via GitHub Pages</li>
+              <li><span class="pro">+</span> Ingen opdateringer eller vedligeholdelse</li>
+              <li><span class="pro">+</span> Perfekt Lighthouse-score</li>
+              <li><span class="con">−</span> Kan ikke selv redigere indhold visuelt</li>
+              <li><span class="con">−</span> Ikke egnet til webshops eller store portaler</li>
+              <li><span class="con">−</span> Kræver teknisk hjælp til ændringer</li>
+            </ul>
+          </div>
+          <div class="comp-card">
+            <h3>📝 WordPress</h3>
+            <ul>
+              <li><span class="pro">+</span> Visuelt CMS — rediger selv indhold</li>
+              <li><span class="pro">+</span> Tusindvis af plugins og temaer</li>
+              <li><span class="pro">+</span> Stort community og support</li>
+              <li><span class="pro">+</span> Kan skaleres til store sites</li>
+              <li><span class="con">−</span> Kræver løbende opdatering og vedligeholdelse</li>
+              <li><span class="con">−</span> Sårbar over for sikkerhedshuller</li>
+              <li><span class="con">−</span> Langsommere loadtider (database + plugins)</li>
+              <li><span class="con">−</span> Hosting koster 500-2.000+ kr/år</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Hastighed og performance</h2>
+        <p>Her vinder AI-bygget kode klart. En statisk hjemmeside uden database og plugins loader typisk på under 1 sekund. En gennemsnitlig WordPress-side med 10+ plugins loader på 2-5 sekunder — og det koster dig besøgende og Google-ranking.</p>
+        <p>Google har gjort hastighed til en direkte rankingfaktor med Core Web Vitals. En hurtigere side = bedre placering i søgeresultaterne.</p>
+
+        <h2>Sikkerhed</h2>
+        <p>WordPress er det mest angrebne CMS i verden — netop fordi det er så udbredt. Forældede plugins og temaer er den hyppigste årsag til at WordPress-sites bliver hacket.</p>
+        <p>En statisk HTML-side har ingen database, ingen login, intet CMS at angribe. Sikkerhedsrisikoen er praktisk talt nul.</p>
+
+        <h2>Vedligeholdelse</h2>
+        <p>WordPress kræver løbende opdatering af core, temaer og plugins. Hvis du springer opdateringer over, risikerer du sikkerhedshuller og kompatibilitetsproblemer. Det koster tid — eller penge til en vedligeholdelsesaftale.</p>
+        <p>En statisk side kræver ingen vedligeholdelse. Den kode du får leveret, fungerer i morgen, om et år og om fem år. Der er intet der skal opdateres.</p>
+
+        <h2>Ejerskab og fleksibilitet</h2>
+        <p>Med AI-bygget kode ejer du alt. Du kan flytte din side til enhver hosting-udbyder, redigere koden selv (eller bede en AI-assistent om det), og du er aldrig afhængig af én leverandør.</p>
+        <p>WordPress giver dig også god fleksibilitet, men du er afhængig af dit valg af hosting, dit tema og dine plugins. Skifter du tema, kan du miste indhold og formatering.</p>
+
+        <h2>Hvornår skal du vælge hvad?</h2>
+
+        <div class="verdict">
+          <h3>Vælg AI-bygget kode hvis:</h3>
+          <p>Du har en lille virksomhed med 1-10 sider, du vil have en hurtig og sikker side, du ikke opdaterer indhold dagligt, og du gerne vil eje din kode 100%.</p>
+        </div>
+
+        <div class="verdict">
+          <h3>Vælg WordPress hvis:</h3>
+          <p>Du har en blog med daglige indlæg, du driver en webshop med mange produkter, du har brug for avancerede medlemssystemer, eller du allerede har en WordPress-side der fungerer godt.</p>
+        </div>
+
+        <h2>Bundlinjen</h2>
+        <p>For de fleste små virksomheder i Danmark — konsulenter, håndværkere, restauranter, kreative — er en AI-bygget side det bedste valg i 2026. Du får professionel kvalitet, hurtig levering og ingen løbende vedligeholdelse. Og du ejer det hele.</p>
+        <p>WordPress er stadig et godt valg for sites med stort indhold, webshops og portaler. Men for en simpel virksomhedsside er det ofte mere end du har brug for.</p>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="article-cta">
+    <div class="container">
+      <h2>Klar til at prøve AI-bygget?</h2>
+      <p>Udfyld vores briefing-skema på 5 minutter og modtag et skræddersyet tilbud inden for 24 timer.</p>
+      <a href="/briefing.html" class="btn-primary">Udfyld briefing-skema →</a>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="container">
+      <h3>Læs også</h3>
+      <div class="related-grid">
+        <a href="hvad-koster-en-hjemmeside-2026.html" class="related-card">
+          <h4>Hvad koster en hjemmeside i 2026?</h4>
+          <p>Komplet prisoversigt for alle typer hjemmesider i Danmark.</p>
+        </a>
+        <a href="5-tegn-hjemmeside-opgradering.html" class="related-card">
+          <h4>5 tegn på at din hjemmeside trænger til en opgradering</h4>
+          <p>Er din side langsom, utidssvarende eller mobil-uvenlig? Her er advarselstegnene.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-wide">
+      <p>&copy; 2026 BygMedAI — Et projekt af <a href="https://stevenwensley.com" target="_blank">Steven Wensley</a></p>
+      <p><a href="/om.html">Om os</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
