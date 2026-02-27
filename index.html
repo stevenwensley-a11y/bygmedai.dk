@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
   <title>BygMedAI — Professionelle hjemmesider bygget med AI</title>
   <meta name="description" content="Få en professionel hjemmeside fra 10.000 kr. Vi bruger AI til at bygge den — derfor får du den hurtigere og billigere. Med fuld dokumentation og overdragelse.">
   <meta property="og:title" content="BygMedAI — Professionelle hjemmesider bygget med AI">
@@ -162,6 +165,22 @@
     .trans-icon { font-size: 24px; flex-shrink: 0; }
     .trans-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
     .trans-item p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* FAQ */
+    .faq { padding: 80px 0; }
+    .faq h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 16px; }
+    .faq > .container > .subtitle { text-align: center; color: var(--text-muted); font-size: 16px; margin-bottom: 48px; }
+    .faq-list { max-width: 750px; margin: 0 auto; }
+    .faq-item { background: var(--surface); border-radius: var(--radius); margin-bottom: 12px; border: 1px solid #2A2A3E; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item:hover { border-color: #3A3A4E; }
+    .faq-q { padding: 20px 24px; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; user-select: none; }
+    .faq-q::after { content: '+'; font-size: 20px; color: var(--gold); font-weight: 400; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-a-inner { padding: 0 24px 20px; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-cta { text-align: center; margin-top: 32px; }
+    .faq-cta p { color: var(--text-muted); font-size: 15px; margin-bottom: 16px; }
 
     /* CTA */
     .cta-section { padding: 80px 0; text-align: center; }
@@ -539,6 +558,48 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2>Ofte stillede spørgsmål</h2>
+      <p class="subtitle">Svar på det du sandsynligvis tænker lige nu.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Hvad koster det egentlig?</div>
+          <div class="faq-a"><div class="faq-a-inner">Fast pris fra 10.000 kr ekskl. moms for en professionel hjemmeside. Ingen timepris, ingen skjulte gebyrer. Du ved præcis hvad du betaler inden vi starter. Se alle pakker på vores <a href="priser.html" style="color: var(--gold);">prisside</a>.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Koster hosting noget efterfølgende?</div>
+          <div class="faq-a"><div class="faq-a-inner">Nej. Vi bygger til gratis hosting via GitHub Pages eller Netlify. Din eneste løbende udgift er dit domæne — typisk omkring 100 kr om året. Vi hjælper med hele opsætningen.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Er kvaliteten god nok når AI bygger?</div>
+          <div class="faq-a"><div class="faq-a-inner">AI skriver koden, men en erfaren konsulent med 18+ års erfaring kvalitetssikrer hvert eneste trin. Intet forlader vores hænder uden menneskelig godkendelse. Resultatet er professionelt — bare hurtigere og billigere end traditionelt.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Kan jeg selv ændre i siden bagefter?</div>
+          <div class="faq-a"><div class="faq-a-inner">Ja, du ejer al kildekode og dokumentation. Kan du kode, kan du ændre alt selv. Kan du ikke, kan du tilkøbe vores AI-assistent der opdaterer indhold for dig — på dansk, uden ventetid.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Hvad hvis jeg ikke er tilfreds?</div>
+          <div class="faq-a"><div class="faq-a-inner">Du godkender designet inden vi bygger. Alle pakker inkluderer op til 2 feedback-runder, så vi kan justere til du er 100% tilfreds. Er der stadig noget, finder vi en løsning sammen.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Hvordan er I billigere end et bureau?</div>
+          <div class="faq-a"><div class="faq-a-inner">Et traditionelt bureau bruger uger og mange timer manuelt. Vi bruger AI til det tunge løft og mennesker til kvalitetssikring. Det betyder færre timer — og dermed lavere pris for dig. Samme professionelle resultat, bare smartere udført.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Hvad er en AI-assistent (CLAUDE.md)?</div>
+          <div class="faq-a"><div class="faq-a-inner">Det er en skræddersyet opsætning af Claude AI der kender din hjemmeside indefra. Den kan opdatere tekst, billeder og indhold — som at have en webudvikler på speed-dial, uden timelønnen. Kræver et Claude Pro-abonnement ($20/md ≈ 140 kr/md).</div></div>
+        </div>
+      </div>
+      <div class="faq-cta">
+        <p>Har du et spørgsmål vi ikke har besvaret?</p>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary">Book en gratis samtale →</a>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="container">
       <div class="cta-box">
@@ -556,6 +617,17 @@
       <p><a href="om.html">Om os</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a> &nbsp;·&nbsp; <a href="https://stevenwensley.com" target="_blank">stevenwensley.com</a></p>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
