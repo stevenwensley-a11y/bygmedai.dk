@@ -84,6 +84,20 @@
     .stat-num { font-size: 36px; font-weight: 800; color: var(--accent); }
     .stat-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
 
+    /* Pain Points */
+    .pain-points { padding: 80px 0; }
+    .pain-points h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 12px; }
+    .pain-points .subtitle { text-align: center; color: var(--text-muted); font-size: 16px; margin-bottom: 48px; }
+    .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+    .pain-card { background: var(--surface); border-radius: var(--radius); padding: 28px 24px; border: 1px solid #E2DFD9; display: flex; gap: 16px; align-items: flex-start; transition: border-color 0.2s, box-shadow 0.2s; }
+    .pain-card:hover { border-color: #EF4444; box-shadow: 0 4px 16px rgba(239,68,68,0.08); }
+    .pain-icon { width: 40px; height: 40px; border-radius: 10px; background: #FEE2E2; color: #EF4444; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0; }
+    .pain-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .pain-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .pain-solution { text-align: center; margin-top: 40px; }
+    .pain-solution p { color: var(--text-muted); font-size: 15px; margin-bottom: 16px; }
+    .pain-solution .solution-text { display: inline-flex; align-items: center; gap: 8px; background: #F0FDF4; border: 1px solid #BBF7D0; padding: 12px 28px; border-radius: 30px; font-size: 15px; font-weight: 600; color: #166534; }
+
     /* USPs */
     .usps { padding: 80px 0; }
     .usps h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 48px; }
@@ -254,6 +268,22 @@
     .cta-box { background: linear-gradient(135deg, var(--accent-bg), #2B7A6F08); border: 1px solid #2B7A6F44; border-radius: 20px; padding: 60px 40px; max-width: 700px; margin: 0 auto; }
     .cta-box h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 12px; }
     .cta-box p { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; line-height: 1.6; }
+
+    /* Urgency badge */
+    .urgency-badge { display: inline-flex; align-items: center; gap: 8px; background: #FEF3C7; border: 1px solid #FDE68A; padding: 10px 24px; border-radius: 30px; font-size: 14px; font-weight: 600; color: #92400E; margin-bottom: 24px; }
+    .urgency-dot { width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; animation: pulse-dot 2s infinite; }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    /* Trust / About section */
+    .trust-section { padding: 80px 0; background: var(--surface2); }
+    .trust-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .trust-avatar { width: 96px; height: 96px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #236860); color: #FFFFFF; font-size: 36px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 3px solid var(--surface); box-shadow: 0 4px 16px rgba(43,122,111,0.2); }
+    .trust-inner h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 8px; }
+    .trust-role { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 20px; }
+    .trust-inner > p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .trust-badges { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 24px; }
+    .trust-badge { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); }
+    .trust-badge-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--accent-bg); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 16px; }
 
     /* Footer */
     footer { padding: 40px 0; border-top: 1px solid #E8E5E0; }
@@ -511,6 +541,48 @@
       <div class="stat"><div class="stat-num">5-10</div><div class="stat-label">Dages levering</div></div>
       <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Dit ejerskab</div></div>
       <div class="stat"><div class="stat-num">AI</div><div class="stat-label">Transparent metode</div></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM SECTION -->
+  <section class="pain-points">
+    <div class="container">
+      <h2>Kender du <span style="color: var(--accent);">det her?</span></h2>
+      <p class="subtitle">De fleste små virksomheder kæmper med det samme.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">✕</div>
+          <div>
+            <h3>Ingen tid til WordPress</h3>
+            <p>Du driver en virksomhed — du har ikke tid til at lære temaer, plugins og opdateringer.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">✕</div>
+          <div>
+            <h3>For dyrt hos bureauer</h3>
+            <p>30-80.000 kr for en hjemmeside? Det er urealistisk for de fleste små virksomheder.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">✕</div>
+          <div>
+            <h3>Din side skræmmer kunder væk</h3>
+            <p>En forældet eller uprofessionel side koster dig kunder — hver eneste dag.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">✕</div>
+          <div>
+            <h3>Låst til en leverandør</h3>
+            <p>Wix, Squarespace, dit bureau — du ejer ingenting og betaler hver måned.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pain-solution">
+        <p>Det behøver ikke at være sådan.</p>
+        <div class="solution-text">✓ BygMedAI løser alle fire — fra 10.000 kr</div>
+      </div>
     </div>
   </section>
 
@@ -1097,10 +1169,29 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-box">
+        <div class="urgency-badge"><span class="urgency-dot"></span> Kun 3 projekter ad gangen — så kvaliteten holder</div>
         <h2 class="section-header-xl">Klar til at <span class="highlight">komme i gang?</span></h2>
         <p>Book en gratis 30-minutters samtale. Vi gennemgår dit behov og finder den rigtige løsning — helt uforpligtende.</p>
         <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary">Book gratis samtale →</a>
         <a href="briefing.html" class="btn-secondary" style="margin-left: 12px;">Udfyld briefing-skema →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / ABOUT SECTION -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-avatar">SW</div>
+        <h2>Mennesket bag BygMedAI</h2>
+        <div class="trust-role">Steven Wensley — Konsulent & Grundlægger</div>
+        <p>Jeg hedder Steven, og jeg har 18+ års erfaring med it-projekter i store virksomheder som Novo Nordisk, Danske Bank og Siemens Gamesa. Nu bruger jeg den erfaring til at hjælpe små virksomheder med at få professionelle hjemmesider — hurtigt og til en fair pris.</p>
+        <p>Du får altid personlig kontakt med mig. Ingen chatbots, ingen supportkøer — bare en direkte linje til den person der bygger din side.</p>
+        <div class="trust-badges">
+          <div class="trust-badge"><div class="trust-badge-icon">🇩🇰</div> Dansk konsulent</div>
+          <div class="trust-badge"><div class="trust-badge-icon">💼</div> 18+ års erfaring</div>
+          <div class="trust-badge"><div class="trust-badge-icon">🤝</div> Personlig kontakt</div>
+        </div>
       </div>
     </div>
   </section>
