@@ -351,6 +351,83 @@
     }
     .proof-quote p { font-size: 17px; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 12px; }
     .proof-author { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+    /* ===== BOLD VISUAL OVERHAUL ===== */
+
+    /* Highlight marker effect — like yellow highlighter pen */
+    .highlight {
+      background: linear-gradient(180deg, transparent 55%, #FFD36E 55%, #FFD36E 90%, transparent 90%);
+      padding: 0 4px;
+    }
+    .highlight-teal {
+      background: linear-gradient(180deg, transparent 55%, #2B7A6F30 55%, #2B7A6F30 90%, transparent 90%);
+      padding: 0 4px;
+    }
+    .highlight-pink {
+      background: linear-gradient(180deg, transparent 55%, #F8BBD030 55%, #F8BBD030 90%, transparent 90%);
+      padding: 0 4px;
+    }
+
+    /* Bold full-bleed section backgrounds */
+    .bg-warm-cream { background: #FFF8F0; }
+    .bg-soft-teal { background: #E8F5F2; }
+    .bg-soft-pink { background: #FFF0F3; }
+    .bg-warm-yellow { background: #FFFBEB; }
+    .bg-deep-teal { background: #1A5C52; color: #FFFFFF; }
+    .bg-deep-teal h2, .bg-deep-teal h3 { color: #FFFFFF; }
+    .bg-deep-teal p, .bg-deep-teal .subtitle { color: #C5E8E2; }
+    .bg-deep-teal .usp-card { background: #22705F; border-color: #2B8A7A; }
+    .bg-deep-teal .usp-card h3 { color: #FFFFFF; }
+    .bg-deep-teal .usp-card p { color: #A8D5CB; }
+
+    /* Hand-drawn SVG decoration styles */
+    .deco-arrow { position: absolute; pointer-events: none; }
+    .deco-container { position: relative; }
+
+    /* Wavy section dividers */
+    .wave-divider {
+      width: 100%; height: 40px; overflow: hidden; position: relative;
+      margin-top: -1px;
+    }
+    .wave-divider svg { width: 100%; height: 100%; display: block; }
+
+    /* Bigger hero */
+    .hero-xl h1 { font-size: clamp(42px, 6vw, 68px) !important; line-height: 1.1 !important; }
+    .hero-xl p { font-size: 20px !important; }
+
+    /* Organic blob shapes behind sections */
+    .blob-bg {
+      position: relative; overflow: hidden;
+    }
+    .blob-bg::before {
+      content: ''; position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, currentColor 0%, transparent 70%);
+      border-radius: 50%; opacity: 0.04; pointer-events: none;
+      top: -200px; right: -200px;
+    }
+    .blob-bg::after {
+      content: ''; position: absolute; width: 500px; height: 500px;
+      background: radial-gradient(circle, currentColor 0%, transparent 70%);
+      border-radius: 50%; opacity: 0.03; pointer-events: none;
+      bottom: -200px; left: -150px;
+    }
+
+    /* Card with subtle grain texture */
+    .textured {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+
+    /* Scenario cards with colored left border */
+    .scenario-card-bold {
+      text-align: left !important; padding-left: 28px !important;
+      border-left: 4px solid var(--accent);
+    }
+
+    /* Bigger section headers */
+    .section-header-xl {
+      font-size: clamp(32px, 5vw, 48px) !important;
+      line-height: 1.15 !important;
+    }
   </style>
 </head>
 <body>
@@ -368,7 +445,7 @@
     </div>
   </nav>
 
-  <section class="hero">
+  <section class="hero hero-xl bg-warm-cream textured">
     <div class="container">
       <div class="hero-illustration">
         <svg viewBox="0 0 560 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration af hjemmeside-byggeri">
@@ -411,16 +488,24 @@
         </svg>
       </div>
       <div class="hero-badge">🤖 Ærligt om AI — bedre for din pengepung</div>
-      <h1>Professionelle hjemmesider<br><span class="gold">bygget med AI</span></h1>
+      <h1>Professionelle hjemmesider<br><span class="highlight">bygget med AI</span></h1>
       <p>Vi bruger AI til at bygge din hjemmeside — derfor får du den hurtigere, billigere og med fuld dokumentation til overdragelse. Ingen skjulte tricks.</p>
       <div class="hero-btns">
         <a href="priser.html" class="btn-primary">Se priser fra 10.000 kr →</a>
         <a href="services.html" class="btn-secondary">Hvad får du?</a>
+
+      <!-- Hand-drawn arrow -->
+      <div style="text-align:center; margin-top: 24px;">
+        <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.4;">
+          <path d="M20 2 C18 15, 22 25, 20 40 C19 45, 18 48, 14 52 M20 40 C21 45, 22 48, 26 52 M20 2 C22 15, 18 25, 20 40" stroke="#2B7A6F" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M12 48 L20 58 L28 48" stroke="#2B7A6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
       </div>
     </div>
   </section>
 
-  <section class="stats">
+  <section class="stats bg-warm-yellow">
     <div class="container" style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap;">
       <div class="stat"><div class="stat-num">10K</div><div class="stat-label">Hjemmeside fra</div></div>
       <div class="stat"><div class="stat-num">5-10</div><div class="stat-label">Dages levering</div></div>
@@ -429,9 +514,9 @@
     </div>
   </section>
 
-  <section class="usps section-warm">
+  <section class="usps bg-deep-teal textured">
     <div class="container">
-      <h2>Hvorfor BygMedAI?</h2>
+      <h2 class="section-header-xl">Hvorfor <span class="highlight">BygMedAI?</span></h2>
       <div class="usp-grid">
         <div class="usp-card">
           <div class="usp-icon">⚡</div>
@@ -469,9 +554,9 @@
 
 
   <!-- HVEM ER DET FOR? - Scenarier -->
-  <section class="scenarios section-warm">
+  <section class="scenarios bg-soft-pink blob-bg">
     <div class="container">
-      <h2>Hvem er det for?</h2>
+      <h2 class="section-header-xl">Hvem er <span class="highlight">det for?</span></h2>
       <p class="subtitle">Vi hjælper alle typer små virksomheder — her er et par eksempler på folk vi har hjulpet.</p>
 
       <div class="scenario-grid">
@@ -508,9 +593,9 @@
     </div>
   </section>
 
-  <section class="process section-warm">
+  <section class="process bg-soft-teal textured">
     <div class="container">
-      <h2>Sådan foregår det</h2>
+      <h2 class="section-header-xl">Sådan <span class="highlight">foregår det</span></h2>
       <p style="text-align:center; color:var(--text-muted); font-size:16px; margin-bottom:48px;">Fire enkle trin — fra første samtale til din færdige side.</p>
       <div class="process-steps-enhanced">
         <div class="step-enhanced">
@@ -538,7 +623,7 @@
   </section>
 
   <!-- CASE STUDY -->
-  <section class="case-study section-warm">
+  <section class="case-study bg-warm-yellow textured">
     <div class="container">
       <h2>Se hvad vi har bygget</h2>
       <p class="subtitle">Et rigtigt eksempel — ikke et mockup. Bygget med præcis den metode vi tilbyder dig.</p>
@@ -591,7 +676,7 @@
   <!-- PORTFOLIO -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <h2>Kunder vi har hjulpet</h2>
+      <h2 class="section-header-xl">Kunder vi har <span class="highlight">hjulpet</span></h2>
       <p class="subtitle">Terapeut, tømrer og café — tre helt forskellige behov, samme høje kvalitet og gennemsigtighed.</p>
 
       <div class="portfolio-grid">
@@ -742,7 +827,7 @@
   <section class="speed-section">
     <div class="container">
       <div class="speed-inner">
-        <h2>Fra idé til live website — <span style="color: var(--accent);">på dage, ikke uger</span></h2>
+        <h2>Fra idé til live website — <span class="highlight">på dage, ikke uger</span></h2>
         <p>Traditionelle bureauer bruger 4-8 uger og kræver workshops, wireframes og uendelige feedback-runder. Med AI som motor skærer vi processen ned til det essentielle — uden at gå på kompromis med kvaliteten.</p>
         <div class="speed-timeline">
           <div class="speed-step">
@@ -774,9 +859,9 @@
   </section>
 
   <!-- PROCESS INFOGRAPHIC -->
-  <section class="infographic">
+  <section class="infographic bg-warm-cream">
     <div class="container">
-      <h2>Processen trin for trin</h2>
+      <h2 class="section-header-xl">Processen <span class="highlight">trin for trin</span></h2>
       <p class="subtitle">Fra første samtale til overdragelse — her er præcis hvad der sker, og hvad du kan forvente.</p>
 
       <div class="info-steps">
@@ -865,9 +950,9 @@
     </div>
   </section>
 
-  <section class="products-preview">
+  <section class="products-preview bg-soft-teal">
     <div class="container">
-      <h2>To produkter, ét mål</h2>
+      <h2 class="section-header-xl">To produkter, <span class="highlight">ét mål</span></h2>
       <p>Alt hvad en lille virksomhed behøver for at komme online — og blive der.</p>
       <div class="product-grid">
         <div class="product-card featured">
@@ -938,9 +1023,9 @@
   </section>
 
   <!-- FAQ -->
-  <section class="faq">
+  <section class="faq bg-warm-cream textured">
     <div class="container">
-      <h2>Ofte stillede spørgsmål</h2>
+      <h2 class="section-header-xl">Ofte stillede <span class="highlight">spørgsmål</span></h2>
       <p class="subtitle">Svar på det du sandsynligvis tænker lige nu.</p>
       <div class="faq-list">
         <div class="faq-item">
@@ -1012,7 +1097,7 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-box">
-        <h2>Klar til at komme i gang?</h2>
+        <h2 class="section-header-xl">Klar til at <span class="highlight">komme i gang?</span></h2>
         <p>Book en gratis 30-minutters samtale. Vi gennemgår dit behov og finder den rigtige løsning — helt uforpligtende.</p>
         <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary">Book gratis samtale →</a>
         <a href="briefing.html" class="btn-secondary" style="margin-left: 12px;">Udfyld briefing-skema →</a>
