@@ -1113,12 +1113,40 @@
   </footer>
 
   <script>
+    // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
         const item = q.parentElement;
         const wasOpen = item.classList.contains('open');
         document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
         if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    // GA4 Conversion Tracking
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(link => {
+      link.addEventListener('click', () => {
+        gtag('event', 'calendly_click', {
+          event_category: 'conversion',
+          event_label: link.textContent.trim(),
+          value: 1
+        });
+      });
+    });
+    document.querySelectorAll('a[href="priser.html"], a[href*="priser"]').forEach(link => {
+      link.addEventListener('click', () => {
+        gtag('event', 'cta_click', {
+          event_category: 'engagement',
+          event_label: 'Se priser'
+        });
+      });
+    });
+    document.querySelectorAll('a[href="briefing.html"], a[href*="briefing"]').forEach(link => {
+      link.addEventListener('click', () => {
+        gtag('event', 'cta_click', {
+          event_category: 'engagement',
+          event_label: 'Briefing-skema'
+        });
       });
     });
   </script>

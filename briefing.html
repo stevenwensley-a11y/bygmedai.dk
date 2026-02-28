@@ -615,6 +615,14 @@
         });
 
         if (response.ok) {
+          // GA4 conversion tracking
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'briefing_submit', {
+              event_category: 'conversion',
+              event_label: 'Briefing formular indsendt',
+              value: 1
+            });
+          }
           this.style.display = 'none';
           document.querySelector('.page-header').style.display = 'none';
           document.querySelector('.progress-bar').parentElement.style.display = 'none';
