@@ -272,6 +272,85 @@
     @media (max-width: 480px) {
       .nav-links a:not(.nav-cta) { display: none; }
     }
+
+    /* Decorative blob backgrounds */
+    .section-warm { position: relative; overflow: hidden; }
+    .section-warm::before {
+      content: ''; position: absolute; width: 500px; height: 500px;
+      background: radial-gradient(circle, #2B7A6F08 0%, transparent 70%);
+      border-radius: 50%; top: -200px; right: -150px; pointer-events: none;
+    }
+    .section-warm::after {
+      content: ''; position: absolute; width: 400px; height: 400px;
+      background: radial-gradient(circle, #E8944C06 0%, transparent 70%);
+      border-radius: 50%; bottom: -150px; left: -100px; pointer-events: none;
+    }
+
+    /* Hero illustration area */
+    .hero-visual { position: relative; max-width: 700px; margin: 0 auto; }
+    .hero-illustration { display: flex; justify-content: center; margin-bottom: 40px; }
+    .hero-illustration svg { width: 100%; max-width: 560px; height: auto; }
+
+    /* Scenario cards - "Hvem er det for?" */
+    .scenarios { padding: 80px 0; background: linear-gradient(180deg, var(--surface2) 0%, var(--bg) 100%); }
+    .scenarios h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 12px; }
+    .scenarios .subtitle { text-align: center; color: var(--text-muted); font-size: 16px; margin-bottom: 48px; }
+    .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 960px; margin: 0 auto; }
+    .scenario-card {
+      background: var(--surface); border-radius: 16px; padding: 32px 28px;
+      border: 1px solid #E2DFD9; text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .scenario-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .scenario-icon { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .scenario-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .scenario-card .scenario-type { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+    .scenario-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
+    .scenario-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--accent-bg); color: var(--accent); font-weight: 600; }
+
+    /* Improved process steps with connector lines */
+    .process-enhanced { counter-reset: step-counter; }
+    .process-steps-enhanced {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      max-width: 900px; margin: 0 auto; position: relative;
+    }
+    .step-enhanced { text-align: center; position: relative; padding: 0 16px; }
+    .step-enhanced::before {
+      content: ''; position: absolute; top: 28px; left: 50%; right: -50%;
+      height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-bg));
+      z-index: 0;
+    }
+    .step-enhanced:last-child::before { display: none; }
+    .step-icon-wrap {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #236860);
+      color: #FFFFFF; display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin: 0 auto 14px; position: relative; z-index: 1;
+      box-shadow: 0 4px 12px rgba(43,122,111,0.25);
+    }
+    .step-enhanced h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .step-enhanced p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .process-steps-enhanced { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .step-enhanced::before { display: none; }
+      .scenario-grid { grid-template-columns: 1fr; max-width: 400px; }
+    }
+
+    /* Visual quote / social proof */
+    .social-proof { padding: 48px 0; text-align: center; }
+    .proof-quote {
+      max-width: 600px; margin: 0 auto; padding: 32px;
+      background: var(--surface); border-radius: 16px;
+      border: 1px solid #E2DFD9; position: relative;
+    }
+    .proof-quote::before {
+      content: '"'; font-family: 'Playfair Display', serif;
+      font-size: 80px; color: var(--accent); opacity: 0.15;
+      position: absolute; top: -10px; left: 20px; line-height: 1;
+    }
+    .proof-quote p { font-size: 17px; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 12px; }
+    .proof-author { font-size: 13px; color: var(--text-muted); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -291,6 +370,46 @@
 
   <section class="hero">
     <div class="container">
+      <div class="hero-illustration">
+        <svg viewBox="0 0 560 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration af hjemmeside-byggeri">
+          <!-- Laptop -->
+          <rect x="160" y="30" width="240" height="140" rx="12" fill="#FFFFFF" stroke="#E2DFD9" stroke-width="2"/>
+          <rect x="170" y="40" width="220" height="110" rx="6" fill="#F5F2EE"/>
+          <!-- Screen content mockup -->
+          <rect x="185" y="55" width="90" height="8" rx="4" fill="#2B7A6F" opacity="0.7"/>
+          <rect x="185" y="70" width="130" height="6" rx="3" fill="#D5D0C8"/>
+          <rect x="185" y="82" width="110" height="6" rx="3" fill="#D5D0C8"/>
+          <rect x="185" y="98" width="50" height="22" rx="6" fill="#2B7A6F"/>
+          <text x="210" y="113" font-size="9" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="600">Book</text>
+          <rect x="320" y="55" width="55" height="55" rx="8" fill="#E8F5E9"/>
+          <rect x="320" y="118" width="55" height="25" rx="6" fill="#FBE9E7"/>
+          <!-- Keyboard base -->
+          <rect x="180" y="168" width="200" height="8" rx="4" fill="#E2DFD9"/>
+          <!-- Left person (woman) -->
+          <circle cx="80" cy="95" r="22" fill="#FBE9E7"/>
+          <circle cx="80" cy="82" r="14" fill="#F5D0C5"/>
+          <rect x="68" y="96" width="24" height="30" rx="8" fill="#2B7A6F" opacity="0.7"/>
+          <circle cx="80" cy="72" r="10" fill="#8B6F5E"/>
+          <!-- Speech bubble -->
+          <rect x="45" y="40" width="70" height="28" rx="10" fill="#2B7A6F" opacity="0.12"/>
+          <text x="58" y="58" font-size="9" fill="#2B7A6F" font-family="Inter, sans-serif" font-weight="600">Min side!</text>
+          <!-- Right person (man) -->
+          <circle cx="480" cy="95" r="22" fill="#E8EAF6"/>
+          <circle cx="480" cy="82" r="14" fill="#D4C5A9"/>
+          <rect x="468" y="96" width="24" height="30" rx="8" fill="#6DB86B" opacity="0.7"/>
+          <circle cx="480" cy="72" r="10" fill="#7A6B50"/>
+          <!-- Speech bubble -->
+          <rect x="445" y="40" width="70" height="28" rx="10" fill="#6DB86B" opacity="0.12"/>
+          <text x="452" y="58" font-size="9" fill="#6DB86B" font-family="Inter, sans-serif" font-weight="600">Nemt!</text>
+          <!-- Decorative dots -->
+          <circle cx="30" cy="140" r="4" fill="#2B7A6F" opacity="0.1"/>
+          <circle cx="42" cy="155" r="3" fill="#E8944C" opacity="0.15"/>
+          <circle cx="530" cy="140" r="4" fill="#6DB86B" opacity="0.1"/>
+          <circle cx="518" cy="155" r="3" fill="#2B7A6F" opacity="0.15"/>
+          <!-- AI sparkle -->
+          <text x="280" y="25" font-size="16" text-anchor="middle">✨</text>
+        </svg>
+      </div>
       <div class="hero-badge">🤖 Ærligt om AI — bedre for din pengepung</div>
       <h1>Professionelle hjemmesider<br><span class="gold">bygget med AI</span></h1>
       <p>Vi bruger AI til at bygge din hjemmeside — derfor får du den hurtigere, billigere og med fuld dokumentation til overdragelse. Ingen skjulte tricks.</p>
@@ -310,7 +429,7 @@
     </div>
   </section>
 
-  <section class="usps">
+  <section class="usps section-warm">
     <div class="container">
       <h2>Hvorfor BygMedAI?</h2>
       <div class="usp-grid">
@@ -348,36 +467,78 @@
     </div>
   </section>
 
-  <section class="process">
+
+  <!-- HVEM ER DET FOR? - Scenarier -->
+  <section class="scenarios section-warm">
+    <div class="container">
+      <h2>Hvem er det for?</h2>
+      <p class="subtitle">Vi hjælper alle typer små virksomheder — her er et par eksempler på folk vi har hjulpet.</p>
+
+      <div class="scenario-grid">
+        <div class="scenario-card">
+          <div class="scenario-icon" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9);">
+            <span style="font-size: 32px;">🔨</span>
+          </div>
+          <h3>Thomas, tømrermester</h3>
+          <div class="scenario-type">Håndværker · 3 ansatte</div>
+          <p>"Jeg havde ingen hjemmeside — bare et Facebook-opslag. Nu finder nye kunder mig på Google, og jeg behøver ikke røre koden."</p>
+          <span class="scenario-tag">S-pakke · 10.000 kr</span>
+        </div>
+
+        <div class="scenario-card">
+          <div class="scenario-icon" style="background: linear-gradient(135deg, #F3E5F5, #E1BEE7);">
+            <span style="font-size: 32px;">🧘</span>
+          </div>
+          <h3>Mette, kropsterapeut</h3>
+          <div class="scenario-type">Terapeut · Solo-praksis</div>
+          <p>"Jeg ville have en rolig, professionel side der passer til mine klienter. Steven forstod mit behov — og leverede på 5 dage."</p>
+          <span class="scenario-tag">M-pakke · 18.000 kr</span>
+        </div>
+
+        <div class="scenario-card">
+          <div class="scenario-icon" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">
+            <span style="font-size: 32px;">☕</span>
+          </div>
+          <h3>Sofie, caféejer</h3>
+          <div class="scenario-type">Café & restaurant · 8 ansatte</div>
+          <p>"Vi havde brug for en side med menukort og online bestilling. Det hele var klar inden vi åbnede i det nye lokale."</p>
+          <span class="scenario-tag">M-pakke · 18.000 kr</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process section-warm">
     <div class="container">
       <h2>Sådan foregår det</h2>
-      <div class="process-steps">
-        <div class="step">
-          <div class="step-num">1</div>
+      <p style="text-align:center; color:var(--text-muted); font-size:16px; margin-bottom:48px;">Fire enkle trin — fra første samtale til din færdige side.</p>
+      <div class="process-steps-enhanced">
+        <div class="step-enhanced">
+          <div class="step-icon-wrap">💬</div>
           <h3>Gratis samtale</h3>
-          <p>Vi taler om din forretning, dit behov og hvilken pakke der passer. 30 min, ingen binding.</p>
+          <p>Vi taler om din forretning og finder den rigtige pakke. 30 min, ingen binding.</p>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
+        <div class="step-enhanced">
+          <div class="step-icon-wrap">🤖</div>
           <h3>AI bygger</h3>
-          <p>Vores AI-system bygger din side baseret på dine input. Vi kvalitets&shy;sikrer hvert trin.</p>
+          <p>Vores AI-system bygger din side. En erfaren konsulent kvalitetssikrer hvert trin.</p>
         </div>
-        <div class="step">
-          <div class="step-num">3</div>
+        <div class="step-enhanced">
+          <div class="step-icon-wrap">👁️</div>
           <h3>Du godkender</h3>
-          <p>Du ser resultatet, giver feedback, og vi justerer til du er tilfreds.</p>
+          <p>Du ser resultatet live, giver feedback, og vi justerer til du er tilfreds.</p>
         </div>
-        <div class="step">
-          <div class="step-num">4</div>
+        <div class="step-enhanced">
+          <div class="step-icon-wrap">🚀</div>
           <h3>Overdragelse</h3>
-          <p>Du modtager alt: kode, dokumentation, hosting-guide. Din side, dit ejerskab.</p>
+          <p>Du modtager alt: kode, dokumentation og hosting-guide. Dit ejerskab fra dag ét.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CASE STUDY -->
-  <section class="case-study">
+  <section class="case-study section-warm">
     <div class="container">
       <h2>Se hvad vi har bygget</h2>
       <p class="subtitle">Et rigtigt eksempel — ikke et mockup. Bygget med præcis den metode vi tilbyder dig.</p>
@@ -431,52 +592,52 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <h2>Kunder vi har hjulpet</h2>
-      <p class="subtitle">Tre forskellige brancher, tre forskellige behov — samme høje kvalitet og gennemsigtighed.</p>
+      <p class="subtitle">Terapeut, tømrer og café — tre helt forskellige behov, samme høje kvalitet og gennemsigtighed.</p>
 
       <div class="portfolio-grid">
-        <!-- 1: Nordberg Consulting — Konsulent, M-pakke -->
+        <!-- 1: Indre Ro Terapi — Terapeut, M-pakke -->
         <div class="portfolio-card">
           <div class="pf-browser">
             <div class="pf-browser-bar">
               <div class="pf-dot r"></div><div class="pf-dot y"></div><div class="pf-dot g"></div>
-              <div class="pf-url">nordbergconsulting.dk</div>
+              <div class="pf-url">indreroterapl.dk</div>
             </div>
-            <div class="pf-body" style="background: #EFF6FF;">
+            <div class="pf-body" style="background: #FDF2F8;">
               <div class="pf-nav">
-                <div class="pf-nav-logo" style="color: #5B9BD5;">NC</div>
+                <div class="pf-nav-logo" style="color: #B07BAC;">IR</div>
                 <div class="pf-nav-links">
-                  <div class="pf-nav-link" style="background: #5B9BD5;"></div>
-                  <div class="pf-nav-link" style="background: #5B9BD5;"></div>
-                  <div class="pf-nav-link" style="background: #5B9BD5;"></div>
+                  <div class="pf-nav-link" style="background: #B07BAC;"></div>
+                  <div class="pf-nav-link" style="background: #B07BAC;"></div>
+                  <div class="pf-nav-link" style="background: #B07BAC;"></div>
                 </div>
               </div>
-              <div class="pf-hero-block" style="background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #1E3A5F;">
-                <div class="pf-hero-title">Strategisk rådgivning<br>der skaber resultater</div>
-                <div class="pf-hero-sub">Ledelsesrådgivning · Forandringsledelse · Digitalisering</div>
-                <div class="pf-hero-btn" style="background: #5B9BD5; color: #FFFFFF;">Book konsultation</div>
+              <div class="pf-hero-block" style="background: linear-gradient(135deg, #F3E5F5, #E1BEE7); color: #4A2545;">
+                <div class="pf-hero-title">Find ro og balance<br>i en travl hverdag</div>
+                <div class="pf-hero-sub">Kropsterapi · Mindfulness · Stresshåndtering</div>
+                <div class="pf-hero-btn" style="background: #B07BAC; color: #FFFFFF;">Book en tid</div>
               </div>
-              <div class="pf-grid-row cols-3">
-                <div class="pf-box" style="background: #5B9BD5;"></div>
-                <div class="pf-box" style="background: #5B9BD5;"></div>
-                <div class="pf-box" style="background: #5B9BD5;"></div>
+              <div class="pf-grid-row cols-2">
+                <div class="pf-box" style="background: #B07BAC;"></div>
+                <div class="pf-box" style="background: #B07BAC;"></div>
               </div>
-              <div class="pf-line w60" style="background: #5B9BD5;"></div>
+              <div class="pf-line w80" style="background: #B07BAC;"></div>
+              <div class="pf-line w40" style="background: #B07BAC;"></div>
             </div>
           </div>
           <div class="pf-info">
-            <h3>Nordberg Consulting</h3>
-            <div class="pf-type">Ledelsesrådgivning · M-pakke</div>
-            <p>Professionelt konsulenthus der ønskede en hjemmeside der udstråler tillid og faglig tyngde. 5 sider med client testimonials, metodebeskrivelser og booking-integration.</p>
+            <h3>Indre Ro Terapi</h3>
+            <div class="pf-type">Kropsterapeut · M-pakke</div>
+            <p>Solo-terapeut der ønskede en rolig, professionel side med online booking og beskrivelse af behandlingsformer. 4 sider med blødt, indbydende design og klientudtalelser.</p>
             <div class="pf-tags">
-              <span class="pf-tag" style="color: #5B9BD5; border-color: #5B9BD533;">5 sider</span>
-              <span class="pf-tag" style="color: #5B9BD5; border-color: #5B9BD533;">GA4</span>
-              <span class="pf-tag" style="color: #5B9BD5; border-color: #5B9BD533;">Calendly</span>
-              <span class="pf-tag" style="color: #5B9BD5; border-color: #5B9BD533;">SEO</span>
+              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">4 sider</span>
+              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">Calendly</span>
+              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">Testimonials</span>
+              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">SEO</span>
             </div>
             <div class="pf-stats-row">
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #5B9BD5;">7</div><div class="pf-stat-label">dage</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #5B9BD5;">18K</div><div class="pf-stat-label">fast pris</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #5B9BD5;">0 kr</div><div class="pf-stat-label">hosting/md</div></div>
+              <div class="pf-stat"><div class="pf-stat-val" style="color: #B07BAC;">6</div><div class="pf-stat-label">dage</div></div>
+              <div class="pf-stat"><div class="pf-stat-val" style="color: #B07BAC;">18K</div><div class="pf-stat-label">fast pris</div></div>
+              <div class="pf-stat"><div class="pf-stat-val" style="color: #B07BAC;">0 kr</div><div class="pf-stat-label">hosting/md</div></div>
             </div>
           </div>
         </div>
@@ -835,6 +996,15 @@
             <span>⚡ Svar i 24t</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-proof">
+    <div class="container">
+      <div class="proof-quote">
+        <p>Vi troede det ville tage måneder og koste en formue at få en ordentlig hjemmeside. Med BygMedAI var vi online på under en uge — til en brøkdel af prisen.</p>
+        <div class="proof-author">— Thomas K., tømrermester i Roskilde</div>
       </div>
     </div>
   </section>
