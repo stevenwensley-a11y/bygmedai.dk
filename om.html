@@ -7,122 +7,218 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
   <title>Om os — BygMedAI</title>
-  <meta name="description" content="BygMedAI er skabt af Steven Wensley — senior konsulent med 18+ års erfaring. Vi bruger AI åbent og ærligt til at bygge bedre hjemmesider.">
+  <meta name="description" content="BygMedAI er skabt af Steven Wensley — Senior Program & Transition Manager med 18+ års erfaring i regulerede industrier. Dansk/britisk, København.">
   <meta property="og:title" content="Om os — BygMedAI">
-  <meta property="og:description" content="BygMedAI er skabt af Steven Wensley — senior konsulent med 18+ års erfaring.">
+  <meta property="og:description" content="BygMedAI er skabt af Steven Wensley — Senior Program & Transition Manager med 18+ års erfaring.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bygmedai.dk/om.html">
   <meta property="og:locale" content="da_DK">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Om os — BygMedAI">
-  <meta name="twitter:description" content="BygMedAI er skabt af Steven Wensley — senior konsulent med 18+ års erfaring.">
+  <meta name="twitter:description" content="BygMedAI er skabt af Steven Wensley — Senior Program & Transition Manager med 18+ års erfaring.">
   <link rel="canonical" href="https://bygmedai.dk/om.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --bg: #FAFAF8; --surface: #FFFFFF; --surface2: #F5F2EE; --accent: #2B7A6F; --accent-light: #38917F; --accent-bg: #2B7A6F12; --text: #2D3748; --text-muted: #718096; --text-dim: #A0AEC0; --green: #38A169; --blue: #3B82F6; --radius: 12px; --max-w: 1100px; }
+    :root {
+      --bg: #F7F7F5; --surface: #FFFFFF; --surface2: #EFEEE9;
+      --accent: #1B5E54; --accent-light: #247A6D; --accent-bg: #1B5E5410;
+      --navy: #1A2332; --navy-light: #243040;
+      --text: #1A2332; --text-muted: #4A5568; --text-dim: #8896A6;
+      --warm: #D4956A;
+      --radius: 12px; --max-w: 1100px;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
-    nav { padding: 20px 0; border-bottom: 1px solid #E8E5E0; position: sticky; top: 0; background: var(--bg); z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+    /* Top bar */
+    .top-bar { background: var(--navy); color: #fff; font-size: 13px; padding: 8px 0; text-align: center; }
+    .top-bar a { color: #fff; font-weight: 500; }
+    .top-bar span { margin: 0 10px; opacity: .4; }
+
+    /* Nav */
+    nav { padding: 16px 0; border-bottom: 1px solid #E8E6E1; position: sticky; top: 0; background: var(--surface); z-index: 100; }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 20px; font-weight: 800; } .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; } .nav-links a:hover { color: var(--accent); } .nav-links a.active { color: var(--accent); }
-    .nav-cta { background: var(--accent) !important; color: #FFFFFF !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), #236860); color: #FFFFFF; padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #2B7A6F33; }
+    .logo { font-size: 20px; font-weight: 800; color: var(--navy); } .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a.active { color: var(--accent); font-weight: 700; }
+    .nav-cta { background: var(--accent) !important; color: #fff !important; padding: 10px 22px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .nav-cta:hover { background: var(--accent-light) !important; }
 
-    .page-header { padding: 60px 0 40px; text-align: center; }
-    .page-header h1 { font-family: 'Playfair Display', serif; font-size: 40px; margin-bottom: 12px; }
-    .page-header p { color: var(--text-muted); font-size: 17px; max-width: 560px; margin: 0 auto; }
+    .btn-primary { background: var(--accent); color: #fff; padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(27,94,84,.2); }
+    .btn-secondary { background: transparent; color: var(--accent); padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: 2px solid var(--accent); display: inline-block; transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--accent-bg); }
 
-    /* About section */
-    .about { padding: 40px 0 60px; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
-    .about-card { background: var(--surface); border-radius: 16px; padding: 32px; border: 1px solid #E2DFD9; text-align: center; }
-    .about-avatar { width: 180px; height: 180px; border-radius: 50%; background: var(--accent-bg); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 48px; margin: 0 auto 16px; overflow: hidden; }
+    .highlight { background: linear-gradient(to bottom, transparent 60%, #1B5E5425 60%); }
+
+    /* Page header */
+    .page-header { padding: 72px 0 48px; text-align: center; }
+    .page-header .label { display: inline-block; font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: 44px; margin-bottom: 16px; color: var(--navy); }
+    .page-header p { color: var(--text-muted); font-size: 17px; max-width: 620px; margin: 0 auto; line-height: 1.7; }
+
+    /* About intro */
+    .about-intro { padding: 0 0 64px; }
+    .about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
+    .about-card { background: var(--surface); border-radius: 16px; padding: 32px; border: 1px solid #E8E6E1; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+    .about-avatar { width: 140px; height: 140px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 42px; font-weight: 800; margin: 0 auto 16px; overflow: hidden; }
     .about-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .about-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
-    .about-card .title { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 16px; }
-    .about-card .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .about-card .links a { font-size: 12px; color: var(--text-muted); padding: 6px 14px; border: 1px solid #E2DFD9; border-radius: 6px; transition: all 0.2s; }
+    .about-card h3 { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 2px; }
+    .about-card .title { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
+    .about-card .subtitle { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+    .about-card .links { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .about-card .links a { font-size: 12px; color: var(--text-muted); padding: 6px 14px; border: 1px solid #E8E6E1; border-radius: 6px; transition: all 0.2s; }
     .about-card .links a:hover { border-color: var(--accent); color: var(--accent); }
-    .about-text h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 16px; }
-    .about-text p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
+    .about-text h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 16px; color: var(--navy); }
+    .about-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
     .about-text p strong { color: var(--text); }
 
+    /* Key achievements */
+    .achievements { padding: 64px 0; background: var(--navy); color: #fff; }
+    .achievements h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; }
+    .ach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .ach-card { text-align: center; }
+    .ach-card .number { font-size: 42px; font-weight: 800; color: var(--warm); margin-bottom: 6px; }
+    .ach-card p { font-size: 13px; color: #B0BEC5; line-height: 1.5; }
+
+    /* Experience timeline */
+    .experience { padding: 64px 0; }
+    .experience h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 12px; color: var(--navy); }
+    .experience > .container > p.sub { text-align: center; color: var(--text-muted); font-size: 15px; margin-bottom: 40px; }
+    .timeline { max-width: 800px; margin: 0 auto; position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: #E8E6E1; }
+    .tl-item { position: relative; padding-left: 56px; margin-bottom: 32px; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot { position: absolute; left: 12px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); }
+    .tl-date { font-size: 12px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+    .tl-item h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+    .tl-item .company { font-size: 13px; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; }
+    .tl-item .desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .tl-item .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    .tl-item .tags span { font-size: 11px; padding: 3px 10px; border-radius: 4px; background: var(--accent-bg); color: var(--accent); font-weight: 600; }
+    .tl-earlier { background: var(--surface); border: 1px solid #E8E6E1; border-radius: 12px; padding: 20px 24px; margin-left: 56px; margin-top: 16px; }
+    .tl-earlier h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .tl-earlier p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    /* Competencies */
+    .competencies { padding: 64px 0; background: var(--surface2); }
+    .competencies h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; color: var(--navy); }
+    .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; }
+    .comp-item { background: var(--surface); border: 1px solid #E8E6E1; border-radius: 10px; padding: 16px 20px; font-size: 14px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+    .comp-item .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* Certifications */
+    .certs { padding: 64px 0; }
+    .certs h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; color: var(--navy); }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; }
+    .cert-item { background: var(--surface); border: 1px solid #E8E6E1; border-radius: 10px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .cert-item .name { font-size: 14px; font-weight: 600; color: var(--navy); }
+    .cert-item .org { font-size: 12px; color: var(--text-muted); }
+    .cert-item .year { font-size: 13px; font-weight: 700; color: var(--accent); }
+    .cert-pursuing { text-align: center; margin-top: 24px; padding: 16px; background: var(--accent-bg); border-radius: 10px; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .cert-pursuing p { font-size: 14px; color: var(--accent); font-weight: 600; }
+
+    /* Industries */
+    .industries { padding: 64px 0; background: var(--surface2); }
+    .industries h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; color: var(--navy); }
+    .ind-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 800px; margin: 0 auto; }
+    .ind-item { background: var(--surface); border: 1px solid #E8E6E1; border-radius: 10px; padding: 20px; text-align: center; font-size: 14px; font-weight: 600; color: var(--navy); }
+    .ind-item .icon { font-size: 28px; margin-bottom: 8px; }
+
     /* Values */
-    .values { padding: 60px 0; background: var(--surface2); }
-    .values h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; }
-    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-    .value-card { background: var(--surface); border-radius: 12px; padding: 28px; border: 1px solid #E2DFD9; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+    .values { padding: 64px 0; }
+    .values h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; color: var(--navy); }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .value-card { background: var(--surface); border-radius: 12px; padding: 28px; border: 1px solid #E8E6E1; }
     .value-card .icon { font-size: 28px; margin-bottom: 12px; }
-    .value-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .value-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
     .value-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-    /* How it works */
-    .method { padding: 60px 0; }
-    .method h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 16px; }
-    .method > .container > p { text-align: center; color: var(--text-muted); font-size: 15px; max-width: 600px; margin: 0 auto 40px; }
-    .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px; margin: 0 auto; }
-    .method-item { background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #E2DFD9; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-    .method-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-    .method-item p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-
     /* Contact */
-    .contact { padding: 60px 0; background: var(--surface2); }
-    .contact h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; }
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto; }
-    .contact-card { background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #E2DFD9; text-align: center; }
+    .contact { padding: 64px 0; background: var(--surface2); }
+    .contact h2 { font-family: 'Playfair Display', serif; font-size: 28px; text-align: center; margin-bottom: 40px; color: var(--navy); }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto; }
+    .contact-card { background: var(--surface); border-radius: 12px; padding: 24px; border: 1px solid #E8E6E1; text-align: center; }
     .contact-card .icon { font-size: 28px; margin-bottom: 12px; }
-    .contact-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .contact-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--navy); }
     .contact-card p { font-size: 13px; color: var(--text-muted); }
     .contact-card a { color: var(--accent); font-weight: 600; }
 
-    footer { padding: 40px 0; border-top: 1px solid #E8E5E0; }
+    /* CTA */
+    .cta-section { padding: 64px 0; text-align: center; }
+    .cta-box { background: var(--surface); border: 1px solid #E8E6E1; border-radius: 20px; padding: 48px 40px; max-width: 700px; margin: 0 auto; box-shadow: 0 4px 24px rgba(0,0,0,.04); }
+    .cta-box h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 12px; color: var(--navy); }
+    .cta-box p { color: var(--text-muted); font-size: 15px; margin-bottom: 24px; }
+
+    footer { padding: 40px 0; border-top: 1px solid #E8E6E1; background: var(--surface); }
     footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    footer p { font-size: 12px; color: var(--text-dim); } footer a { color: var(--text-muted); transition: color 0.2s; } footer a:hover { color: var(--accent); }
+    footer p { font-size: 12px; color: var(--text-dim); }
+    footer a { color: var(--text-muted); } footer a:hover { color: var(--accent); }
+
+    /* Hamburger */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger svg { width: 24px; height: 24px; stroke: var(--navy); }
 
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; }
-      .method-grid { grid-template-columns: 1fr; }
-      .nav-links a:not(.nav-cta) { display: none; }
+      .ach-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--surface); flex-direction: column; padding: 16px 24px; gap: 12px; border-bottom: 1px solid #E8E6E1; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+      .nav-links.active { display: flex; }
+      .hamburger { display: block; }
+      .page-header h1 { font-size: 32px; }
     }
   </style>
 </head>
 <body>
 
+  <div class="top-bar">
+    <div class="container">
+      <a href="tel:+4528111514">+45 2811 1514</a>
+      <span>|</span>
+      <a href="mailto:steven.wensley@gmail.com">steven.wensley@gmail.com</a>
+    </div>
+  </div>
+
   <nav>
     <div class="container">
       <a href="index.html" class="logo">Byg<span>Med</span>AI</a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <div class="nav-links">
         <a href="services.html">Tjenester</a>
         <a href="priser.html">Priser</a>
         <a href="ai-assistent.html">AI-Assistent</a>
         <a href="blog.html">Blog</a>
         <a href="om.html" class="active">Om os</a>
-        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta" onclick="gtag('event','calendly_click',{event_category:'navigation',event_label:'nav_cta'});">Book et møde</a>
       </div>
     </div>
   </nav>
 
+  <!-- Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Mennesket bag maskinen</h1>
-      <p>AI bygger. Mennesker rådgiver. Ærlighed driver os.</p>
+      <div class="label">Grundlægger, BygMedAI</div>
+      <h1>Steven Seidenfaden <span class="highlight">Wensley</span></h1>
+      <p>Senior Program & Transition Manager med 18+ års erfaring i regulerede industrier. Dansk/britisk, bosat i København. Jeg bruger min erfaring fra pharma, finans og kritisk infrastruktur til at bygge bedre digitale løsninger.</p>
     </div>
   </section>
 
-  <section class="about">
+  <!-- About intro -->
+  <section class="about-intro">
     <div class="container">
       <div class="about-grid">
         <div class="about-card">
-          <div class="about-avatar"><img src="assets/steven-wensley.jpg" alt="Steven Wensley — grundlægger af BygMedAI" onerror="this.style.display='none';this.parentElement.innerHTML='SW';"></div>
+          <div class="about-avatar"><img src="assets/steven-wensley.jpg" alt="Steven Wensley" onerror="this.style.display='none';this.parentElement.innerHTML='SW';"></div>
           <h3>Steven Wensley</h3>
-          <div class="title">Grundlægger, BygMedAI</div>
-          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">Dansk/britisk, bosat på Islands Brygge i København. Far til fire. Senior konsulent med 18+ års erfaring i programledelse, digital transformation og AI-implementering i pharma, finans og tech. Når jeg ikke bygger hjemmesider, løber jeg langs havnen eller forsøger at følge med mine børn.</p>
+          <div class="title">Senior Program Manager</div>
+          <div class="subtitle">MA i Historie, KU · Dansk/britisk<br>København, Danmark</div>
           <div class="links">
             <a href="https://stevenwensley.com" target="_blank">stevenwensley.com</a>
             <a href="https://linkedin.com/in/stevenwensley" target="_blank">LinkedIn</a>
@@ -131,106 +227,262 @@
         </div>
         <div class="about-text">
           <h2>Hvorfor BygMedAI?</h2>
-          <p>Jeg har bygget min egen hjemmeside — <strong>stevenwensley.com</strong> — med præcis de samme AI-værktøjer jeg tilbyder jer. 9 sider, 5 interaktive tools, deployed og vedligeholdt med AI.</p>
-          <p>Det fungerer. Det er hurtigere. Det er billigere. Og kvaliteten er professionel.</p>
-          <p>Små virksomheder fortjener <strong>professionelle hjemmesider uden professionelle priser</strong>. Ved at bruge AI åbent og ærligt kan vi levere det — med fuld dokumentation, så du aldrig er låst til os.</p>
-          <p>Jeg har <strong>18+ års erfaring</strong> med programledelse i pharma, finans og teknologi. Jeg forstår forretning, ikke kun kode. Det betyder at din side ikke bare ser godt ud — den understøtter dine mål.</p>
-          <p>BygMedAI er ikke et traditionelt bureau. Det er en ny model: <strong>AI som værktøj, mennesker som rådgivere, ærlighed som princip.</strong></p>
+          <p>Med <strong>18+ års erfaring</strong> som programleder i regulerede miljøer — pharma, finans, sundhed og kritisk infrastruktur — har jeg altid arbejdet med komplekse transformationsprojekter, hvor struktur, kvalitet og compliance er afgørende.</p>
+          <p>BygMedAI er født af den erfaring. Jeg bruger AI som et <strong>professionelt værktøj</strong> — ligesom jeg har brugt PRINCE2, SAFe og agile metoder til at styre programmer for Novo Nordisk, LEO Pharma, TDC og Danmarks største finansielle IT-leverandører.</p>
+          <p>Resultatet er en <strong>ny model</strong>: Professionelle hjemmesider bygget hurtigere og billigere, med fuld dokumentation og overdragelse. Ingen hemmeligheder, ingen vendor lock-in.</p>
+          <p>Jeg har bygget min egen hjemmeside — <strong>stevenwensley.com</strong> — med præcis de samme metoder og værktøjer. 9 sider, 5 interaktive tools, hostet gratis. Det er min proof of concept.</p>
+          <p style="margin-top: 20px;">
+            <strong>Advisory Board Member</strong> i en schweizisk AI-startup (AI Governance & Compliance)<br>
+            <strong>Grundlægger</strong> af Xin Consult (freelance-konsulent siden 2019)
+          </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Key achievements -->
+  <section class="achievements">
+    <div class="container">
+      <h2>Nøgletal fra karrieren</h2>
+      <div class="ach-grid">
+        <div class="ach-card">
+          <div class="number">6M</div>
+          <p>DKK under budget på et 33M datacenter-program (Nuuday/TDC)</p>
+        </div>
+        <div class="ach-card">
+          <div class="number">0</div>
+          <p>Uplanlagt nedetid under reguleret pharma-transition (NNE/Novo Nordisk)</p>
+        </div>
+        <div class="ach-card">
+          <div class="number">29</div>
+          <p>Samtidige infrastruktur- og compliance-projekter (LEO Pharma)</p>
+        </div>
+        <div class="ach-card">
+          <div class="number">4</div>
+          <p>Lande i global IT carve-out (NNIT / Novo Nordisk IT)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional experience -->
+  <section class="experience">
+    <div class="container">
+      <h2>Professionel erfaring</h2>
+      <p class="sub">Et udvalg af mine seneste roller i regulerede industrier.</p>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Apr 2025 — Okt 2025</div>
+          <h4>Senior Transition & Program Manager</h4>
+          <div class="company">Mindcore (via Xin Consult) · København</div>
+          <div class="desc">Datacenter-migration for Semler Group. AD Tiering & NIS2-compliance for Region Hovedstaden. Vendor-analyse for AJ Vaccines (pharma/GxP).</div>
+          <div class="tags"><span>NIS2</span><span>GxP</span><span>Hybrid Cloud</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Jan 2024 — Dec 2024</div>
+          <h4>Senior Transition Manager</h4>
+          <div class="company">Nuuday / TDC Group · København</div>
+          <div class="desc">Ledte mainframe- og datacenter-transition fra KMD til Kyndryl. DKK 33M budget — leveret DKK 6M under budget. 50+ tekniske ressourcer på tværs af leverandører.</div>
+          <div class="tags"><span>Mainframe</span><span>DKK 33M</span><span>Multi-vendor</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Jun 2023 — Dec 2023</div>
+          <h4>Senior Transition Manager — Reguleret Infrastruktur</h4>
+          <div class="company">NNE (Novo Nordisk Engineering) · København</div>
+          <div class="desc">End-to-end infrastruktur-transition i fuldt GxP-reguleret pharma-miljø (SCADA, MES, PAS-X). Nul uplanlagt nedetid. EU GMP Annex 11 og GAMP 5 compliance.</div>
+          <div class="tags"><span>GxP</span><span>SCADA</span><span>Zero Downtime</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Jan 2023 — Maj 2023</div>
+          <h4>Program Manager — Infrastruktur & Compliance</h4>
+          <div class="company">LEO Pharma · København</div>
+          <div class="desc">29 samtidige infrastruktur- og compliance-projekter. Carbon Black endpoint security rollout. Struktureret programstyring med GxP-compliance i alle leverancer.</div>
+          <div class="tags"><span>29 projekter</span><span>GxP</span><span>Security</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Jun 2022 — Dec 2022</div>
+          <h4>Senior Program Manager — Global Carve-Out</h4>
+          <div class="company">NNIT (Novo Nordisk IT) · København + Global</div>
+          <div class="desc">Global IT carve-out på tværs af 4 lande (DK, US, CN, CZ) og 9 parallelle workstreams. Program governance for 70+ stakeholders.</div>
+          <div class="tags"><span>4 lande</span><span>Life Science</span><span>Carve-out</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Mar 2021 — Okt 2021</div>
+          <h4>Senior Transition Manager — Financial Services</h4>
+          <div class="company">BEC Financial Technologies · København</div>
+          <div class="desc">Datacenter-migration for Danmarks største finansielle IT-leverandør (70+ banker). Mainframe, midrange og distribuerede systemer. PCI-DSS og DORA compliance.</div>
+          <div class="tags"><span>70+ banker</span><span>PCI-DSS</span><span>DORA</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Sep 2020 — Feb 2021</div>
+          <h4>Senior Program Manager — Turnaround</h4>
+          <div class="company">Tata Consultancy Services (TCS) · København</div>
+          <div class="desc">Hentet ind for at redde et fejlslagent kritisk program for en stor offentlig kunde. Omstrukturerede 16 teams på tværs af 4 lande. Genskabte tillid på C-level.</div>
+          <div class="tags"><span>Turnaround</span><span>16 teams</span><span>Crisis</span></div>
+        </div>
+
+        <div class="tl-earlier">
+          <h4>Tidligere karriere (2006 — 2019)</h4>
+          <p>Program Manager hos KMD (offentlig sektor IT). IT Transition Manager hos CSC/DXC Technology (internationale infrastruktur-transitioner). Service Delivery & Operations Management hos NNIT, TDC og Atos Origin.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Core competencies -->
+  <section class="competencies">
+    <div class="container">
+      <h2>Kernekompetencer</h2>
+      <div class="comp-grid">
+        <div class="comp-item"><div class="dot"></div>IT Infrastructure Transformation</div>
+        <div class="comp-item"><div class="dot"></div>GxP / CSV / Pharma Compliance</div>
+        <div class="comp-item"><div class="dot"></div>NIS2, ISO27001, DORA, PCI-DSS</div>
+        <div class="comp-item"><div class="dot"></div>Datacenter Migration</div>
+        <div class="comp-item"><div class="dot"></div>Multi-Vendor Governance</div>
+        <div class="comp-item"><div class="dot"></div>Crisis & Turnaround Management</div>
+        <div class="comp-item"><div class="dot"></div>Cloud Transition (Azure, Hybrid)</div>
+        <div class="comp-item"><div class="dot"></div>SCADA / MES / PAS-X</div>
+        <div class="comp-item"><div class="dot"></div>C-Level Stakeholder Management</div>
+        <div class="comp-item"><div class="dot"></div>AI Governance & EU AI Act</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certs">
+    <div class="container">
+      <h2>Certificeringer</h2>
+      <div class="cert-grid">
+        <div class="cert-item">
+          <div><div class="name">PRINCE2 Practitioner</div><div class="org">APMG / Axelos</div></div>
+          <div class="year">2012</div>
+        </div>
+        <div class="cert-item">
+          <div><div class="name">PMI PMP</div><div class="org">Project Management Institute</div></div>
+          <div class="year">2014</div>
+        </div>
+        <div class="cert-item">
+          <div><div class="name">Professional Scrum Master I</div><div class="org">Scrum.org</div></div>
+          <div class="year">2020</div>
+        </div>
+        <div class="cert-item">
+          <div><div class="name">SAFe 5.0 Agilist</div><div class="org">Scaled Agile</div></div>
+          <div class="year">2021</div>
+        </div>
+        <div class="cert-item">
+          <div><div class="name">Scrum Product Owner I (PSPO I)</div><div class="org">Scrum.org</div></div>
+          <div class="year">2021</div>
+        </div>
+        <div class="cert-item">
+          <div><div class="name">Scaled Professional Scrum</div><div class="org">Scrum.org</div></div>
+          <div class="year">2021</div>
+        </div>
+        <div class="cert-item">
+          <div><div class="name">Professional Agile Leadership I</div><div class="org">Scrum.org</div></div>
+          <div class="year">2021</div>
+        </div>
+      </div>
+      <div class="cert-pursuing">
+        <p>Under uddannelse: EU AI Act & ISO/IEC 42001 Lead Implementer + NIS2 Lead Implementer (PECB, 2026)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry expertise -->
+  <section class="industries">
+    <div class="container">
+      <h2>Brancheerfaring</h2>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="icon">💊</div>Life Science & Pharma</div>
+        <div class="ind-item"><div class="icon">🏥</div>Sundhed & Hospitaler</div>
+        <div class="ind-item"><div class="icon">🏦</div>Finans & Banking</div>
+        <div class="ind-item"><div class="icon">🏛️</div>Offentlig Sektor</div>
+        <div class="ind-item"><div class="icon">⚡</div>Kritisk Infrastruktur</div>
+        <div class="ind-item"><div class="icon">📡</div>Telekommunikation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values / principles -->
   <section class="values">
     <div class="container">
-      <h2>Vores principper</h2>
+      <h2>BygMedAI's principper</h2>
       <div class="values-grid">
         <div class="value-card">
           <div class="icon">🔍</div>
           <h3>Radikal transparens</h3>
-          <p>Vi fortæller præcis hvad der er bygget med AI og hvad der er lavet af mennesker. Ingen "magiske" processer — bare ærligt arbejde med moderne værktøjer.</p>
+          <p>Vi fortæller præcis hvad der er bygget med AI og hvad der er lavet af mennesker. Ingen "magiske" processer.</p>
         </div>
         <div class="value-card">
           <div class="icon">🔓</div>
           <h3>Dit ejerskab, altid</h3>
-          <p>Du ejer alt vi laver. Kode, design, dokumentation. Vi bygger med standard-teknologier du kan tage med overalt. Ingen vendor lock-in, nogensinde.</p>
+          <p>Du ejer alt vi laver. Kode, design, dokumentation. Ingen vendor lock-in, nogensinde.</p>
         </div>
         <div class="value-card">
           <div class="icon">🤝</div>
           <h3>Fair priser, fast aftale</h3>
-          <p>Fast pris fra start. Ingen timeregnskab der løber, ingen "scope creep"-tillæg. Du ved hvad du betaler inden vi starter.</p>
+          <p>Fast pris fra start. Ingen timeregnskab der løber, ingen overraskelser.</p>
         </div>
         <div class="value-card">
           <div class="icon">📦</div>
           <h3>Overdragelse, ikke afhængighed</h3>
-          <p>Vores mål er at gøre dig uafhængig af os. Fuld dokumentation, hosting-guide og træning — så du kan klare dig selv eller bruge hvem du vil.</p>
+          <p>Vores mål er at gøre dig uafhængig. Fuld dokumentation og hosting-guide inkluderet.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="method">
-    <div class="container">
-      <h2>Sådan bruger vi AI</h2>
-      <p>Her er vores faktiske workflow — ingen hemmeligheder.</p>
-      <div class="method-grid">
-        <div class="method-item">
-          <h4>🧠 Menneske: Strategi</h4>
-          <p>Vi taler med dig om din forretning, dine mål og din målgruppe. Vi definerer struktur, tone og indhold.</p>
-        </div>
-        <div class="method-item">
-          <h4>🤖 AI: Kode-generation</h4>
-          <p>Claude Cowork bygger HTML, CSS og JavaScript baseret på vores specifikationer. Hurtigere end manuelt, med konsistent kvalitet.</p>
-        </div>
-        <div class="method-item">
-          <h4>🧠 Menneske: Kvalitetssikring</h4>
-          <p>Vi gennemgår al kode, tester på alle enheder og sikrer at alt fungerer perfekt.</p>
-        </div>
-        <div class="method-item">
-          <h4>🤖 AI: Dokumentation</h4>
-          <p>AI genererer teknisk dokumentation, design-guide og hosting-vejledning — kommenteret og struktureret.</p>
-        </div>
-        <div class="method-item">
-          <h4>🧠 Menneske: Feedback-runder</h4>
-          <p>Du ser resultatet, giver feedback, og vi justerer. Op til 2 runder inkluderet i prisen.</p>
-        </div>
-        <div class="method-item">
-          <h4>🤖 + 🧠 Overdragelse</h4>
-          <p>Vi overdrager alt: kode, docs, hosting-guide. Og hvis du vil, sætter vi din egen AI-assistent op til fremtiden.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- Contact -->
   <section class="contact" id="kontakt">
     <div class="container">
       <h2>Kontakt</h2>
       <div class="contact-grid">
         <div class="contact-card">
-          <div class="icon">📧</div>
+          <div class="icon">✉️</div>
           <h4>Email</h4>
           <p><a href="mailto:steven.wensley@gmail.com">steven.wensley@gmail.com</a></p>
         </div>
         <div class="contact-card">
           <div class="icon">📞</div>
           <h4>Telefon</h4>
-          <p><a href="tel:+4553886061">+45 5388 6061</a></p>
+          <p><a href="tel:+4528111514">+45 2811 1514</a></p>
         </div>
         <div class="contact-card">
           <div class="icon">📅</div>
           <h4>Book et møde</h4>
-          <p><a href="https://calendly.com/steven-wensley/30min" target="_blank">Calendly (30 min, gratis)</a></p>
+          <p><a href="https://calendly.com/steven-wensley/30min" target="_blank" onclick="gtag('event','calendly_click',{event_category:'contact',event_label:'om_page'});">Calendly (30 min, gratis)</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="icon">🌐</div>
+          <h4>Sprog</h4>
+          <p>Dansk (modermål)<br>Engelsk (tosprog)<br>Skandinavisk</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="padding: 60px 0; text-align: center;">
+  <!-- CTA -->
+  <section class="cta-section">
     <div class="container">
-      <div style="background: linear-gradient(135deg, var(--accent-bg), #2B7A6F08); border: 1px solid #2B7A6F44; border-radius: 20px; padding: 48px 40px; max-width: 700px; margin: 0 auto;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 12px;">Lad os tale om din hjemmeside</h2>
-        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 24px;">30 minutter, ingen binding, ingen salgstrick. Bare en ærlig samtale om hvad du har brug for.</p>
-        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary">Book gratis samtale →</a>
+      <div class="cta-box">
+        <h2>Lad os tale om dit projekt</h2>
+        <p>30 minutter, ingen binding, ingen salgstrick. Bare en ærlig samtale om hvad du har brug for.</p>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary" onclick="gtag('event','calendly_click',{event_category:'cta',event_label:'om_bottom'});">Book gratis samtale →</a>
       </div>
     </div>
   </section>
@@ -238,7 +490,7 @@
   <footer>
     <div class="container">
       <p>&copy; 2026 BygMedAI — Et projekt af <a href="https://stevenwensley.com" target="_blank">Steven Wensley</a></p>
-      <p><a href="services.html">Tjenester</a> &nbsp;·&nbsp; <a href="priser.html">Priser</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a></p>
+      <p><a href="om.html">Om os</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a> &nbsp;·&nbsp; <a href="https://stevenwensley.com" target="_blank">stevenwensley.com</a></p>
     </div>
   </footer>
 
