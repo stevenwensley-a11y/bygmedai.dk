@@ -21,11 +21,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #F7F7F5; --surface: #FFFFFF; --surface2: #EFEEE9;
+      --bg: #FFFFFF; --surface: #FFFFFF; --surface2: #F5F5F3;
       --accent: #1B5E54; --accent-light: #247A6D; --accent-bg: #1B5E5410;
-      --navy: #1A2332; --navy-light: #243040;
-      --text: #1A2332; --text-muted: #4A5568; --text-dim: #8896A6;
-      --warm: #D4956A;
+      --navy: #0F1923; --navy-light: #1A2836;
+      --text: #0F1923; --text-muted: #4A5568; --text-dim: #8896A6;
+      --green: #38A169; --warm: #D4956A;
       --radius: 12px; --max-w: 1100px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,21 +33,19 @@
     a { color: inherit; text-decoration: none; }
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
-    /* Top bar */
-    .top-bar { background: var(--navy); color: #fff; font-size: 13px; padding: 8px 0; text-align: center; }
-    .top-bar a { color: #fff; font-weight: 500; }
-    .top-bar span { margin: 0 10px; opacity: .4; }
+    /* Top bar - hidden, info moved to footer */
+    .top-bar { display: none; }
 
     /* Nav */
-    nav { padding: 16px 0; border-bottom: 1px solid #E8E6E1; position: sticky; top: 0; background: var(--surface); z-index: 100; }
+    nav { padding: 16px 0; border-bottom: none; position: sticky; top: 0; background: var(--navy); z-index: 100; }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 20px; font-weight: 800; color: var(--navy); } .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 28px; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-links a.active { color: var(--accent); font-weight: 700; }
-    .nav-cta { background: var(--accent) !important; color: #fff !important; padding: 10px 22px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
-    .nav-cta:hover { background: var(--accent-light) !important; }
+    .logo { font-size: 20px; font-weight: 800; color: #FFFFFF; } .logo span { color: var(--accent-light); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: #94A3B8; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #FFFFFF; }
+    .nav-links a.active { color: #FFFFFF; font-weight: 700; }
+    .nav-cta { background: #FFFFFF !important; color: var(--navy) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .nav-cta:hover { background: #F0F0F0 !important; }
 
     .btn-primary { background: var(--accent); color: #fff; padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; }
     .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(27,94,84,.2); }
@@ -155,10 +153,10 @@
     .cta-box h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 12px; color: var(--navy); }
     .cta-box p { color: var(--text-muted); font-size: 15px; margin-bottom: 24px; }
 
-    footer { padding: 40px 0; border-top: 1px solid #E8E6E1; background: var(--surface); }
+    footer { padding: 40px 0; background: var(--navy); border-top: none; }
     footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    footer p { font-size: 12px; color: var(--text-dim); }
-    footer a { color: var(--text-muted); } footer a:hover { color: var(--accent); }
+    footer p { font-size: 12px; color: #64748B; }
+    footer a { color: #94A3B8; } footer a:hover { color: #FFFFFF; }
 
     /* Hamburger */
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
@@ -188,7 +186,7 @@
     <div class="container">
       <a href="index.html" class="logo">Byg<span>Med</span>AI</a>
       <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <div class="nav-links">
         <a href="services.html">Tjenester</a>
@@ -196,6 +194,7 @@
         <a href="ai-assistent.html">AI-Assistent</a>
         <a href="blog.html">Blog</a>
         <a href="om.html" class="active">Om os</a>
+        <a href="briefing.html">Briefing</a>
         <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta" onclick="gtag('event','calendly_click',{event_category:'navigation',event_label:'nav_cta'});">Book et møde</a>
       </div>
     </div>

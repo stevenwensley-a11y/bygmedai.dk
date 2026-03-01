@@ -20,19 +20,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg: #FAFAF8; --surface: #FFFFFF; --surface2: #F5F2EE; --accent: #2B7A6F; --accent-light: #38917F; --accent-bg: #2B7A6F12; --text: #2D3748; --text-muted: #718096; --text-dim: #A0AEC0; --green: #38A169; --blue: #3B82F6; --radius: 12px; --max-w: 1100px; }
+    :root { --bg: #FFFFFF; --surface: #FFFFFF; --surface2: #F5F5F3; --accent: #1B5E54; --accent-light: #247A6D; --accent-bg: #1B5E5410; --navy: #0F1923; --navy-light: #1A2836; --text: #0F1923; --text-muted: #4A5568; --text-dim: #8896A6; --green: #38A169; --blue: #3B82F6; --red: #EF4444; --warm: #D4956A; --radius: 12px; --max-w: 1100px; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
-    nav { padding: 20px 0; border-bottom: 1px solid #E8E5E0; position: sticky; top: 0; background: var(--bg); z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    nav { padding: 16px 0; border-bottom: none; position: sticky; top: 0; background: var(--navy); z-index: 100; }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 20px; font-weight: 800; } .logo span { color: var(--accent); }
+    .logo { font-size: 20px; font-weight: 800; color: #FFFFFF; } .logo span { color: var(--accent-light); }
     .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; } .nav-links a:hover { color: var(--accent); } .nav-links a.active { color: var(--accent); }
-    .nav-cta { background: var(--accent) !important; color: #FFFFFF !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), #236860); color: #FFFFFF; padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #2B7A6F33; }
+    .nav-links a { font-size: 14px; color: #94A3B8; font-weight: 500; transition: color 0.2s; } .nav-links a:hover { color: #FFFFFF; } .nav-links a.active { color: #FFFFFF; font-weight: 700; }
+    .nav-cta { background: #FFFFFF !important; color: var(--navy) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .nav-cta:hover { background: #F0F0F0 !important; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #0D4A42); color: #FFFFFF; padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #1B5E5433; }
     .btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; display: inline-block; transition: all 0.2s; }
     .btn-outline:hover { background: var(--accent-bg); }
 
@@ -70,9 +71,9 @@
     .faq-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; cursor: pointer; }
     .faq-item p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-    footer { padding: 40px 0; border-top: 1px solid #E8E5E0; }
+    footer { padding: 40px 0; background: var(--navy); border-top: none; }
     footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    footer p { font-size: 12px; color: var(--text-dim); } footer a { color: var(--text-muted); transition: color 0.2s; } footer a:hover { color: var(--accent); }
+    footer p { font-size: 12px; color: #64748B; } footer a { color: #94A3B8; } footer a:hover { color: #FFFFFF; }
 
     @media (max-width: 768px) {
       .price-table { font-size: 12px; }
@@ -92,6 +93,7 @@
         <a href="ai-assistent.html">AI-Assistent</a>
         <a href="blog.html">Blog</a>
         <a href="om.html">Om os</a>
+        <a href="briefing.html">Briefing</a>
         <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a>
       </div>
     </div>
@@ -107,7 +109,7 @@
   <!-- Lanceringstilbud mini-banner -->
   <section style="padding: 0 0 32px;">
     <div class="container">
-      <div style="background: linear-gradient(135deg, #2B7A6F12, #2B7A6F06); border: 2px solid var(--accent); border-radius: 16px; padding: 24px 32px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+      <div style="background: linear-gradient(135deg, #1B5E5410, #1B5E5408); border: 2px solid var(--accent); border-radius: 16px; padding: 24px 32px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
         <div style="background: var(--accent); color: #FFFFFF; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 5px 14px; border-radius: 6px; white-space: nowrap;">Lanceringstilbud</div>
         <div style="flex: 1; min-width: 240px;">
           <div style="font-size: 15px; font-weight: 700; color: var(--text);">De første 10 projekter får gratis AI-Assistent Basic + 2 timers konsultation</div>

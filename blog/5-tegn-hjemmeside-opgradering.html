@@ -34,20 +34,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg: #FAFAF8; --surface: #FFFFFF; --surface2: #F5F2EE; --accent: #2B7A6F; --accent-light: #38917F; --accent-bg: #2B7A6F12; --text: #2D3748; --text-muted: #718096; --text-dim: #A0AEC0; --green: #38A169; --red: #EF4444; --radius: 12px; }
+    :root {
+      --bg: #FFFFFF; --surface: #FFFFFF; --surface2: #F5F5F3;
+      --accent: #1B5E54; --accent-light: #247A6D; --accent-bg: #1B5E5410;
+      --navy: #0F1923; --navy-light: #1A2836;
+      --text: #0F1923; --text-muted: #4A5568; --text-dim: #8896A6;
+      --green: #38A169; --blue: #3B82F6; --red: #EF4444;
+      --warm: #D4956A;
+      --radius: 12px; --max-w: 1100px;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
     a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
     .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
     .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    nav { padding: 20px 0; border-bottom: 1px solid #E8E5E0; position: sticky; top: 0; background: var(--bg); z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    nav { padding: 20px 0; border-bottom: 1px solid #E8E5E0; position: sticky; top: 0; background: var(--bg); z-index: 100; }
     nav .container-wide { display: flex; justify-content: space-between; align-items: center; }
     .logo { font-size: 20px; font-weight: 800; color: var(--text); } .logo span { color: var(--accent); }
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a { font-size: 14px; color: var(--text-muted); font-weight: 500; transition: color 0.2s; } .nav-links a:hover { color: var(--accent); text-decoration: none; }
-    .nav-cta { background: var(--accent) !important; color: #FFFFFF !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), #236860); color: #FFFFFF; padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; text-decoration: none; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #2B7A6F33; text-decoration: none; }
+    .nav-cta { background: var(--accent) !important; color: var(--bg) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #0D4A42); color: var(--bg); padding: 14px 36px; border-radius: 12px; font-size: 15px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: all 0.2s; text-decoration: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #1B5E5433; text-decoration: none; }
 
     .article-header { padding: 60px 0 32px; }
     .article-header .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
@@ -72,7 +80,7 @@
     .sign-card .fix { margin-top: 12px; padding-top: 12px; border-top: 1px solid #E2DFD9; font-size: 14px; }
     .sign-card .fix strong { color: var(--green); }
 
-    .checklist { background: var(--accent-bg); border: 1px solid #2B7A6F33; border-radius: 12px; padding: 24px; margin: 32px 0; }
+    .checklist { background: var(--accent-bg); border: 1px solid #1B5E5433; border-radius: 12px; padding: 24px; margin: 32px 0; }
     .checklist h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--accent); }
     .checklist ul { list-style: none; margin: 0; padding: 0; }
     .checklist li { padding: 6px 0; font-size: 15px; display: flex; gap: 10px; line-height: 1.5; }
@@ -90,10 +98,10 @@
     .related-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .related-card p { font-size: 13px; color: var(--text-muted); margin: 0; }
 
-    footer { padding: 40px 0; border-top: 1px solid #E8E5E0; }
+    footer { padding: 40px 0; background: var(--navy); border-top: none; }
     footer .container-wide { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    footer p { font-size: 12px; color: var(--text-dim); }
-    footer a { color: var(--text-muted); transition: color 0.2s; } footer a:hover { color: var(--accent); }
+    footer p { font-size: 12px; color: #64748B; }
+    footer a { color: #94A3B8; } footer a:hover { color: #FFFFFF; }
 
     @media (max-width: 768px) {
       .nav-links a:not(.nav-cta) { display: none; }
@@ -103,14 +111,16 @@
 </head>
 <body>
 
-  <nav>
-    <div class="container-wide">
-      <a href="/" class="logo" style="text-decoration:none;">Byg<span>Med</span>AI</a>
+    <nav>
+    <div class="container">
+      <a href="index.html" class="logo">Byg<span>Med</span>AI</a>
       <div class="nav-links">
-        <a href="/services.html">Tjenester</a>
-        <a href="/priser.html">Priser</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/om.html">Om os</a>
+        <a href="services.html">Tjenester</a>
+        <a href="priser.html">Priser</a>
+        <a href="ai-assistent.html">AI-Assistent</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="om.html">Om os</a>
+        <a href="briefing.html">Briefing</a>
         <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a>
       </div>
     </div>
