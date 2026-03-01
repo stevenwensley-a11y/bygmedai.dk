@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Assistent – Skræddersyet til din virksomhed | BygMedAI</title>
+
+  <meta name="description" content="En skræddersyet AI-assistent (CLAUDE.md) der kender din virksomhed. Blog, social media, emails, FAQ — alt genereres on-brand. Se levende eksempel på vendhjem.dk.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="AI-Assistent – Skræddersyet til din virksomhed | BygMedAI">
+  <meta property="og:description" content="En skræddersyet AI-assistent (CLAUDE.md) der kender din virksomhed. Blog, social media, emails, FAQ — alt genereres on-brand.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bygmedai.dk/ai-assistent.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI-Assistent – Skræddersyet til din virksomhed | BygMedAI">
+  <meta name="twitter:description" content="En skræddersyet AI-assistent (CLAUDE.md) der kender din virksomhed.">
+
+  <link rel="canonical" href="https://bygmedai.dk/ai-assistent.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BZME709L33');
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --surface2: #F5F2EE;
+      --accent: #2B7A6F;
+      --accent-light: #38917F;
+      --accent-bg: rgba(43, 122, 111, 0.07);
+      --text: #2D3748;
+      --text-muted: #718096;
+      --text-dim: #A0AEC0;
+      --green: #38A169;
+      --blue: #3B82F6;
+      --red: #EF4444;
+      --radius: 12px;
+      --max-w: 1100px;
+      --gold: #D4A574;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      border-bottom: 1px solid #E8E5E0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      padding: 0.75rem 1.5rem;
+    }
+
+    .nav-container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.25rem;
+    }
+
+    .nav-cta {
+      background-color: var(--accent);
+      color: white !important;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-cta:hover {
+      background-color: var(--accent-light);
+      color: white !important;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .nav-cta {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--accent-bg);
+      color: var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .hero h1 .gold {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 1rem 1.8rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(43, 122, 111, 0.2);
+    }
+
+    .btn-secondary {
+      background-color: var(--surface);
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-bg);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 2.5rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    /* What is Claude.md Section */
+    .claude-md-section {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 4rem 1.5rem;
+      background-color: var(--surface);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--text);
+    }
+
+    .claude-md-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .claude-md-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .claude-md-content p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .stat-boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .stat-box {
+      background-color: var(--accent-bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .stat-box .number {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .stat-box .label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .claude-md-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-boxes {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Demo Section */
+    .demo-section {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 4rem 1.5rem;
+      background-color: var(--bg);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .demo-card {
+      background-color: var(--surface);
+      padding: 2rem;
+      border-radius: var(--radius);
+      border: 1px solid #E8E5E0;
+      transition: all 0.3s ease;
+    }
+
+    .demo-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+
+    .demo-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent-bg);
+      border-radius: var(--radius);
+    }
+
+    .demo-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .demo-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .demo-tag {
+      display: inline-block;
+      background-color: var(--accent-bg);
+      color: var(--accent);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .demo-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .demo-link:hover {
+      color: var(--accent-light);
+    }
+
+    @media (max-width: 768px) {
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* How It Works Section */
+    .how-it-works {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 4rem 1.5rem;
+      background-color: var(--surface);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      background-color: var(--accent);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0 auto 1.5rem;
+    }
+
+    .step-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent-bg);
+      border-radius: var(--radius);
+    }
+
+    .step h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .step p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Case Study Section */
+    .case-study {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 4rem 1.5rem;
+      background-color: var(--bg);
+    }
+
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .case-study-image {
+      background: linear-gradient(135deg, #3E524F 0%, #5A7A6A 100%);
+      border-radius: var(--radius);
+      padding: 2rem;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .case-study-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .case-study-role {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .case-study-intro {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .case-study-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .case-study-features li {
+      padding: 0.75rem 0;
+      color: var(--text);
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .case-study-features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .case-study-quote {
+      background-color: var(--surface);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .case-study-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .case-study-link:hover {
+      color: var(--accent-light);
+    }
+
+    @media (max-width: 768px) {
+      .case-study-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study-image {
+        aspect-ratio: auto;
+        min-height: 300px;
+      }
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 4rem 1.5rem;
+      background-color: var(--surface);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .pricing-card {
+      background-color: var(--bg);
+      border: 1px solid #E8E5E0;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(43, 122, 111, 0.15);
+      transform: scale(1.05);
+    }
+
+    .pricing-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .pricing-price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-subtext {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      padding: 0.75rem 0;
+      color: var(--text);
+      border-bottom: 1px solid #E8E5E0;
+      font-size: 0.95rem;
+    }
+
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-card .btn {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-card.featured {
+        transform: none;
+      }
+    }
+
+    /* Use Cases Section */
+    .use-cases-section {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 4rem 1.5rem;
+      background-color: var(--bg);
+    }
+
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .use-case {
+      background-color: var(--surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid #E8E5E0;
+    }
+
+    .use-case h4 {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .use-case p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .use-cases-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Final CTA Section */
+    .final-cta {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 4rem 1.5rem;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      border-radius: var(--radius);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .final-cta p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .final-cta .btn-primary {
+      background-color: white;
+      color: var(--accent);
+    }
+
+    .final-cta .btn-primary:hover {
+      background-color: #F5F5F5;
+    }
+
+    /* Footer */
+    footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid #E8E5E0;
+      margin-top: 4rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--accent-light);
+    }
+
+    /* SVG Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Byg<span>Med</span>AI</a>
+      <ul class="nav-links">
+        <li><a href="services.html">Tjenester</a></li>
+        <li><a href="priser.html">Priser</a></li>
+        <li><a href="ai-assistent.html" class="active">AI-Assistent</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="om.html">Om os</a></li>
+        <li><a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta">Book et møde</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="badge">🤖 Ny tilkøbsservice</div>
+    <h1>Din virksomhed — i <span class="gold">Claudes</span> hænder</h1>
+    <p>En skræddersyet AI-assistent der allerede kender din virksomhed. Brand, tone, ydelser, kunder — alt er med. Du skriver prompts, Claude leverer on-brand indhold.</p>
+    <div class="hero-buttons">
+      <a href="#claude-md" class="btn btn-primary">Se levende eksempel ↓</a>
+      <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn btn-secondary">Book en samtale</a>
+    </div>
+  </section>
+
+  <!-- What is Claude.md Section -->
+  <section class="claude-md-section" id="claude-md">
+    <h2 class="section-title">Hvad er CLAUDE.md?</h2>
+
+    <div class="claude-md-grid">
+      <div>
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Document icon -->
+          <rect x="30" y="20" width="140" height="160" fill="none" stroke="#2B7A6F" stroke-width="3" rx="8"/>
+          <line x1="50" y1="50" x2="150" y2="50" stroke="#2B7A6F" stroke-width="2"/>
+          <line x1="50" y1="75" x2="150" y2="75" stroke="#2B7A6F" stroke-width="2"/>
+          <line x1="50" y1="100" x2="130" y2="100" stroke="#2B7A6F" stroke-width="2"/>
+          <line x1="50" y1="125" x2="140" y2="125" stroke="#2B7A6F" stroke-width="2"/>
+          <line x1="50" y1="150" x2="120" y2="150" stroke="#2B7A6F" stroke-width="2"/>
+          <!-- Arrow to brain -->
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+              <polygon points="0 0, 10 3, 0 6" fill="#2B7A6F" />
+            </marker>
+          </defs>
+        </svg>
+      </div>
+      <div class="claude-md-content">
+        <h3>En instruktionsfil der bygger AI</h3>
+        <p>CLAUDE.md er en kompakt tekstfil (under 150 linjer) som du uploader til Claude. Den siger til Claude hvem du er, hvad dine ydelser er, hvordan du snakker, og hvem dine kunder er.</p>
+        <p>Resultatet? En AI-assistent der fungerer som din virtuelt medarbejder — uden API'er, uden kodning, uden dyre værktøjer.</p>
+      </div>
+    </div>
+
+    <div class="stat-boxes">
+      <div class="stat-box">
+        <div class="number">Under 150 linjer</div>
+        <div class="label">kompakt & letlæst</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">Klar på 2 timer</div>
+        <div class="label">inkl. opsætning</div>
+      </div>
+      <div class="stat-box">
+        <div class="number">Virker med gratis Claude</div>
+        <div class="label">ingen ekstra udgifter</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section class="demo-section">
+    <h2 class="section-title">Hvad kan den bygge?</h2>
+
+    <div class="demo-grid">
+      <!-- Card 1: Content Generation -->
+      <div class="demo-card">
+        <div class="demo-tag">Content Generation</div>
+        <div class="demo-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
+            <path d="M15 10 L45 10 L45 50 L15 50 Z" fill="none" stroke="#2B7A6F" stroke-width="2"/>
+            <line x1="20" y1="20" x2="40" y2="20" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="20" y1="28" x2="40" y2="28" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="20" y1="36" x2="35" y2="36" stroke="#2B7A6F" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Blogartikler i din stemme</h3>
+        <p>2 artikler skrevet i Lai Ydes tone — Integral Teori for ledere og refleksioner fra BuddhiCamp. Indholdet matcher hendes personlighed og ekspertise præcist.</p>
+        <a href="https://vendhjem.dk/blog.html" target="_blank" class="demo-link">Se eksempel →</a>
+      </div>
+
+      <!-- Card 2: Tool Generation -->
+      <div class="demo-card">
+        <div class="demo-tag">Tool Generation</div>
+        <div class="demo-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
+            <circle cx="30" cy="15" r="4" fill="#2B7A6F"/>
+            <circle cx="15" cy="35" r="4" fill="#2B7A6F"/>
+            <circle cx="45" cy="35" r="4" fill="#2B7A6F"/>
+            <circle cx="30" cy="50" r="4" fill="#2B7A6F"/>
+            <line x1="30" y1="19" x2="30" y2="30" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="28" y1="32" x2="17" y2="33" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="32" y1="32" x2="43" y2="33" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="30" y1="39" x2="30" y2="46" stroke="#2B7A6F" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Interaktive værktøjer</h3>
+        <p>En "Find Din Vej"-quiz med 5 spørgsmål der matcher besøgende til den rigtige ydelse. Ren JavaScript, bygget på få minutter via CLAUDE.md.</p>
+        <a href="https://vendhjem.dk/finddinvej.html" target="_blank" class="demo-link">Se eksempel →</a>
+      </div>
+
+      <!-- Card 3: Bulk Content -->
+      <div class="demo-card">
+        <div class="demo-tag">Bulk Content</div>
+        <div class="demo-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
+            <circle cx="30" cy="30" r="20" fill="none" stroke="#2B7A6F" stroke-width="2"/>
+            <line x1="30" y1="12" x2="30" y2="48" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="12" y1="30" x2="48" y2="30" stroke="#2B7A6F" stroke-width="1.5"/>
+            <circle cx="30" cy="30" r="3" fill="#2B7A6F"/>
+          </svg>
+        </div>
+        <h3>30 dages indhold på én gang</h3>
+        <p>30 daglige refleksioner i Lais poetiske stemme. Ny refleksion hver dag, auto-rotation baseret på dato. Ugers arbejde — lavet på minutter.</p>
+        <a href="https://vendhjem.dk/refleksion.html" target="_blank" class="demo-link">Se eksempel →</a>
+      </div>
+
+      <!-- Card 4: Knowledge Structuring -->
+      <div class="demo-card">
+        <div class="demo-tag">Knowledge Structuring</div>
+        <div class="demo-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
+            <rect x="10" y="15" width="40" height="35" fill="none" stroke="#2B7A6F" stroke-width="2" rx="2"/>
+            <line x1="10" y1="25" x2="50" y2="25" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="15" y1="35" x2="20" y2="35" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="15" y1="42" x2="45" y2="42" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="15" y1="48" x2="35" y2="48" stroke="#2B7A6F" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>FAQ der besvarer alt</h3>
+        <p>10 BuddhiCamp-spørgsmål struktureret som interaktiv accordion. AI'en forstår virksomhedens viden og formulerer svar i den rigtige tone.</p>
+        <a href="https://vendhjem.dk/agersoe.html" target="_blank" class="demo-link">Se eksempel →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <h2 class="section-title">Sådan fungerer det</h2>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 35px; height: 35px;">
+            <path d="M15 20 L45 20 L50 25 L50 45 C50 47.5 48.5 50 45 50 L15 50 C12.5 50 10 47.5 10 45 L10 25 C10 22.5 12.5 20 15 20 Z" fill="none" stroke="#2B7A6F" stroke-width="2"/>
+            <line x1="20" y1="30" x2="40" y2="30" stroke="#2B7A6F" stroke-width="1.5"/>
+            <line x1="20" y1="38" x2="40" y2="38" stroke="#2B7A6F" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Vi bygger din CLAUDE.md</h3>
+        <p>Vi analyserer din virksomhed, ydelser, tone og kunder og skriver en skræddersyet instruktionsfil.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 35px; height: 35px;">
+            <rect x="12" y="10" width="36" height="25" fill="none" stroke="#2B7A6F" stroke-width="2" rx="2"/>
+            <line x1="12" y1="35" x2="48" y2="35" stroke="#2B7A6F" stroke-width="2"/>
+            <line x1="20" y1="38" x2="25" y2="50" stroke="#2B7A6F" stroke-width="2"/>
+            <line x1="40" y1="38" x2="35" y2="50" stroke="#2B7A6F" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Du åbner Claude</h3>
+        <p>Du uploader CLAUDE.md som projekt-instruktion i claude.ai (gratis) eller Claude desktop.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 35px; height: 35px;">
+            <circle cx="30" cy="30" r="18" fill="none" stroke="#2B7A6F" stroke-width="2"/>
+            <path d="M25 22 Q30 35 35 22" fill="none" stroke="#2B7A6F" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="22" cy="32" r="2" fill="#2B7A6F"/>
+            <circle cx="38" cy="32" r="2" fill="#2B7A6F"/>
+          </svg>
+        </div>
+        <h3>Du skriver prompts</h3>
+        <p>Sig hvad du har brug for — blogindlæg, social media, email, FAQ, opdateringer til din side.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="width: 35px; height: 35px;">
+            <circle cx="30" cy="30" r="18" fill="none" stroke="#2B7A6F" stroke-width="2"/>
+            <path d="M30 15 L35 25 L25 25 Z" fill="#2B7A6F"/>
+            <path d="M30 45 L25 35 L35 35 Z" fill="#2B7A6F"/>
+            <path d="M15 30 L25 35 L25 25 Z" fill="#2B7A6F"/>
+            <path d="M45 30 L35 25 L35 35 Z" fill="#2B7A6F"/>
+          </svg>
+        </div>
+        <h3>Claude leverer on-brand</h3>
+        <p>Claude kender din virksomhed og leverer indhold der matcher din tone, dine farver og dine kunder.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Section -->
+  <section class="case-study">
+    <h2 class="section-title">Levende eksempel</h2>
+
+    <div class="case-study-grid">
+      <div class="case-study-image">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="30" width="160" height="140" fill="none" stroke="white" stroke-width="2" rx="4"/>
+          <rect x="20" y="30" width="160" height="20" fill="rgba(255,255,255,0.2)"/>
+          <text x="100" y="42" text-anchor="middle" fill="white" font-size="10" font-weight="bold">vendhjem.dk</text>
+          <circle cx="100" cy="100" r="30" fill="rgba(255,255,255,0.3)"/>
+          <text x="100" y="105" text-anchor="middle" fill="white" font-size="9" font-weight="bold">AI-Assistent</text>
+        </svg>
+      </div>
+
+      <div class="case-study-content">
+        <h3>Lai Yde — Foredragsholder & Coach</h3>
+        <p class="case-study-role">vendhjem.dk bruger allerede AI-Assistenten</p>
+
+        <ul class="case-study-features">
+          <li>Blog: 2 artikler i Lais stemme</li>
+          <li>Interaktiv quiz: Find Din Vej</li>
+          <li>30 daglige refleksioner: auto-rotation</li>
+          <li>FAQ: 10 spørgsmål + svar</li>
+        </ul>
+
+        <div class="case-study-quote">
+          "Alt indhold er genereret via CLAUDE.md — præcist i min tone og med kendskab til hele min virksomhed."
+        </div>
+
+        <a href="https://vendhjem.dk" target="_blank" class="case-study-link">Besøg vendhjem.dk →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <h2 class="section-title">Priser</h2>
+
+    <div class="pricing-grid">
+      <!-- BASIC -->
+      <div class="pricing-card">
+        <h3>BASIC</h3>
+        <div class="pricing-price">Inkluderet</div>
+        <div class="pricing-subtext">i M/L pakke</div>
+        <ul class="pricing-features">
+          <li>Hjemmeside-specifik CLAUDE.md</li>
+          <li>5 sample prompts</li>
+          <li>Quick-start guide</li>
+          <li>Email-support</li>
+        </ul>
+        <button class="btn btn-secondary" disabled>Inkluderet i pakken</button>
+      </div>
+
+      <!-- PRO -->
+      <div class="pricing-card featured">
+        <h3>PRO</h3>
+        <div class="pricing-price">3.000 kr</div>
+        <div class="pricing-subtext">engangsgebyr</div>
+        <ul class="pricing-features">
+          <li>Alt i Basic</li>
+          <li>Social media prompts</li>
+          <li>Email-skabeloner</li>
+          <li>SEO/blog prompts</li>
+          <li>20 sample prompts</li>
+          <li>1 times oplæring</li>
+        </ul>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn btn-primary">Book en samtale</a>
+      </div>
+
+      <!-- BUSINESS -->
+      <div class="pricing-card">
+        <h3>BUSINESS</h3>
+        <div class="pricing-price">5.000 kr</div>
+        <div class="pricing-subtext">engangsgebyr</div>
+        <ul class="pricing-features">
+          <li>Alt i Pro</li>
+          <li>Konkurrentanalyse</li>
+          <li>Sæsonkalender</li>
+          <li>Tilbuds-/fakturaer</li>
+          <li>AI-chatbot opsætning</li>
+          <li>2 timers oplæring</li>
+        </ul>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn btn-primary">Book en samtale</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="use-cases-section">
+    <h2 class="section-title">10 ting din AI-Assistent kan</h2>
+
+    <div class="use-cases-grid">
+      <div class="use-case">
+        <h4>🌐 Hjemmeside-vedligehold</h4>
+        <p>Opdateringer, nye sektioner, indholdsforbedringer — uden at røre koden.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>✍️ Blog & SEO-indhold</h4>
+        <p>Artikler der ranker, skrevet i din tone med søgeord der konverterer.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>📱 Social media-opslag</h4>
+        <p>LinkedIn, Instagram, Facebook — alt genereret on-brand på sekunder.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>📧 Email-skabeloner</h4>
+        <p>Nyhedsbrev, opfølgning, kampagner — klare til brug uden redigering.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>💬 Kundekommunikation</h4>
+        <p>Svar på henvendelser, FAQ, support-mails — konsistent og professionel tone.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>🎄 Sæsonkampagner</h4>
+        <p>Juletilbud, nye år, sommerkampagner — strategisk og målrettet.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>📄 Tilbud & fakturaer</h4>
+        <p>Personaliserede tilbud og professionelle fakturaer på få minutter.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>🔍 Konkurrentanalyse</h4>
+        <p>Analyse af hvad andre gør — og hvordan du differentierer dig.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>🌍 Oversættelse</h4>
+        <p>Flydende tekstoversættelse til andre sprog i din tone.</p>
+      </div>
+
+      <div class="use-case">
+        <h4>🤖 AI-chatbot til din side</h4>
+        <p>FAQ-besvarelse og kundeservice drevet af din CLAUDE.md.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta">
+    <h2>Klar til din egen AI-Assistent?</h2>
+    <p>Book en gratis samtale, så finder vi ud af hvad din virksomhed har brug for.</p>
+    <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn btn-primary">Book et møde</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 BygMedAI — Et projekt af <a href="https://stevenwensley.com" target="_blank">Steven Wensley</a></p>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // GA4 custom event for key interactions
+    function trackEvent(eventName) {
+      if (window.gtag) {
+        gtag('event', eventName);
+      }
+    }
+
+    // Track demo card clicks
+    document.querySelectorAll('.demo-link').forEach(link => {
+      link.addEventListener('click', () => {
+        trackEvent('demo_example_click');
+      });
+    });
+
+    // Track CTA clicks
+    document.querySelectorAll('a[href*="calendly"]').forEach(link => {
+      link.addEventListener('click', () => {
+        trackEvent('calendly_click');
+      });
+    });
+
+    // Track case study link
+    document.querySelector('.case-study-link')?.addEventListener('click', () => {
+      trackEvent('case_study_click');
+    });
+
+    // Add animation on scroll for elements
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.demo-card, .use-case, .pricing-card, .step').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
