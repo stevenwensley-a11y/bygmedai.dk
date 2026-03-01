@@ -43,10 +43,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FAFAF8; --surface: #FFFFFF; --surface2: #F5F2EE;
-      --accent: #2B7A6F; --accent-light: #38917F; --accent-bg: #2B7A6F12;
-      --text: #2D3748; --text-muted: #718096; --text-dim: #A0AEC0;
+      --bg: #F7F7F5; --surface: #FFFFFF; --surface2: #EFEEE9;
+      --accent: #1B5E54; --accent-light: #247A6D; --accent-bg: #1B5E5410;
+      --navy: #1A2332; --navy-light: #243040;
+      --text: #1A2332; --text-muted: #4A5568; --text-dim: #8896A6;
       --green: #38A169; --blue: #3B82F6; --red: #EF4444;
+      --warm: #D4956A;
       --radius: 12px; --max-w: 1100px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -56,7 +58,10 @@
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
     /* Nav */
-    nav { padding: 20px 0; border-bottom: 1px solid #E8E5E0; position: sticky; top: 0; background: var(--bg); z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .top-bar { background: var(--navy); color: #FFFFFF; padding: 6px 0; font-size: 13px; text-align: center; }
+    .top-bar a { color: #FFFFFF; text-decoration: none; font-weight: 500; }
+    .top-bar span { opacity: 0.5; margin: 0 12px; }
+    nav { padding: 20px 0; border-bottom: 1px solid #E0DDD7; position: sticky; top: 0; background: var(--bg); z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
     .logo { font-size: 20px; font-weight: 800; }
     .logo span { color: var(--accent); }
@@ -68,21 +73,21 @@
 
     /* Hero */
     .hero { padding: 100px 0 80px; text-align: center; }
-    .hero-badge { display: inline-flex; gap: 8px; align-items: center; background: var(--accent-bg); border: 1px solid #2B7A6F33; padding: 8px 20px; border-radius: 30px; font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 32px; }
+    .hero-badge { display: inline-flex; gap: 8px; align-items: center; background: var(--accent-bg); border: 1px solid #1B5E5433; padding: 8px 20px; border-radius: 30px; font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 32px; }
     .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); line-height: 1.15; margin-bottom: 20px; }
     .hero h1 .gold { color: var(--accent); }
     .hero p { font-size: 19px; color: var(--text-muted); line-height: 1.6; max-width: 600px; margin: 0 auto 40px; }
     .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), #236860); color: #FFFFFF; padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 700; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #2B7A6F33; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #0D4A42); color: #FFFFFF; padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 700; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #1B5E5433; }
     .btn-secondary { background: transparent; border: 1px solid #D5D0C8; color: var(--text); padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; }
     .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
     /* Stats */
     .stats { display: flex; justify-content: center; gap: 48px; padding: 48px 0; border-top: 1px solid #E8E5E0; border-bottom: 1px solid #E8E5E0; margin: 0; flex-wrap: wrap; }
     .stat { text-align: center; }
-    .stat-num { font-size: 36px; font-weight: 800; color: var(--accent); }
-    .stat-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+    .stat-num { font-size: 36px; font-weight: 800; color: #FFFFFF; }
+    .stat-label { font-size: 13px; color: #8896A6; margin-top: 4px; }
 
     /* Pain Points */
     .pain-points { padding: 80px 0; }
@@ -130,7 +135,7 @@
     .case-browser-url { background: #F5F2EE; border-radius: 6px; padding: 4px 12px; font-size: 11px; color: var(--text-muted); margin-left: 8px; flex: 1; }
     .case-browser-body { padding: 20px; min-height: 200px; display: flex; flex-direction: column; gap: 12px; }
     .case-mockup-line { height: 8px; border-radius: 4px; background: #E2DFD9; }
-    .case-mockup-line.gold { background: linear-gradient(90deg, var(--accent), #236860); width: 60%; }
+    .case-mockup-line.gold { background: linear-gradient(90deg, var(--accent), #0D4A42); width: 60%; }
     .case-mockup-line.short { width: 40%; } .case-mockup-line.med { width: 75%; }
     .case-mockup-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
     .case-mockup-box { height: 48px; border-radius: 6px; background: #E2DFD9; }
@@ -203,7 +208,7 @@
     .infographic h2 { font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; margin-bottom: 16px; }
     .infographic > .container > .subtitle { text-align: center; color: var(--text-muted); font-size: 16px; margin-bottom: 48px; }
     .info-steps { display: flex; flex-direction: column; gap: 0; max-width: 700px; margin: 0 auto; position: relative; }
-    .info-steps::before { content: ''; position: absolute; left: 32px; top: 32px; bottom: 32px; width: 2px; background: linear-gradient(to bottom, var(--accent), #2B7A6F33); }
+    .info-steps::before { content: ''; position: absolute; left: 32px; top: 32px; bottom: 32px; width: 2px; background: linear-gradient(to bottom, var(--accent), #1B5E5433); }
     .info-step { display: flex; gap: 24px; align-items: flex-start; padding: 24px 0; position: relative; }
     .info-step-marker { width: 64px; height: 64px; border-radius: 16px; background: var(--surface); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; z-index: 1; }
     .info-step-content { flex: 1; }
@@ -218,7 +223,7 @@
     /* Launch Offer */
     .launch-offer { padding: 60px 0; background: var(--surface2); }
     .offer-card { background: var(--surface); border: 2px solid var(--accent); border-radius: 20px; padding: 48px 40px; position: relative; overflow: hidden; box-shadow: 0 4px 24px rgba(43,122,111,0.08); }
-    .offer-card::before { content: ''; position: absolute; top: -60%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, #2B7A6F06 0%, transparent 70%); pointer-events: none; }
+    .offer-card::before { content: ''; position: absolute; top: -60%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, #1B5E5406 0%, transparent 70%); pointer-events: none; }
     .offer-badge { display: inline-block; background: var(--accent); color: #FFFFFF; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 6px 16px; border-radius: 6px; margin-bottom: 24px; }
     .offer-content { display: flex; gap: 48px; align-items: flex-start; }
     .offer-text { flex: 1; }
@@ -229,7 +234,7 @@
     .offer-item-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
     .offer-item-title { font-size: 15px; font-weight: 700; margin-bottom: 2px; color: var(--text); }
     .offer-item-desc { font-size: 13px; color: var(--text-muted); }
-    .offer-value { font-size: 14px; color: var(--accent); background: var(--accent-bg); border: 1px solid #2B7A6F22; padding: 10px 16px; border-radius: 8px; display: inline-block; }
+    .offer-value { font-size: 14px; color: var(--accent); background: var(--accent-bg); border: 1px solid #1B5E5422; padding: 10px 16px; border-radius: 8px; display: inline-block; }
     .offer-cta-col { display: flex; flex-direction: column; align-items: center; gap: 16px; min-width: 200px; text-align: center; }
     .offer-spots { display: flex; align-items: center; gap: 12px; background: var(--surface2); border: 1px solid #E2DFD9; border-radius: 12px; padding: 16px 24px; }
     .offer-spots-num { font-size: 42px; font-weight: 800; color: var(--accent); line-height: 1; }
@@ -294,7 +299,7 @@
 
     /* CTA */
     .cta-section { padding: 80px 0; text-align: center; }
-    .cta-box { background: linear-gradient(135deg, var(--accent-bg), #2B7A6F08); border: 1px solid #2B7A6F44; border-radius: 20px; padding: 60px 40px; max-width: 700px; margin: 0 auto; }
+    .cta-box { background: linear-gradient(135deg, var(--accent-bg), #1B5E5408); border: 1px solid #1B5E5444; border-radius: 20px; padding: 60px 40px; max-width: 700px; margin: 0 auto; }
     .cta-box h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 12px; }
     .cta-box p { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; line-height: 1.6; }
 
@@ -306,7 +311,7 @@
     /* Trust / About section */
     .trust-section { padding: 80px 0; background: var(--surface2); }
     .trust-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-    .trust-avatar { width: 96px; height: 96px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #236860); color: #FFFFFF; font-size: 36px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 3px solid var(--surface); box-shadow: 0 4px 16px rgba(43,122,111,0.2); }
+    .trust-avatar { width: 96px; height: 96px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #0D4A42); color: #FFFFFF; font-size: 36px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 3px solid var(--surface); box-shadow: 0 4px 16px rgba(43,122,111,0.2); }
     .trust-inner h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 8px; }
     .trust-role { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 20px; }
     .trust-inner > p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; max-width: 560px; margin-left: auto; margin-right: auto; }
@@ -336,7 +341,7 @@
     .section-warm { position: relative; overflow: hidden; }
     .section-warm::before {
       content: ''; position: absolute; width: 500px; height: 500px;
-      background: radial-gradient(circle, #2B7A6F08 0%, transparent 70%);
+      background: radial-gradient(circle, #1B5E5408 0%, transparent 70%);
       border-radius: 50%; top: -200px; right: -150px; pointer-events: none;
     }
     .section-warm::after {
@@ -382,7 +387,7 @@
     .step-enhanced:last-child::before { display: none; }
     .step-icon-wrap {
       width: 56px; height: 56px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), #236860);
+      background: linear-gradient(135deg, var(--accent), #0D4A42);
       color: #FFFFFF; display: flex; align-items: center; justify-content: center;
       font-size: 22px; margin: 0 auto 14px; position: relative; z-index: 1;
       box-shadow: 0 4px 12px rgba(43,122,111,0.25);
@@ -415,11 +420,11 @@
 
     /* Highlight marker effect — like yellow highlighter pen */
     .highlight {
-      background: linear-gradient(180deg, transparent 55%, #FFD36E 55%, #FFD36E 90%, transparent 90%);
+      background: linear-gradient(180deg, transparent 55%, #1B5E5425 55%, #1B5E5425 90%, transparent 90%);
       padding: 0 4px;
     }
     .highlight-teal {
-      background: linear-gradient(180deg, transparent 55%, #2B7A6F30 55%, #2B7A6F30 90%, transparent 90%);
+      background: linear-gradient(180deg, transparent 55%, #1B5E5430 55%, #1B5E5430 90%, transparent 90%);
       padding: 0 4px;
     }
     .highlight-pink {
@@ -428,16 +433,16 @@
     }
 
     /* Bold full-bleed section backgrounds */
-    .bg-warm-cream { background: #FFF8F0; }
-    .bg-soft-teal { background: #E8F5F2; }
-    .bg-soft-pink { background: #FFF0F3; }
-    .bg-warm-yellow { background: #FFFBEB; }
-    .bg-deep-teal { background: #1A5C52; color: #FFFFFF; }
+    .bg-warm-cream { background: #F5F3EF; }
+    .bg-soft-teal { background: #EEF2F0; }
+    .bg-soft-pink { background: #F5F0EF; }
+    .bg-warm-yellow { background: #F3F1EB; }
+    .bg-deep-teal { background: var(--navy); color: #FFFFFF; }
     .bg-deep-teal h2, .bg-deep-teal h3 { color: #FFFFFF; }
-    .bg-deep-teal p, .bg-deep-teal .subtitle { color: #C5E8E2; }
-    .bg-deep-teal .usp-card { background: #22705F; border-color: #2B8A7A; }
+    .bg-deep-teal p, .bg-deep-teal .subtitle { color: #B0BEC5; }
+    .bg-deep-teal .usp-card { background: var(--navy-light); border-color: #3A4A5A; }
     .bg-deep-teal .usp-card h3 { color: #FFFFFF; }
-    .bg-deep-teal .usp-card p { color: #A8D5CB; }
+    .bg-deep-teal .usp-card p { color: #90A4AE; }
 
     /* Hand-drawn SVG decoration styles */
     .deco-arrow { position: absolute; pointer-events: none; }
@@ -491,6 +496,11 @@
 </head>
 <body>
 
+  <div class="top-bar">
+    <div class="container">
+      📞 <a href="tel:+4553886061">+45 5388 6061</a> <span>|</span> ✉️ <a href="mailto:steven.wensley@gmail.com">steven.wensley@gmail.com</a>
+    </div>
+  </div>
   <nav>
     <div class="container">
       <div class="logo">Byg<span>Med</span>AI</div>
@@ -505,72 +515,48 @@
     </div>
   </nav>
 
-  <section class="hero hero-xl bg-warm-cream textured">
+  <section class="hero hero-xl" style="background: var(--bg);">
     <div class="container">
-      <div class="hero-illustration">
-        <svg viewBox="0 0 560 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration af hjemmeside-byggeri">
-          <!-- Laptop -->
-          <rect x="160" y="30" width="240" height="140" rx="12" fill="#FFFFFF" stroke="#E2DFD9" stroke-width="2"/>
-          <rect x="170" y="40" width="220" height="110" rx="6" fill="#F5F2EE"/>
-          <!-- Screen content mockup -->
-          <rect x="185" y="55" width="90" height="8" rx="4" fill="#2B7A6F" opacity="0.7"/>
-          <rect x="185" y="70" width="130" height="6" rx="3" fill="#D5D0C8"/>
-          <rect x="185" y="82" width="110" height="6" rx="3" fill="#D5D0C8"/>
-          <rect x="185" y="98" width="50" height="22" rx="6" fill="#2B7A6F"/>
-          <text x="210" y="113" font-size="9" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="600">Book</text>
-          <rect x="320" y="55" width="55" height="55" rx="8" fill="#E8F5E9"/>
-          <rect x="320" y="118" width="55" height="25" rx="6" fill="#FBE9E7"/>
-          <!-- Keyboard base -->
-          <rect x="180" y="168" width="200" height="8" rx="4" fill="#E2DFD9"/>
-          <!-- Left person (woman) -->
-          <circle cx="80" cy="95" r="22" fill="#FBE9E7"/>
-          <circle cx="80" cy="82" r="14" fill="#F5D0C5"/>
-          <rect x="68" y="96" width="24" height="30" rx="8" fill="#2B7A6F" opacity="0.7"/>
-          <circle cx="80" cy="72" r="10" fill="#8B6F5E"/>
-          <!-- Speech bubble -->
-          <rect x="45" y="40" width="70" height="28" rx="10" fill="#2B7A6F" opacity="0.12"/>
-          <text x="58" y="58" font-size="9" fill="#2B7A6F" font-family="Inter, sans-serif" font-weight="600">Min side!</text>
-          <!-- Right person (man) -->
-          <circle cx="480" cy="95" r="22" fill="#E8EAF6"/>
-          <circle cx="480" cy="82" r="14" fill="#D4C5A9"/>
-          <rect x="468" y="96" width="24" height="30" rx="8" fill="#6DB86B" opacity="0.7"/>
-          <circle cx="480" cy="72" r="10" fill="#7A6B50"/>
-          <!-- Speech bubble -->
-          <rect x="445" y="40" width="70" height="28" rx="10" fill="#6DB86B" opacity="0.12"/>
-          <text x="452" y="58" font-size="9" fill="#6DB86B" font-family="Inter, sans-serif" font-weight="600">Nemt!</text>
-          <!-- Decorative dots -->
-          <circle cx="30" cy="140" r="4" fill="#2B7A6F" opacity="0.1"/>
-          <circle cx="42" cy="155" r="3" fill="#E8944C" opacity="0.15"/>
-          <circle cx="530" cy="140" r="4" fill="#6DB86B" opacity="0.1"/>
-          <circle cx="518" cy="155" r="3" fill="#2B7A6F" opacity="0.15"/>
-          <!-- AI sparkle -->
-          <text x="280" y="25" font-size="16" text-anchor="middle">✨</text>
-        </svg>
-      </div>
-      <div class="hero-badge">🤖 Ærligt om AI — bedre for din pengepung</div>
+      <div style="display: inline-block; font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;">Freelance webdesigner · København</div>
       <h1>Professionelle hjemmesider<br><span class="highlight">bygget med AI</span></h1>
-      <p>Vi bruger AI til at bygge din hjemmeside — derfor får du den hurtigere, billigere og med fuld dokumentation til overdragelse. Ingen skjulte tricks.</p>
+      <p>Jeg bruger AI til at bygge din hjemmeside — derfor får du den hurtigere, billigere og med fuld dokumentation til overdragelse. Ingen skjulte tricks.</p>
       <div class="hero-btns">
         <a href="priser.html" class="btn-primary">Se priser fra 10.000 kr →</a>
-        <a href="services.html" class="btn-secondary">Hvad får du?</a>
-
-      <!-- Hand-drawn arrow -->
-      <div style="text-align:center; margin-top: 24px;">
-        <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.4;">
-          <path d="M20 2 C18 15, 22 25, 20 40 C19 45, 18 48, 14 52 M20 40 C21 45, 22 48, 26 52 M20 2 C22 15, 18 25, 20 40" stroke="#2B7A6F" stroke-width="2" stroke-linecap="round" fill="none"/>
-          <path d="M12 48 L20 58 L28 48" stroke="#2B7A6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
+        <a href="#tilbud" class="btn-secondary">Se lanceringstilbud</a>
       </div>
+      <div style="margin-top: 32px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; font-size: 13px; color: var(--text-muted);">
+        <span>✓ Fast pris, ingen overraskelser</span>
+        <span>✓ Du ejer alt</span>
+        <span>✓ 18+ års erfaring</span>
       </div>
     </div>
   </section>
 
-  <section class="stats bg-warm-yellow">
+  <section class="stats" style="background: var(--navy); border: none;"  >
     <div class="container" style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap;">
       <div class="stat"><div class="stat-num">10K</div><div class="stat-label">Hjemmeside fra</div></div>
       <div class="stat"><div class="stat-num">5-10</div><div class="stat-label">Dages levering</div></div>
       <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Dit ejerskab</div></div>
       <div class="stat"><div class="stat-num">AI</div><div class="stat-label">Transparent metode</div></div>
+    </div>
+  </section>
+
+  <!-- TRUST / ABOUT SECTION — moved up for authenticity -->
+  <section class="trust-section" style="padding: 60px 0; background: var(--surface);">
+    <div class="container">
+      <div style="display: flex; gap: 40px; align-items: center; max-width: 800px; margin: 0 auto; flex-wrap: wrap;">
+        <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #0D4A42); color: #FFFFFF; font-size: 42px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 20px rgba(27,94,84,0.25);">SW</div>
+        <div style="flex: 1; min-width: 280px;">
+          <div style="font-size: 13px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Mennesket bag BygMedAI</div>
+          <h2 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 10px;">Steven Wensley</h2>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px;">18+ års erfaring med it-projekter i Novo Nordisk, Danske Bank og Siemens Gamesa. Nu hjælper jeg små virksomheder med professionelle hjemmesider — hurtigt og til en fair pris. Du får altid direkte kontakt med mig.</p>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; color: var(--text-muted);">
+            <span>🇩🇰 Dansk konsulent</span>
+            <span>💼 18+ års erfaring</span>
+            <span>📞 <a href="tel:+4553886061" style="color: var(--accent);">+45 5388 6061</a></span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -656,7 +642,7 @@
     </div>
   </section>
 
-  <section class="usps bg-deep-teal textured">
+  <section class="usps bg-deep-teal">
     <div class="container">
       <h2 class="section-header-xl">Hvorfor <span class="highlight">BygMedAI?</span></h2>
       <div class="usp-grid">
@@ -696,7 +682,7 @@
 
 
   <!-- HVEM ER DET FOR? - Scenarier -->
-  <section class="scenarios bg-soft-pink blob-bg">
+  <section class="scenarios" style="background: var(--surface2);"
     <div class="container">
       <h2 class="section-header-xl">Hvem er <span class="highlight">det for?</span></h2>
       <p class="subtitle">Se hvad vi har bygget for rigtige kunder — og hvad vi kan gøre for dig.</p>
@@ -720,7 +706,7 @@
     </div>
   </section>
 
-  <section class="process bg-soft-teal textured">
+  <section class="process bg-soft-teal">
     <div class="container">
       <h2 class="section-header-xl">Sådan <span class="highlight">foregår det</span></h2>
       <p style="text-align:center; color:var(--text-muted); font-size:16px; margin-bottom:48px;">Fire enkle trin — fra første samtale til din færdige side.</p>
@@ -750,7 +736,7 @@
   </section>
 
   <!-- CASE STUDY -->
-  <section class="case-study bg-warm-yellow textured">
+  <section class="case-study bg-warm-yellow">
     <div class="container">
       <h2>Se hvad vi har bygget</h2>
       <p class="subtitle">Et rigtigt eksempel — ikke et mockup. Bygget med præcis den metode vi tilbyder dig.</p>
@@ -800,153 +786,50 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section class="portfolio" id="portfolio">
+  <!-- PORTFOLIO — real work only -->
+  <section class="portfolio" id="portfolio" style="background: var(--bg);">
     <div class="container">
-      <h2 class="section-header-xl">Kunder vi har <span class="highlight">hjulpet</span></h2>
-      <p class="subtitle">Terapeut, tømrer og café — tre helt forskellige behov, samme høje kvalitet og gennemsigtighed.</p>
+      <h2 class="section-header-xl">Ægte arbejde, <span class="highlight">ægte resultater</span></h2>
+      <p class="subtitle">Ikke mockups — rigtige hjemmesider du kan besøge lige nu.</p>
 
-      <div class="portfolio-grid">
-        <!-- 1: Indre Ro Terapi — Terapeut, M-pakke -->
-        <div class="portfolio-card">
-          <div class="pf-browser">
-            <div class="pf-browser-bar">
-              <div class="pf-dot r"></div><div class="pf-dot y"></div><div class="pf-dot g"></div>
-              <div class="pf-url">indreroterapl.dk</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 900px; margin: 0 auto; align-items: center;">
+        <div>
+          <div style="border-radius: 12px; overflow: hidden; border: 2px solid #E0DDD7; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+            <div style="background: var(--navy); padding: 8px 16px; display: flex; align-items: center; gap: 8px;">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444;"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #EAB308;"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #22C55E;"></div>
+              <div style="background: #2A3A4A; border-radius: 6px; padding: 4px 12px; font-size: 11px; color: #8896A6; margin-left: 8px; flex: 1; font-family: monospace;">vendhjem.dk</div>
             </div>
-            <div class="pf-body" style="background: #FDF2F8;">
-              <div class="pf-nav">
-                <div class="pf-nav-logo" style="color: #B07BAC;">IR</div>
-                <div class="pf-nav-links">
-                  <div class="pf-nav-link" style="background: #B07BAC;"></div>
-                  <div class="pf-nav-link" style="background: #B07BAC;"></div>
-                  <div class="pf-nav-link" style="background: #B07BAC;"></div>
-                </div>
-              </div>
-              <div class="pf-hero-block" style="background: linear-gradient(135deg, #F3E5F5, #E1BEE7); color: #4A2545;">
-                <div class="pf-hero-title">Find ro og balance<br>i en travl hverdag</div>
-                <div class="pf-hero-sub">Kropsterapi · Mindfulness · Stresshåndtering</div>
-                <div class="pf-hero-btn" style="background: #B07BAC; color: #FFFFFF;">Book en tid</div>
-              </div>
-              <div class="pf-grid-row cols-2">
-                <div class="pf-box" style="background: #B07BAC;"></div>
-                <div class="pf-box" style="background: #B07BAC;"></div>
-              </div>
-              <div class="pf-line w80" style="background: #B07BAC;"></div>
-              <div class="pf-line w40" style="background: #B07BAC;"></div>
-            </div>
-          </div>
-          <div class="pf-info">
-            <h3>Indre Ro Terapi</h3>
-            <div class="pf-type">Kropsterapeut · M-pakke</div>
-            <p>Solo-terapeut der ønskede en rolig, professionel side med online booking og beskrivelse af behandlingsformer. 4 sider med blødt, indbydende design og klientudtalelser.</p>
-            <div class="pf-tags">
-              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">4 sider</span>
-              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">Calendly</span>
-              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">Testimonials</span>
-              <span class="pf-tag" style="color: #B07BAC; border-color: #B07BAC33;">SEO</span>
-            </div>
-            <div class="pf-stats-row">
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #B07BAC;">6</div><div class="pf-stat-label">dage</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #B07BAC;">18K</div><div class="pf-stat-label">fast pris</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #B07BAC;">0 kr</div><div class="pf-stat-label">hosting/md</div></div>
-            </div>
+            <iframe src="https://vendhjem.dk" style="width: 100%; height: 340px; border: none; pointer-events: none;" loading="lazy" title="vendhjem.dk preview"></iframe>
           </div>
         </div>
-
-        <!-- 2: Smed & Søn — Håndværker, S-pakke -->
-        <div class="portfolio-card">
-          <div class="pf-browser">
-            <div class="pf-browser-bar">
-              <div class="pf-dot r"></div><div class="pf-dot y"></div><div class="pf-dot g"></div>
-              <div class="pf-url">smedogson.dk</div>
+        <div>
+          <div style="font-size: 12px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Leveret marts 2026</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 12px;">vendhjem.dk — Lai Yde</h3>
+          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7; margin-bottom: 16px;">Foredragsholder og coach der havde brug for en varm, professionel hjemmeside. 7 sider med rigtigt foto, YouTube-embeds, interaktiv quiz og blog — bygget på under en uge.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+            <div style="background: var(--surface); border: 1px solid #E0DDD7; border-radius: 10px; padding: 14px; text-align: center;">
+              <div style="font-size: 22px; font-weight: 800; color: var(--accent);">7</div>
+              <div style="font-size: 11px; color: var(--text-muted);">sider</div>
             </div>
-            <div class="pf-body" style="background: #ECFDF5;">
-              <div class="pf-nav">
-                <div class="pf-nav-logo" style="color: #6DB86B;">S&S</div>
-                <div class="pf-nav-links">
-                  <div class="pf-nav-link" style="background: #6DB86B;"></div>
-                  <div class="pf-nav-link" style="background: #6DB86B;"></div>
-                </div>
-              </div>
-              <div class="pf-hero-block" style="background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #1A3E2A;">
-                <div class="pf-hero-title">Kvalitetshåndværk<br>i tredje generation</div>
-                <div class="pf-hero-sub">Tømrerarbejde · Renovering · Tilbygning</div>
-                <div class="pf-hero-btn" style="background: #6DB86B; color: #FFFFFF;">Ring 70 20 30 40</div>
-              </div>
-              <div class="pf-grid-row cols-2">
-                <div class="pf-box" style="background: #6DB86B; height: 40px;"></div>
-                <div class="pf-box" style="background: #6DB86B; height: 40px;"></div>
-              </div>
-              <div class="pf-line w80" style="background: #6DB86B;"></div>
-              <div class="pf-line w40" style="background: #6DB86B;"></div>
+            <div style="background: var(--surface); border: 1px solid #E0DDD7; border-radius: 10px; padding: 14px; text-align: center;">
+              <div style="font-size: 22px; font-weight: 800; color: var(--accent);">5</div>
+              <div style="font-size: 11px; color: var(--text-muted);">dage</div>
+            </div>
+            <div style="background: var(--surface); border: 1px solid #E0DDD7; border-radius: 10px; padding: 14px; text-align: center;">
+              <div style="font-size: 22px; font-weight: 800; color: var(--accent);">0 kr</div>
+              <div style="font-size: 11px; color: var(--text-muted);">hosting/md</div>
+            </div>
+            <div style="background: var(--surface); border: 1px solid #E0DDD7; border-radius: 10px; padding: 14px; text-align: center;">
+              <div style="font-size: 22px; font-weight: 800; color: var(--accent);">M</div>
+              <div style="font-size: 11px; color: var(--text-muted);">pakke</div>
             </div>
           </div>
-          <div class="pf-info">
-            <h3>Smed & Søn Tømrer</h3>
-            <div class="pf-type">Håndværkerfirma · S-pakke</div>
-            <p>Familieejet tømrerfirma der manglede online tilstedeværelse. 3 sider med gallerifunktion, kontaktformular og Google Maps-integration. Simpelt og effektivt.</p>
-            <div class="pf-tags">
-              <span class="pf-tag" style="color: #6DB86B; border-color: #6DB86B33;">3 sider</span>
-              <span class="pf-tag" style="color: #6DB86B; border-color: #6DB86B33;">Formspree</span>
-              <span class="pf-tag" style="color: #6DB86B; border-color: #6DB86B33;">Galleri</span>
-            </div>
-            <div class="pf-stats-row">
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #6DB86B;">5</div><div class="pf-stat-label">dage</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #6DB86B;">10K</div><div class="pf-stat-label">fast pris</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #6DB86B;">0 kr</div><div class="pf-stat-label">hosting/md</div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3: Café Grøn — Café/restaurant, M-pakke -->
-        <div class="portfolio-card">
-          <div class="pf-browser">
-            <div class="pf-browser-bar">
-              <div class="pf-dot r"></div><div class="pf-dot y"></div><div class="pf-dot g"></div>
-              <div class="pf-url">cafegroen.dk</div>
-            </div>
-            <div class="pf-body" style="background: #FFF7ED;">
-              <div class="pf-nav">
-                <div class="pf-nav-logo" style="color: #E8944C;">CG</div>
-                <div class="pf-nav-links">
-                  <div class="pf-nav-link" style="background: #E8944C;"></div>
-                  <div class="pf-nav-link" style="background: #E8944C;"></div>
-                  <div class="pf-nav-link" style="background: #E8944C;"></div>
-                </div>
-              </div>
-              <div class="pf-hero-block" style="background: linear-gradient(135deg, #FED7AA, #FDBA74); color: #7C2D12;">
-                <div class="pf-hero-title">Bæredygtig mad<br>med kærlighed</div>
-                <div class="pf-hero-sub">Brunch · Frokost · Kaffe · Catering</div>
-                <div class="pf-hero-btn" style="background: #E8944C; color: #FFFFFF;">Se menukort</div>
-              </div>
-              <div class="pf-grid-row cols-3">
-                <div class="pf-box" style="background: #E8944C; height: 28px;"></div>
-                <div class="pf-box" style="background: #E8944C; height: 28px;"></div>
-                <div class="pf-box" style="background: #E8944C; height: 28px;"></div>
-              </div>
-              <div class="pf-line w80" style="background: #E8944C;"></div>
-              <div class="pf-line w60" style="background: #E8944C;"></div>
-            </div>
-          </div>
-          <div class="pf-info">
-            <h3>Café Grøn</h3>
-            <div class="pf-type">Café & Restaurant · M-pakke</div>
-            <p>Lokal café med fokus på bæredygtighed ville gerne vise menukort, åbningstider og cateringmuligheder online. 4 sider med varm, indbydende atmosfære.</p>
-            <div class="pf-tags">
-              <span class="pf-tag" style="color: #E8944C; border-color: #E8944C33;">4 sider</span>
-              <span class="pf-tag" style="color: #E8944C; border-color: #E8944C33;">GA4</span>
-              <span class="pf-tag" style="color: #E8944C; border-color: #E8944C33;">Menukort</span>
-              <span class="pf-tag" style="color: #E8944C; border-color: #E8944C33;">SEO</span>
-            </div>
-            <div class="pf-stats-row">
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #E8944C;">8</div><div class="pf-stat-label">dage</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #E8944C;">18K</div><div class="pf-stat-label">fast pris</div></div>
-              <div class="pf-stat"><div class="pf-stat-val" style="color: #E8944C;">0 kr</div><div class="pf-stat-label">hosting/md</div></div>
-            </div>
-          </div>
+          <a href="https://vendhjem.dk" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 700; font-size: 15px;">Besøg vendhjem.dk →</a>
         </div>
       </div>
+      <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 40px; font-style: italic;">Dit projekt kan blive det næste — <a href="https://calendly.com/steven-wensley/30min" target="_blank" style="color: var(--accent);">book en samtale</a></p>
     </div>
   </section>
 
@@ -1150,7 +1033,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="faq bg-warm-cream textured">
+  <section class="faq bg-warm-cream">
     <div class="container">
       <h2 class="section-header-xl">Ofte stillede <span class="highlight">spørgsmål</span></h2>
       <p class="subtitle">Svar på det du sandsynligvis tænker lige nu.</p>
@@ -1194,7 +1077,7 @@
   <!-- Briefing CTA Banner -->
   <section style="padding: 48px 0; background: var(--surface2);">
     <div class="container">
-      <div style="background: linear-gradient(135deg, #2B7A6F15, #2B7A6F08); border: 1px solid #2B7A6F33; border-radius: 20px; padding: 40px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+      <div style="background: linear-gradient(135deg, #1B5E5415, #1B5E5408); border: 1px solid #1B5E5433; border-radius: 20px; padding: 40px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
         <div style="flex: 1; min-width: 280px;">
           <div style="font-size: 14px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Gratis og uforpligtende</div>
           <h2 style="font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 8px;">Fortæl os om din drømmehjemmeside</h2>
@@ -1233,23 +1116,7 @@
     </div>
   </section>
 
-  <!-- TRUST / ABOUT SECTION -->
-  <section class="trust-section">
-    <div class="container">
-      <div class="trust-inner">
-        <div class="trust-avatar">SW</div>
-        <h2>Mennesket bag BygMedAI</h2>
-        <div class="trust-role">Steven Wensley — Konsulent & Grundlægger</div>
-        <p>Jeg hedder Steven, og jeg har 18+ års erfaring med it-projekter i store virksomheder som Novo Nordisk, Danske Bank og Siemens Gamesa. Nu bruger jeg den erfaring til at hjælpe små virksomheder med at få professionelle hjemmesider — hurtigt og til en fair pris.</p>
-        <p>Du får altid personlig kontakt med mig. Ingen chatbots, ingen supportkøer — bare en direkte linje til den person der bygger din side.</p>
-        <div class="trust-badges">
-          <div class="trust-badge"><div class="trust-badge-icon">🇩🇰</div> Dansk konsulent</div>
-          <div class="trust-badge"><div class="trust-badge-icon">💼</div> 18+ års erfaring</div>
-          <div class="trust-badge"><div class="trust-badge-icon">🤝</div> Personlig kontakt</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Trust section moved up -->
 
   <footer>
     <div class="container">
