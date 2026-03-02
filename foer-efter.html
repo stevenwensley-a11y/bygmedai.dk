@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
+  <title>Før & Efter — BygMedAI</title>
+  <meta name="description" content="Se forskellen: din hjemmeside før og efter BygMedAI. Fra forældet og usynlig til moderne, professionel og klar til at konvertere kunder.">
+  <meta property="og:title" content="Før & Efter — BygMedAI">
+  <meta property="og:description" content="Se forskellen: din hjemmeside før og efter BygMedAI. Fra forældet til moderne på under 10 dage.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bygmedai.dk/foer-efter.html">
+  <meta property="og:locale" content="da_DK">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Før & Efter — BygMedAI">
+  <meta name="twitter:description" content="Se forskellen: din hjemmeside før og efter BygMedAI.">
+  <link rel="canonical" href="https://bygmedai.dk/foer-efter.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFFFF; --surface: #FFFFFF; --surface2: #F5F5F3;
+      --accent: #1B5E54; --accent-light: #247A6D; --accent-bg: #1B5E5410;
+      --navy: #0F1923; --navy-light: #1A2836;
+      --text: #0F1923; --text-muted: #4A5568; --text-dim: #8896A6;
+      --green: #38A169; --blue: #3B82F6; --red: #EF4444;
+      --warm: #D4956A;
+      --radius: 12px; --max-w: 1100px;
+      --red-soft: #FEF2F2; --red-muted: #991B1B;
+      --green-soft: #F0FDF4; --green-dark: #15803D;
+      --border: #E5E7EB;
+      --shadow: 0 4px 24px rgba(0,0,0,0.06);
+      --shadow-hover: 0 8px 32px rgba(0,0,0,0.10);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav { padding: 16px 0; position: sticky; top: 0; background: var(--navy); z-index: 100; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 800; color: #FFFFFF; }
+    .logo span { color: var(--accent-light); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 14px; color: #94A3B8; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #FFFFFF; }
+    .nav-cta { background: #FFFFFF !important; color: var(--navy) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700 !important; font-size: 13px !important; }
+    .nav-cta:hover { background: #F0F0F0 !important; }
+
+    /* Footer */
+    footer { padding: 40px 0; background: var(--navy); }
+    footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 12px; color: #64748B; }
+    footer a { color: #94A3B8; }
+    footer a:hover { color: #FFFFFF; }
+
+    /* Page header */
+    .page-header {
+      padding: 80px 0 0;
+      text-align: center;
+    }
+    .ig-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-bg);
+      border: 1px solid rgba(27,94,84,0.15);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .page-header h1 .highlight { color: var(--accent); }
+    .page-header p {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Pairs layout */
+    .pairs-section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    .pairs-header {
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      gap: 0;
+      margin-bottom: 12px;
+    }
+    .pairs-header .col-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding-left: 24px;
+    }
+    .pairs-header .col-title.before-title { color: var(--red); }
+    .pairs-header .col-title.after-title { color: var(--green-dark); }
+
+    .pairs-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .pair-row {
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .pair-card {
+      padding: 20px 24px;
+      border-radius: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+    }
+    .pair-card:hover { transform: translateX(3px); }
+    .pair-card.before {
+      background: var(--red-soft);
+      border: 1px solid #FECACA;
+    }
+    .pair-card.after {
+      background: var(--green-soft);
+      border: 1px solid #BBF7D0;
+    }
+    .pair-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .pair-card:hover .pair-icon { transform: scale(1.1); }
+    .pair-card.before .pair-icon { background: #FEE2E2; }
+    .pair-card.after .pair-icon { background: #DCFCE7; }
+    .pair-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .pair-card.before h3 { color: var(--red-muted); }
+    .pair-card.after h3 { color: var(--green-dark); }
+    .pair-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    .pair-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pair-arrow .arrow {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+    .pair-row:hover .pair-arrow .arrow {
+      background: var(--accent);
+      color: #FFF;
+      transform: scale(1.1);
+    }
+
+    /* Stats bar */
+    .ig-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: var(--max-w);
+      margin: 0 auto 48px;
+      padding: 0 24px;
+    }
+    .ig-stat {
+      text-align: center;
+      padding: 28px 20px;
+      background: var(--surface2);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+    .ig-stat:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent);
+    }
+    .ig-stat .number {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .ig-stat .label {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Case study */
+    .case-section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+    .case-card {
+      background: var(--surface2);
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .case-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .case-card h3 .highlight { color: var(--accent); }
+    .case-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
+    .case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+      transition: gap 0.2s;
+    }
+    .case-link:hover { gap: 10px; }
+    .case-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .case-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .case-feature .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #DCFCE7;
+      color: var(--green-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    /* CTA */
+    .ig-cta {
+      text-align: center;
+      padding: 48px 40px;
+      background: linear-gradient(135deg, var(--navy), #1A3040);
+      border-radius: 20px;
+      color: #FFF;
+      max-width: var(--max-w);
+      margin: 0 auto 60px;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+    @media (min-width: 1148px) {
+      .ig-cta { margin-left: auto; margin-right: auto; }
+    }
+    .ig-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+    .ig-cta p {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #0D4A42);
+      color: #FFF;
+      padding: 16px 40px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(27,94,84,0.3);
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { gap: 16px; }
+      .pair-row { grid-template-columns: 1fr; gap: 8px; }
+      .pair-arrow { display: none; }
+      .pairs-header { display: none; }
+      .ig-stats { grid-template-columns: 1fr; }
+      .case-card { grid-template-columns: 1fr; gap: 24px; padding: 28px 24px; }
+      .case-features { grid-template-columns: 1fr; }
+      .page-header { padding: 60px 0 0; }
+      .ig-cta { padding: 36px 24px; margin-left: 16px; margin-right: 16px; }
+    }
+    @media (max-width: 480px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">Byg<span>Med</span>AI</a>
+      <div class="nav-links">
+        <a href="services.html">Tjenester</a>
+        <a href="priser.html">Priser</a>
+        <a href="foer-efter.html" class="active">Før & Efter</a>
+        <a href="ai-assistent.html">AI-Assistent</a>
+        <a href="om.html">Om os</a>
+        <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="nav-cta" onclick="gtag('event','calendly_click',{event_category:'conversion',event_label:'nav_foer_efter'});">Book et møde</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header fade-in">
+    <div class="container">
+      <div class="ig-badge">✨ Se forskellen</div>
+      <h1>Din hjemmeside <span class="highlight">før og efter</span> BygMedAI</h1>
+      <p>Fra forældet og usynlig til moderne, professionel og klar til at konvertere kunder — på under 10 dage.</p>
+    </div>
+  </div>
+
+  <!-- Column labels -->
+  <div class="pairs-section">
+    <div class="pairs-header fade-in">
+      <span class="col-title before-title">❌ Sådan ser det ud i dag</span>
+      <span></span>
+      <span class="col-title after-title">✅ Sådan ser det ud med BygMedAI</span>
+    </div>
+
+    <!-- Pairs -->
+    <div class="pairs-container">
+
+      <!-- 1: Hjemmeside -->
+      <div class="pair-row fade-in">
+        <div class="pair-card before">
+          <div class="pair-icon">🖥️</div>
+          <div>
+            <h3>Forældet WordPress-side fra 2018</h3>
+            <p>Langsom, mobilfjendtlig og svær at opdatere. Kunder klikker væk inden 3 sekunder.</p>
+          </div>
+        </div>
+        <div class="pair-arrow"><div class="arrow">→</div></div>
+        <div class="pair-card after">
+          <div class="pair-icon">⚡</div>
+          <div>
+            <h3>Lynhurtig moderne hjemmeside</h3>
+            <p>Mobilvenlig, professionel og klar på 5-10 dage. Ingen WordPress-bøvl.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: Booking -->
+      <div class="pair-row fade-in">
+        <div class="pair-card before">
+          <div class="pair-icon">📞</div>
+          <div>
+            <h3>"Ring eller skriv en mail"</h3>
+            <p>Kunder gider ikke ringe. Du mister bookinger mens du er optaget af dit arbejde.</p>
+          </div>
+        </div>
+        <div class="pair-arrow"><div class="arrow">→</div></div>
+        <div class="pair-card after">
+          <div class="pair-icon">📅</div>
+          <div>
+            <h3>Online booking 24/7</h3>
+            <p>Calendly-integration så kunder booker direkte — også kl. 22 om aftenen.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3: Kundeservice -->
+      <div class="pair-row fade-in">
+        <div class="pair-card before">
+          <div class="pair-icon">😩</div>
+          <div>
+            <h3>Samme spørgsmål igen og igen</h3>
+            <p>"Hvad koster det?" "Hvor ligger I?" — du bruger timer på at svare det samme.</p>
+          </div>
+        </div>
+        <div class="pair-arrow"><div class="arrow">→</div></div>
+        <div class="pair-card after">
+          <div class="pair-icon">🤖</div>
+          <div>
+            <h3>AI-assistent svarer for dig</h3>
+            <p>Chatbot der kender din forretning og besvarer kundernes spørgsmål — automatisk.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4: Synlighed -->
+      <div class="pair-row fade-in">
+        <div class="pair-card before">
+          <div class="pair-icon">👻</div>
+          <div>
+            <h3>Usynlig på Google</h3>
+            <p>Ingen SEO, ingen meta-tags. Dine konkurrenter dukker op — du gør ikke.</p>
+          </div>
+        </div>
+        <div class="pair-arrow"><div class="arrow">→</div></div>
+        <div class="pair-card after">
+          <div class="pair-icon">🔍</div>
+          <div>
+            <h3>Optimeret til Google</h3>
+            <p>SEO, meta-tags, sitemap og hurtig load-tid. Du bliver fundet af de rigtige kunder.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5: Indhold -->
+      <div class="pair-row fade-in">
+        <div class="pair-card before">
+          <div class="pair-icon">✍️</div>
+          <div>
+            <h3>Ingen blogindlæg eller nyt indhold</h3>
+            <p>Siden har stået stille i 2 år. Google straffer inaktive sider.</p>
+          </div>
+        </div>
+        <div class="pair-arrow"><div class="arrow">→</div></div>
+        <div class="pair-card after">
+          <div class="pair-icon">📝</div>
+          <div>
+            <h3>AI-genereret indhold i din tone</h3>
+            <p>Blog, FAQ og tekster der lyder som dig — skabt med din personlige AI-assistent.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6: Ejerskab -->
+      <div class="pair-row fade-in">
+        <div class="pair-card before">
+          <div class="pair-icon">🔒</div>
+          <div>
+            <h3>Låst til dit bureau</h3>
+            <p>Du betaler 500 kr for en tekstændring. Alt tager 2 uger. Du ejer ingenting.</p>
+          </div>
+        </div>
+        <div class="pair-arrow"><div class="arrow">→</div></div>
+        <div class="pair-card after">
+          <div class="pair-icon">🔓</div>
+          <div>
+            <h3>Du ejer det hele</h3>
+            <p>Fuld adgang til kildekode + oplæring. Ingen månedlige gebyrer, ingen lock-in.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="ig-stats">
+    <div class="ig-stat fade-in">
+      <div class="number">5-10</div>
+      <div class="label">dage fra start til færdig</div>
+    </div>
+    <div class="ig-stat fade-in">
+      <div class="number">10.000</div>
+      <div class="label">kr. — den billigste pakke</div>
+    </div>
+    <div class="ig-stat fade-in">
+      <div class="number">0 kr</div>
+      <div class="label">månedligt gebyr</div>
+    </div>
+  </div>
+
+  <!-- Case study -->
+  <div class="case-section fade-in">
+    <div class="case-card">
+      <div>
+        <h3>Se det i praksis: <span class="highlight">vendhjem.dk</span></h3>
+        <p>Lai Yde er foredragsholder og coach. Han havde ingen hjemmeside — nu har han en professionel platform med blog, interaktiv quiz, daglig refleksion og AI-assistent. Bygget på under en uge.</p>
+        <a href="https://vendhjem.dk" target="_blank" class="case-link" onclick="gtag('event','case_study_click',{event_category:'engagement',event_label:'vendhjem_foer_efter'});">Besøg vendhjem.dk <span>→</span></a>
+      </div>
+      <div class="case-features">
+        <div class="case-feature"><div class="check">✓</div>7 sider med custom design</div>
+        <div class="case-feature"><div class="check">✓</div>Interaktiv "Find Din Vej" quiz</div>
+        <div class="case-feature"><div class="check">✓</div>Blog med AI-genereret indhold</div>
+        <div class="case-feature"><div class="check">✓</div>30 dages refleksioner</div>
+        <div class="case-feature"><div class="check">✓</div>YouTube-integration</div>
+        <div class="case-feature"><div class="check">✓</div>Fuld kildekode overdraget</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="ig-cta fade-in">
+    <h2>Klar til at opgradere?</h2>
+    <p>Book en gratis 30-minutters briefing — vi gennemgår dine behov og viser hvad der er muligt.</p>
+    <a href="https://calendly.com/steven-wensley/30min" target="_blank" class="btn-primary" onclick="gtag('event','calendly_click',{event_category:'conversion',event_label:'foer_efter_cta'});">Book gratis briefing →</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 BygMedAI — Et projekt af <a href="https://stevenwensley.com" target="_blank">Steven Wensley</a></p>
+      <p><a href="om.html">Om os</a> &nbsp;·&nbsp; <a href="mailto:steven.wensley@gmail.com">Kontakt</a> &nbsp;·&nbsp; <a href="https://stevenwensley.com" target="_blank">stevenwensley.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Scroll animation -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
