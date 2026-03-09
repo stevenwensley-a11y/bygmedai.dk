@@ -560,7 +560,108 @@ footer {
     .clients-grid { grid-template-columns: repeat(2, 1fr); }
     .values-grid { grid-template-columns: 1fr; }
   }
-extraScripts: |
+
+  /* ---------- HERO (matching HTML classes) ---------- */
+  .hero {
+    padding: 140px 40px 80px;
+    background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 300px 1fr; gap: 48px;
+    max-width: 1200px; margin: 0 auto; align-items: start;
+  }
+  .hero-photo { position: relative; }
+  .hero-photo img {
+    width: 300px; height: 300px; border-radius: 16px; object-fit: cover;
+    border: 2px solid rgba(212,149,106,0.3);
+  }
+  .badge {
+    position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--orange); color: var(--white);
+    padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap;
+  }
+  .tagline {
+    color: var(--orange); font-size: 14px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+  }
+  .highlight { color: var(--orange); }
+  .hero-text h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+  .hero-text p { color: var(--text-muted); font-size: 17px; line-height: 1.8; margin-bottom: 12px; }
+
+  /* ---------- STORY (matching HTML classes) ---------- */
+  .story { padding: 80px 40px; }
+  .story-inner { max-width: 800px; margin: 0 auto; }
+  .story-inner h2 { font-family: var(--font-display); font-size: 28px; margin-bottom: 24px; }
+  .story-inner p { color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+  .pull-quote {
+    font-family: var(--font-display); font-size: 24px; font-style: italic;
+    color: var(--orange); padding: 24px 0 24px 24px; margin: 32px 0;
+    border-left: 3px solid var(--orange);
+  }
+
+  /* ---------- METHOD (matching HTML classes) ---------- */
+  .method { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  .method h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 8px; }
+  .method .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+  .method-card {
+    background: rgba(18,21,29,0.2); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px; padding: 32px; transition: all 0.3s;
+  }
+  .method-card:hover { border-color: rgba(212,149,106,0.3); transform: translateY(-4px); }
+  .method-card .icon { font-size: 32px; margin-bottom: 12px; }
+  .method-card h3 { font-family: var(--font-display); font-size: 20px; margin-bottom: 8px; }
+  .method-card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+  /* ---------- CLIENTS (matching HTML classes) ---------- */
+  .clients { padding: 80px 40px; }
+  .clients h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 32px; }
+  .client-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .client-card {
+    background: rgba(18,21,29,0.2); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px; padding: 24px;
+  }
+  .client-top { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .client-top img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+  .client-top h4 { font-size: 16px; font-weight: 600; }
+  .client-top .type { font-size: 13px; color: var(--text-muted); }
+  .client-card p { font-style: italic; font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+  .client-card a { color: var(--orange); font-size: 14px; font-weight: 600; }
+
+  /* ---------- VALUES (matching HTML classes) ---------- */
+  .values { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  .values h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 32px; }
+  .value-card {
+    background: rgba(18,21,29,0.2); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px; padding: 24px;
+  }
+  .value-card h3 { font-family: var(--font-display); font-size: 18px; margin-bottom: 8px; }
+  .value-card .v-icon { margin-right: 8px; }
+  .value-card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+  /* ---------- CONTACT (matching HTML classes) ---------- */
+  .contact { padding: 80px 40px; }
+  .contact h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 32px; text-align: center; }
+  .contact-row {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    max-width: 800px; margin: 0 auto; text-align: center;
+  }
+  .contact-item .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .contact-item a { color: var(--orange); font-size: 15px; font-weight: 500; }
+  .contact-item .val { font-size: 15px; }
+
+  /* ---------- CTA BOX ---------- */
+  .cta-box { max-width: 600px; margin: 0 auto; }
+
+  /* ---------- RESPONSIVE (matching HTML classes) ---------- */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-photo { display: flex; justify-content: center; }
+    .client-grid { grid-template-columns: 1fr; }
+    .contact-row { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
 
   <script>
