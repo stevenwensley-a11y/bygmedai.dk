@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
+<title>BygMedAI — Professionelle hjemmesider fra 10.000 kr — BygMedAI</title>
+<meta name="description" content="Professionelle hjemmesider fra 10.000 kr — bygget med AI, styret af mennesker. Valgfri vedligeholdelse fra 99 kr/md. Du ejer alt.">
+<meta property="og:title" content="BygMedAI — Professionelle hjemmesider fra 10.000 kr — BygMedAI">
+<meta property="og:description" content="AI-bygget, menneske-styret. Fra 10.000 kr + valgfri vedligeholdelse. Du ejer alt.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bygmedai.dk/">
+<meta property="og:locale" content="da_DK">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BygMedAI — Professionelle hjemmesider fra 10.000 kr — BygMedAI">
+<meta name="twitter:description" content="AI-bygget, menneske-styret. Fra 10.000 kr + valgfri vedligeholdelse. Du ejer alt.">
+<link rel="canonical" href="https://bygmedai.dk/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- View Transitions API -->
+<meta name="view-transition" content="same-origin">
+
+<style>
+/* ============================================================
+   BygMedAI v7 — Sophia Art Direction
+   Dusty Pink → Warm Orange · Cinematic · Nordic Elegance
+   Montserrat + Space Grotesk
+   ============================================================ */
+:root {
+  --black: #0A0C12;
+  --black-light: #12151D;
+  --pink: #C4A0A0;
+  --pink-light: #D4B0B0;
+  --orange: #D4956A;
+  --orange-hover: #E0A57A;
+  --gradient: linear-gradient(135deg, #C4A0A0, #D4956A);
+  --gradient-subtle: linear-gradient(135deg, rgba(196,160,160,0.15), rgba(212,149,106,0.15));
+  --text: #F0F2F5;
+  --text-muted: #9CA8B7;
+  --text-dim: #6B7580;
+  --radius: 12px;
+  --max-w: 1100px;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  /* v6 backward compatibility — maps old variable names to v7 palette */
+  --blue: #0A0C12;
+  --white: #FFFFFF;
+  --accent: #D4956A;
+  --accent-light: #E0A57A;
+  --accent-bg: rgba(212,149,106,0.06);
+  --navy: #0A0C12;
+  --navy-light: #12151D;
+  --bg: #0A0C12;
+  --surface: #12151D;
+  --warm: #D4956A;
+  /* Semantic colors used across subpages */
+  --red: #EF4444;
+  --green: #38A169;
+  --grey: #6B7580;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0 32px;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(10, 12, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 149, 106, 0.15);
+  transition: all 0.3s;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-phone {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  font-weight: 500;
+}
+.nav-cta {
+  background: var(--orange) !important;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--orange-hover) !important; }
+
+/* ---------- BUTTONS ---------- */
+.btn-primary {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,149,106,0.3); }
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+.btn-secondary {
+  display: inline-block;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.btn-secondary:hover { color: #fff; }
+
+/* ---------- PAGE HEADER ---------- */
+.page-header {
+  padding: 100px 24px 60px;
+  text-align: center;
+  background: var(--black);
+  color: #fff;
+}
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.page-header p {
+  color: var(--text-muted);
+  font-size: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- SECTIONS ---------- */
+section { padding: 100px 40px; }
+
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+
+/* Section headings */
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 600px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.accent { color: var(--orange); }
+.pink { color: var(--pink); }
+
+/* ---------- CARDS ---------- */
+.card {
+  background: var(--black-light);
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s;
+}
+.card:hover { border-color: rgba(212,149,106,0.2); transform: translateY(-4px); }
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--black);
+  padding: 48px 24px 24px;
+  color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.footer-logo span { color: var(--orange); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: #fff; }
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+/* Animation handled via inline styles in JS (immune to Lenis/GSAP interference) */
+[data-reveal], .stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: rgba(10, 12, 18, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 20px 32px 30px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(212,149,106,0.15);
+  }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+  .hamburger span { width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
+  .nav-phone { display: none; }
+  section { padding: 60px 20px; }
+  .page-header { padding: 80px 20px 40px; }
+  .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+@media (min-width: 681px) { .hamburger { display: none; } }
+
+@media (max-width: 900px) {
+  section { padding: 60px 20px; }
+}
+
+/* ---------- View Transitions ---------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: fade-out 0.2s ease-out; }
+::view-transition-new(root) { animation: fade-in 0.3s ease-in; }
+@keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- prefers-reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], .stagger-item { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Byg<span>Med</span>AI</a>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="/services/">Ydelser</a>
+    <a href="/priser/">Priser</a>
+    <a href="/foer-efter/">Før &amp; Efter</a>
+    <a href="/ai-assistent/">AI-Assistent</a>
+    <a href="/blog/">Blog</a>
+    <a href="/om/">Om</a>
+<a href="/afklaring/" class="nav-cta" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'nav_afklaring'})">Gratis Briefing</a>
+  </div>
+</nav>
+
+
+<style>
+/* ====== HERO ====== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-video-wrap {
+  position: absolute; inset: 0;
+  z-index: 0;
+}
+.hero-video-wrap video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(196,160,160,0.25) 0%, rgba(10,12,18,0.92) 60%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 700px;
+}
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.hero h1 .gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin-bottom: 36px;
+  line-height: 1.8;
+}
+.hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.hero-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hero-photo img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(212,149,106,0.3);
+}
+.float-badge {
+  position: absolute;
+  bottom: 20px; right: 10px;
+  background: rgba(10,12,18,0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212,149,106,0.3);
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-align: center;
+}
+.float-badge .num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--orange);
+  display: block;
+}
+.float-badge .label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ====== STATS BAR ====== */
+.stats-bar {
+  background: var(--black-light);
+  border-top: 1px solid rgba(212,149,106,0.1);
+  border-bottom: 1px solid rgba(212,149,106,0.1);
+  padding: 40px;
+}
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ====== CINEMATIC SECTIONS (Sophia) ====== */
+.cin-section {
+  position: relative;
+  padding: 120px 40px;
+  overflow: hidden;
+}
+.cin-section .cin-bg {
+  position: absolute; inset: 0;
+  z-index: 0;
+}
+.cin-section .cin-bg video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+}
+.cin-section .cin-overlay {
+  position: absolute; inset: 0;
+  z-index: 1;
+}
+.cin-content {
+  position: relative; z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cin-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.cin-sub {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+/* ====== PAIN CARDS ====== */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.pain-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: all 0.3s;
+}
+.pain-card:hover { border-color: rgba(212,149,106,0.2); }
+.pain-icon { font-size: 28px; margin-bottom: 12px; }
+.pain-card h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.pain-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+/* ====== PROCESS STEPS ====== */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  counter-reset: step;
+}
+.process-step {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  counter-increment: step;
+  transition: all 0.3s;
+}
+.process-step:hover { border-color: rgba(212,149,106,0.2); transform: translateY(-4px); }
+.process-step::before {
+  content: counter(step);
+  display: block;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+.process-step h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.process-step p { font-size: 14px; color: var(--text-muted); }
+
+/* ====== PORTFOLIO ====== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.portfolio-card {
+  background: var(--black-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s;
+}
+.portfolio-card:hover { border-color: rgba(212,149,106,0.2); transform: translateY(-4px); }
+.portfolio-thumb {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+.portfolio-thumb iframe {
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: top left;
+  border: 0;
+  pointer-events: none;
+}
+.portfolio-info { padding: 20px; }
+.portfolio-info h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.portfolio-info p { font-size: 13px; color: var(--text-muted); }
+
+/* ====== ABOUT / TRUST ====== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-img img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.about-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.about-text p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ====== PRICING ====== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pricing-card {
+  background: var(--black-light);
+  border-radius: var(--radius);
+  padding: 36px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s;
+  position: relative;
+}
+.pricing-card.featured {
+  border-color: var(--orange);
+  box-shadow: 0 0 40px rgba(212,149,106,0.1);
+}
+.pricing-card.featured::before {
+  content: 'Mest populær';
+  position: absolute;
+  top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--orange);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 16px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pricing-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.pricing-price {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+.pricing-note {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 24px;
+}
+.pricing-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.pricing-list li {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.pricing-list li::before {
+  content: '✓ ';
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* ====== CTA ====== */
+.cta-section {
+  text-align: center;
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(196,160,160,0.08) 0%, transparent 70%);
+}
+.cta-inner {
+  position: relative; z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.cta-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.cta-inner p {
+  color: var(--text-muted);
+  font-size: 17px;
+  margin-bottom: 36px;
+}
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ====== PARALLAX DIVIDER ====== */
+.parallax-divider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.parallax-divider .parallax-bg {
+  position: absolute;
+  inset: -20% 0;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .hero-content { padding: 120px 20px 60px; text-align: center; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-cta-group { justify-content: center; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cin-section { padding: 80px 20px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- ============================================================
+     HERO — danser_movement2.mp4
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline poster="/assets/hero-poster-dancer.jpg">
+      <source src="/assets/danser_movement2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow" data-reveal>Hjemmesider, bygget med flow</div>
+      <h1 data-reveal>Din hjemmeside<br>fortjener bedre end<br><span class="gradient-text">en skabelon</span></h1>
+      <p class="hero-sub" data-reveal>AI er værktøjet. Håndværket er resultatet. Professionelle hjemmesider til små virksomheder — leveret på 5–10 dage. Du ejer det hele.</p>
+      <div class="hero-cta-group" data-reveal>
+        <a href="/afklaring/" class="btn-primary" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'hero_afklaring'})">Book gratis briefing →</a>
+        <a href="/priser/" class="btn-secondary">Se priser ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar" data-reveal>
+  <div class="stats-grid">
+    <div class="stagger-item"><div class="stat-num">10+</div><div class="stat-label">Hjemmesider leveret</div></div>
+    <div class="stagger-item"><div class="stat-num">5–10</div><div class="stat-label">Dage fra start til launch</div></div>
+    <div class="stagger-item"><div class="stat-num">100%</div><div class="stat-label">Du ejer alt</div></div>
+    <div class="stagger-item"><div class="stat-num">0 kr</div><div class="stat-label">Skjulte gebyrer</div></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SEKTION 1 — FLOW · danser_sko.mp4
+     Pain points
+     ============================================================ -->
+<section class="cin-section" id="pain">
+  <div class="cin-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/assets/danser_sko.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="cin-overlay" style="background: linear-gradient(180deg, var(--black) 0%, rgba(10,12,18,0.85) 50%, var(--black) 100%);"></div>
+  <div class="cin-content">
+    <div class="cin-heading" data-reveal>Sådan skal en hjemmeside føles</div>
+    <p class="cin-sub" data-reveal>Når teknologi fungerer rigtigt, føles den let. Men de fleste små virksomheder kæmper med de samme ting:</p>
+    <div class="pain-grid">
+      <div class="pain-card stagger-item">
+        <div class="pain-icon">💸</div>
+        <h3>Dyrt webbureau</h3>
+        <p>Du betalte 30–50.000 kr for et site der stadig ikke konverterer. Og nu vil de have 2.000 kr/md for "drift."</p>
+      </div>
+      <div class="pain-card stagger-item">
+        <div class="pain-icon">🔒</div>
+        <h3>Fanget i en platform</h3>
+        <p>Wix, Squarespace, WordPress — du betaler hver måned, og du ejer intet. Prøv at flytte dit indhold.</p>
+      </div>
+      <div class="pain-card stagger-item">
+        <div class="pain-icon">🐌</div>
+        <h3>Langsomt og tungt</h3>
+        <p>Din side loader i 8 sekunder. Google straffer dig. Dine kunder giver op.</p>
+      </div>
+      <div class="pain-card stagger-item">
+        <div class="pain-icon">😤</div>
+        <h3>Gør-det-selv træthed</h3>
+        <p>Du har brugt 40 timer i en drag-and-drop builder og resultatet ligner stadig… ingenting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX DIVIDER -->
+<div class="parallax-divider" data-parallax>
+  <img src="/assets/dancer-leap.jpg" alt="" class="parallax-bg" loading="lazy">
+</div>
+
+<!-- ============================================================
+     SEKTION 2 — HÅNDVÆRK · danser_gulv.mp4
+     Process
+     ============================================================ -->
+<section class="cin-section" id="services">
+  <div class="cin-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/assets/danser_gulv.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="cin-overlay" style="background: linear-gradient(180deg, var(--black) 0%, rgba(10,12,18,0.85) 50%, var(--black) 100%);"></div>
+  <div class="cin-content">
+    <div class="cin-heading" data-reveal>Håndværk før kompleksitet</div>
+    <p class="cin-sub" data-reveal>En hjemmeside er ikke et system. Det er et stykke digitalt håndværk. Sådan bygger jeg din:</p>
+    <div class="process-grid">
+      <div class="process-step stagger-item">
+        <h3>Gratis briefing</h3>
+        <p>30 min hvor vi taler om din virksomhed, dine mål, og hvad du faktisk har brug for.</p>
+      </div>
+      <div class="process-step stagger-item">
+        <h3>Design & kode</h3>
+        <p>Jeg bygger din side fra bunden med AI som værktøj — ingen templates, intet genbrugsskrald.</p>
+      </div>
+      <div class="process-step stagger-item">
+        <h3>Feedback</h3>
+        <p>Du ser et udkast inden 5 dage. Vi justerer sammen indtil du er tilfreds.</p>
+      </div>
+      <div class="process-step stagger-item">
+        <h3>Launch</h3>
+        <p>Din side går live. Du får alle filer, koden, domænet — alt er dit. Ingen binding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEKTION 3 — BEVÆGELSE · danser_bevaegelse.mp4
+     Portfolio / Cases
+     ============================================================ -->
+<section class="cin-section" id="portfolio">
+  <div class="cin-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/assets/danser_bevaegelse.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="cin-overlay" style="background: linear-gradient(180deg, var(--black) 0%, rgba(10,12,18,0.85) 50%, var(--black) 100%);"></div>
+  <div class="cin-content">
+    <div class="cin-heading" data-reveal>Bygget i bevægelse</div>
+    <p class="cin-sub" data-reveal>AI hjælper mig bygge hurtigere. Men rytmen kommer fra mennesker. Ægte kunder, ægte resultater:</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-card stagger-item">
+        <div class="portfolio-thumb">
+          <iframe src="https://vendhjem.dk" title="Vend Hjem" loading="lazy" sandbox="allow-scripts"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <h3>Vend Hjem</h3>
+          <p>Familierådgivning · 12 sider</p>
+        </div>
+      </div>
+      <div class="portfolio-card stagger-item">
+        <div class="portfolio-thumb">
+          <iframe src="https://dirtydanishdelights.dk" title="Dirty Danish Delights" loading="lazy" sandbox="allow-scripts"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <h3>Dirty Danish Delights</h3>
+          <p>Mad & Events · 9 sider</p>
+        </div>
+      </div>
+      <div class="portfolio-card stagger-item">
+        <div class="portfolio-thumb">
+          <iframe src="https://emilsalzer.dk" title="Emil Salzer" loading="lazy" sandbox="allow-scripts"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <h3>Emil Salzer</h3>
+          <p>Kreativ portfolio · 6 sider</p>
+        </div>
+      </div>
+      <div class="portfolio-card stagger-item">
+        <div class="portfolio-thumb">
+          <iframe src="https://sabinelindeberg.dk" title="Sabine Lindeberg" loading="lazy" sandbox="allow-scripts"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <h3>Sabine Lindeberg</h3>
+          <p>Personlig branding · 6 sider</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX DIVIDER 2 -->
+<div class="parallax-divider" data-parallax>
+  <img src="/assets/dancer-motion.jpg" alt="" class="parallax-bg" loading="lazy">
+</div>
+
+<!-- ============================================================
+     SEKTION 4 — LETHED · danser_movement.mp4
+     Pricing
+     ============================================================ -->
+<section class="cin-section" id="priser">
+  <div class="cin-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/assets/danser_movement.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="cin-overlay" style="background: linear-gradient(180deg, var(--black) 0%, rgba(10,12,18,0.85) 50%, var(--black) 100%);"></div>
+  <div class="cin-content">
+    <div class="cin-heading" data-reveal>Teknologi uden tyngde</div>
+    <p class="cin-sub" data-reveal>Ingen templates. Ingen abonnementer. Bare en hjemmeside der virker.</p>
+    <div class="pricing-grid" data-reveal>
+      <div class="pricing-card stagger-item">
+        <h3>Lille</h3>
+        <div class="pricing-price">10.000 kr</div>
+        <div class="pricing-note">Engangspris · op til 5 sider</div>
+        <ul class="pricing-list">
+          <li>Responsivt design</li>
+          <li>SEO-optimeret</li>
+          <li>Kontaktformular</li>
+          <li>Du ejer alt</li>
+        </ul>
+        <a href="/afklaring/" class="btn-outline" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'pricing_small'})">Kom i gang →</a>
+      </div>
+      <div class="pricing-card featured stagger-item">
+        <h3>Mellem</h3>
+        <div class="pricing-price">15.000 kr</div>
+        <div class="pricing-note">Engangspris · op til 10 sider</div>
+        <ul class="pricing-list">
+          <li>Alt i Lille +</li>
+          <li>Google Analytics</li>
+          <li>Blog / nyhedssektion</li>
+          <li>Før/efter galleri</li>
+          <li>Custom illustrationer</li>
+        </ul>
+        <a href="/afklaring/" class="btn-primary" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'pricing_medium'})">Kom i gang →</a>
+      </div>
+      <div class="pricing-card stagger-item">
+        <h3>Stor</h3>
+        <div class="pricing-price">25.000 kr</div>
+        <div class="pricing-note">Engangspris · op til 20 sider</div>
+        <ul class="pricing-list">
+          <li>Alt i Mellem +</li>
+          <li>Kundeportal</li>
+          <li>Booking-integration</li>
+          <li>Automatiseringer</li>
+          <li>Prioriteret support</li>
+        </ul>
+        <a href="/afklaring/" class="btn-outline" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'pricing_large'})">Kom i gang →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEKTION 5 — RESULTAT · danser_afslutning.mp4
+     About + Trust
+     ============================================================ -->
+<section class="cin-section" id="om">
+  <div class="cin-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/assets/danser_afslutning.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="cin-overlay" style="background: linear-gradient(180deg, var(--black) 0%, rgba(10,12,18,0.85) 50%, var(--black) 100%);"></div>
+  <div class="cin-content">
+    <div class="cin-heading" data-reveal>En hjemmeside der bare virker</div>
+    <p class="cin-sub" data-reveal>Bygget hurtigt. Bygget rigtigt. Bygget til at være dit.</p>
+    <div class="about-grid" data-reveal>
+      <div class="about-img">
+        <img src="/assets/steven-lifestyle.jpg" alt="Steven Wensley" loading="lazy">
+      </div>
+      <div class="about-text">
+        <h2>Hej, jeg er Steven</h2>
+        <p>Jeg er halvt dansk, halvt britisk, og bor i København. I 18+ år har jeg ledet IT-projekter i pharma, finans og kritisk infrastruktur.</p>
+        <p>BygMedAI er mit svar på en simpel frustration: Små virksomheder betaler for meget for hjemmesider der ikke virker. Jeg bruger AI som værktøj til at bygge hurtigere — men håndværket, designet og den personlige service? Det er 100% menneskeligt.</p>
+        <p>Du får en fast pris, en klar tidsplan, og et resultat du faktisk ejer. Ingen binding. Ingen overraskelser.</p>
+        <div style="margin-top: 24px;">
+          <a href="/afklaring/" class="btn-primary" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'about_afklaring'})">Lad os tale sammen →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section class="cta-section">
+  <div class="cta-inner" data-reveal>
+    <h2>Klar til en hjemmeside<br>der bare <span style="color: var(--orange)">virker</span>?</h2>
+    <p>Book en gratis 30-minutters briefing. Ingen salgstale — bare en ærlig snak om hvad du har brug for.</p>
+    <div class="cta-buttons">
+      <a href="/afklaring/" class="btn-primary" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'footer_afklaring'})">Book gratis briefing →</a>
+      <a href="tel:+4553886061" class="btn-outline">Ring +45 5388 6061</a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Byg<span>Med</span>AI</div>
+    <div class="footer-links">
+      <a href="/services/">Ydelser</a>
+      <a href="/priser/">Priser</a>
+      <a href="/foer-efter/">Før &amp; Efter</a>
+      <a href="/ai-assistent/">AI-Assistent</a>
+      <a href="/blog/">Blog</a>
+      <a href="/om/">Om</a>
+      <a href="/afklaring/">Kontakt</a>
+      <a href="/privatlivspolitik/">Privatlivspolitik</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 BygMedAI · CVR 37244449 · steven@bygmedai.dk · +45 5388 6061</div>
+</footer>
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BygMedAI","url":"https://bygmedai.dk","description":"Professionelle hjemmesider fra 10.000 kr — bygget med AI, styret af mennesker.","founder":{"@type":"Person","name":"Steven Wensley","jobTitle":"Grundlægger","telephone":"+4553886061","email":"steven@bygmedai.dk"},"address":{"@type":"PostalAddress","addressLocality":"København","addressCountry":"DK"},"sameAs":[]}
+</script>
+
+
+<!-- Frontend toolkit (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" defer></script>
+
+<script>
+// Reduced motion check
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Scroll reveal — IntersectionObserver (Lenis-safe, pure inline styles)
+function revealElement(el) {
+  el.classList.add('revealed');
+  // Force a paint frame at opacity:0, then transition to opacity:1
+  requestAnimationFrame(() => {
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+  });
+}
+if (!prefersReducedMotion) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('stagger-item')) {
+          const parent = entry.target.parentElement;
+          const siblings = [...parent.querySelectorAll('.stagger-item')];
+          const idx = siblings.indexOf(entry.target);
+          setTimeout(() => revealElement(entry.target), idx * 100);
+        } else {
+          revealElement(entry.target);
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-reveal], .stagger-item').forEach(el => observer.observe(el));
+}
+
+// Lenis smooth scroll + GSAP sync
+try {
+  if (typeof Lenis !== 'undefined' && !prefersReducedMotion) {
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    }
+  }
+} catch(e) {}
+
+// GSAP parallax on [data-parallax]
+try {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !prefersReducedMotion) {
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const img = el.querySelector('.parallax-bg');
+      if (img) {
+        gsap.fromTo(img, { y: '-15%' }, {
+          y: '15%', ease: 'none',
+          scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true }
+        });
+      }
+    });
+  }
+} catch(e) {}
+</script>
+
+</body>
+</html>

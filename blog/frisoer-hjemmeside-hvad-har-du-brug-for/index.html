@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
+<title>Frisør hjemmeside — hvad har du brug for? — BygMedAI</title>
+<meta name="description" content="En god frisør-hjemmeside behøver ikke koste en formue. Her er hvad den skal indeholde, hvad den koster, og hvordan du kommer i gang på 5-7 dage.">
+<meta property="og:title" content="Frisør hjemmeside — hvad har du brug for? — BygMedAI">
+<meta property="og:description" content="Konkret guide til hvad en frisørs hjemmeside skal indeholde og koste i 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bygmedai.dk/blog/frisoer-hjemmeside-hvad-har-du-brug-for/">
+<meta property="og:locale" content="da_DK">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Frisør hjemmeside — hvad har du brug for? — BygMedAI">
+<meta name="twitter:description" content="Konkret guide til hvad en frisørs hjemmeside skal indeholde og koste i 2026.">
+<link rel="canonical" href="https://bygmedai.dk/blog/frisoer-hjemmeside-hvad-har-du-brug-for/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- View Transitions API -->
+<meta name="view-transition" content="same-origin">
+
+<style>
+/* ============================================================
+   BygMedAI v7 — Sophia Art Direction
+   Dusty Pink → Warm Orange · Cinematic · Nordic Elegance
+   Montserrat + Space Grotesk
+   ============================================================ */
+:root {
+  --black: #0A0C12;
+  --black-light: #12151D;
+  --pink: #C4A0A0;
+  --pink-light: #D4B0B0;
+  --orange: #D4956A;
+  --orange-hover: #E0A57A;
+  --gradient: linear-gradient(135deg, #C4A0A0, #D4956A);
+  --gradient-subtle: linear-gradient(135deg, rgba(196,160,160,0.15), rgba(212,149,106,0.15));
+  --text: #F0F2F5;
+  --text-muted: #9CA8B7;
+  --text-dim: #6B7580;
+  --radius: 12px;
+  --max-w: 1100px;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  /* v6 backward compatibility — maps old variable names to v7 palette */
+  --blue: #0A0C12;
+  --white: #FFFFFF;
+  --accent: #D4956A;
+  --accent-light: #E0A57A;
+  --accent-bg: rgba(212,149,106,0.06);
+  --navy: #0A0C12;
+  --navy-light: #12151D;
+  --bg: #0A0C12;
+  --surface: #12151D;
+  --warm: #D4956A;
+  /* Semantic colors used across subpages */
+  --red: #EF4444;
+  --green: #38A169;
+  --grey: #6B7580;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0 32px;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(10, 12, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 149, 106, 0.15);
+  transition: all 0.3s;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-phone {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  font-weight: 500;
+}
+.nav-cta {
+  background: var(--orange) !important;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--orange-hover) !important; }
+
+/* ---------- BUTTONS ---------- */
+.btn-primary {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,149,106,0.3); }
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+.btn-secondary {
+  display: inline-block;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.btn-secondary:hover { color: #fff; }
+
+/* ---------- PAGE HEADER ---------- */
+.page-header {
+  padding: 100px 24px 60px;
+  text-align: center;
+  background: var(--black);
+  color: #fff;
+}
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.page-header p {
+  color: var(--text-muted);
+  font-size: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- SECTIONS ---------- */
+section { padding: 100px 40px; }
+
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+
+/* Section headings */
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 600px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.accent { color: var(--orange); }
+.pink { color: var(--pink); }
+
+/* ---------- CARDS ---------- */
+.card {
+  background: var(--black-light);
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s;
+}
+.card:hover { border-color: rgba(212,149,106,0.2); transform: translateY(-4px); }
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--black);
+  padding: 48px 24px 24px;
+  color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.footer-logo span { color: var(--orange); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: #fff; }
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+/* Animation handled via inline styles in JS (immune to Lenis/GSAP interference) */
+[data-reveal], .stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: rgba(10, 12, 18, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 20px 32px 30px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(212,149,106,0.15);
+  }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+  .hamburger span { width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
+  .nav-phone { display: none; }
+  section { padding: 60px 20px; }
+  .page-header { padding: 80px 20px 40px; }
+  .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+@media (min-width: 681px) { .hamburger { display: none; } }
+
+@media (max-width: 900px) {
+  section { padding: 60px 20px; }
+}
+
+/* ---------- View Transitions ---------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: fade-out 0.2s ease-out; }
+::view-transition-new(root) { animation: fade-in 0.3s ease-in; }
+@keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- prefers-reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], .stagger-item { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Byg<span>Med</span>AI</a>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="/services/">Ydelser</a>
+    <a href="/priser/">Priser</a>
+    <a href="/foer-efter/">Før &amp; Efter</a>
+    <a href="/ai-assistent/">AI-Assistent</a>
+    <a href="/blog/">Blog</a>
+    <a href="/om/">Om</a>
+<a href="/afklaring/" class="nav-cta" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'nav_afklaring'})">Gratis Briefing</a>
+  </div>
+</nav>
+
+
+<style>
+/* ---------- NAV ---------- */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(10, 12, 18, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(212, 149, 106, 0.15);
+    transition: all 0.3s;
+  }
+  
+  /* ---------- BUTTONS ---------- */
+  .btn-primary {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  /* ---------- PAGE HEADER ---------- */
+  .page-header {
+    padding: 140px 40px 60px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
+  }
+  
+  /* ---------- SECTIONS ---------- */
+  section { padding: 80px 40px; }
+  
+  /* ---------- CARDS ---------- */
+  .card {
+    background: rgba(18,21,29,0.2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 32px;
+    transition: all 0.3s;
+  }
+  
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 48px 40px;
+  }
+  
+  /* ---------- SCROLL REVEAL ---------- */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,12,18,0.97); padding: 20px 40px 30px; gap: 16px; border-bottom: 1px solid rgba(212,149,106,0.2); }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 101; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+    section { padding: 60px 20px; }
+    .page-header { padding: 120px 20px 40px; }
+    .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+  
+  @media (min-width: 901px) { .hamburger { display: none; } }
+  
+  /* ---------- PAGE-SPECIFIC ---------- */
+  
+  .article-hero {
+    padding: 140px 40px 60px;
+    background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
+    text-align: center;
+  }
+  
+  .article-hero .tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--orange); margin-bottom: 12px;
+  }
+  
+  .article-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    max-width: 800px; margin: 0 auto 16px;
+  }
+  
+  .article-hero .meta { color: var(--text-muted); font-size: 14px; }
+  
+  .article-content {
+    max-width: 720px; margin: 0 auto; padding: 60px 24px;
+  }
+  
+  .article-content h2 {
+    font-family: var(--font-display);
+    font-size: 24px; margin: 40px 0 16px;
+    color: var(--white);
+  }
+  
+  .article-content h3 {
+    font-family: var(--font-display);
+    font-size: 20px; margin: 32px 0 12px;
+    color: var(--white);
+  }
+  
+  .article-content p {
+    color: var(--text-muted); font-size: 16px; line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  
+  .article-content ul, .article-content ol {
+    color: var(--text-muted); margin: 16px 0 16px 24px;
+    font-size: 16px; line-height: 1.8;
+  }
+  
+  .article-content blockquote {
+    border-left: 3px solid var(--orange);
+    padding: 16px 24px; margin: 24px 0;
+    font-style: italic; color: var(--text-muted);
+    background: rgba(18,21,29,0.15);
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .article-content strong { color: var(--white); }
+  
+  .article-content a { color: var(--orange); text-decoration: underline; }
+  
+  .related-articles { padding: 60px 40px; background: rgba(18,21,29,0.1); }
+  
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 24px auto 0; }
+  
+  .cta-section { padding: 80px 40px; text-align: center; background: var(--blue); }
+  
+  .cta-section h2 { font-family: var(--font-display); font-size: 28px; margin-bottom: 12px; }
+  
+  .cta-section p { color: var(--text-muted); margin-bottom: 32px; }---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,12,18,0.97); padding: 20px 40px 30px; gap: 16px; border-bottom: 1px solid rgba(212,149,106,0.2); }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 101; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+    section { padding: 60px 20px; }
+    .page-header { padding: 120px 20px 40px; }
+    .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+  @media (min-width: 901px) { .hamburger { display: none; } }
+  
+  /* ---------- PAGE-SPECIFIC ---------- */
+  
+  .article-hero {
+    padding: 140px 40px 60px;
+    background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
+    text-align: center;
+  }
+  .article-hero .tag {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--orange); margin-bottom: 12px;
+  }
+  .article-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    max-width: 800px; margin: 0 auto 16px;
+  }
+  .article-hero .meta { color: var(--text-muted); font-size: 14px; }
+  
+  .article-content {
+    max-width: 720px; margin: 0 auto; padding: 60px 24px;
+  }
+  .article-content h2 {
+    font-family: var(--font-display);
+    font-size: 24px; margin: 40px 0 16px;
+    color: var(--white);
+  }
+  .article-content h3 {
+    font-family: var(--font-display);
+    font-size: 20px; margin: 32px 0 12px;
+    color: var(--white);
+  }
+  .article-content p {
+    color: var(--text-muted); font-size: 16px; line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .article-content ul, .article-content ol {
+    color: var(--text-muted); margin: 16px 0 16px 24px;
+    font-size: 16px; line-height: 1.8;
+  }
+  .article-content blockquote {
+    border-left: 3px solid var(--orange);
+    padding: 16px 24px; margin: 24px 0;
+    font-style: italic; color: var(--text-muted);
+    background: rgba(18,21,29,0.15);
+    border-radius: 0 8px 8px 0;
+  }
+  .article-content strong { color: var(--white); }
+  .article-content a { color: var(--orange); text-decoration: underline; }
+  
+  .related-articles { padding: 60px 40px; background: rgba(18,21,29,0.1); }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 24px auto 0; }
+  
+  .cta-section { padding: 80px 40px; text-align: center; background: var(--blue); }
+  .cta-section h2 { font-family: var(--font-display); font-size: 28px; margin-bottom: 12px; }
+  .cta-section p { color: var(--text-muted); margin-bottom: 32px; }
+jsonLd: |
+  {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Frisør hjemmeside — hvad har du brug for?",
+      "description": "En god frisør-hjemmeside behøver ikke koste en formue. Her er hvad den skal indeholde, hvad den koster, og hvordan du kommer i gang.",
+      "datePublished": "2026-03-04",
+      "author": { "@type": "Person", "name": "Steven Wensley", "url": "https://stevenwensley.com" },
+      "publisher": { "@type": "Organization", "name": "BygMedAI", "url": "https://bygmedai.dk" },
+      "mainEntityOfPage": "https://bygmedai.dk/blog/frisoer-hjemmeside-hvad-har-du-brug-for.html",
+      "inLanguage": "da"
+    }
+---
+
+<article>
+    <header class="article-header">
+      <div class="container">
+        <div class="breadcrumb"><a href="/blog/">Blog</a> / Frisør hjemmeside</div>
+        <div class="article-meta">
+          <span class="article-tag">Brancheguide</span>
+          <span>4. marts 2026</span>
+          <span>5 min læsetid</span>
+        </div>
+        <h1>Frisør hjemmeside — hvad har du brug for?</h1>
+        <p class="lead">Som frisør lever du af at folk finder dig, stoler på dig og booker hos dig. Din hjemmeside er det første indtryk mange potentielle kunder får. Her er hvad den skal indeholde — og hvad den koster.</p>
+      </div>
+    </header>
+
+    <div class="article-body">
+      <div class="container">
+
+        <h2>Hvorfor har en frisør brug for en hjemmeside?</h2>
+        <p>De fleste af dine kunder finder dig via Google eller Instagram. Men Instagram ejer dit indhold, algoritmen bestemmer hvem der ser det, og du kan ikke styre oplevelsen. En hjemmeside giver dig noget en social profil aldrig kan: fuld kontrol over dit brand, din stil og dine priser.</p>
+        <p>Derudover er en hjemmeside nøglen til at dukke op i lokale Google-søgninger. Når nogen søger "frisør i [din by]", er det din hjemmeside der gør forskellen mellem at blive fundet eller overset.</p>
+
+        <h2>De 6 ting din frisør-hjemmeside skal indeholde</h2>
+        <p>Du behøver ikke en side med 20 undersider og avancerede features. Her er de 6 elementer der rent faktisk gør en forskel for en frisørsalon:</p>
+
+        <ul class="checklist">
+          <li><span class="check">✓</span> <div><strong>Prisliste med dine ydelser.</strong> Dine kunder vil vide hvad det koster FØR de ringer. En klar, opdateret prisliste er det vigtigste element på din side. Opdel efter dame, herre og børn — og vær ærlig om priserne.</div></li>
+          <li><span class="check">✓</span> <div><strong>Online booking eller kontaktoplysninger.</strong> Gør det nemt at bestille en tid. Enten med et bookinglink (f.eks. Planway, Calendly eller DinBog) eller med telefonnummer og adresse der er store og tydelige.</div></li>
+          <li><span class="check">✓</span> <div><strong>Billeder af dit arbejde.</strong> Før-og-efter billeder, farvebehandlinger, brudestillinger — vis hvad du kan. Billeder sælger mere end ord. Brug ægte fotos fra din salon, ikke stockfotos.</div></li>
+          <li><span class="check">✓</span> <div><strong>Åbningstider og adresse.</strong> Lyder banalt, men det er stadig den mest søgte information. Inkludér et Google Maps-kort så kunderne kan finde vej direkte.</div></li>
+          <li><span class="check">✓</span> <div><strong>Lidt om dig og dit team.</strong> Folk vælger frisør baseret på tillid. Et par linjer om hvem du er, din erfaring og din stil gør en kæmpe forskel. Et godt portræt-foto er guld værd.</div></li>
+          <li><span class="check">✓</span> <div><strong>Kundeanmeldelser.</strong> Sociale beviser virker. Har du gode Google-anmeldelser eller Facebook-anbefalinger? Vis dem frem. Bare 3-5 citater fra tilfredse kunder øger din troværdighed markant.</div></li>
+        </ul>
+
+        <h2>Hvad behøver du IKKE?</h2>
+        <p>Mange frisører får at vide de har brug for en webshop til produkter, et nyhedsbrev-system, en chatbot og en blog. For langt de fleste saloner er det overflødigt og bare noget der koster penge.</p>
+        <p>Start simpelt. En god forside med prisliste, billeder og booking er nok til at tiltrække kunder. Du kan altid udvide senere.</p>
+
+        <h2>Hvad koster en frisør-hjemmeside?</h2>
+        <p>En professionel frisør-hjemmeside med de 6 elementer ovenfor falder typisk i vores Lille- eller Mellem-pakke:</p>
+        <ul>
+          <li><strong>Lille (1 side, one-pager):</strong> 10.000 kr — perfekt hvis du bare vil have det hele samlet på én flot side.</li>
+          <li><strong>Medium (op til 5 sider):</strong> 15.000 kr — hvis du vil have separate sider for priser, galleri, om os og kontakt.</li>
+        </ul>
+        <p>Begge inkluderer mobil-optimering, SEO, hurtig loading og gratis hosting. Ingen månedlige gebyrer.</p>
+
+        <div class="callout">
+          <p><strong>Lanceringstilbud:</strong> Lige nu får de første 10 kunder en gratis AI-Assistent og 2 timers konsultation med i pakken — en ekstra værdi på 5.000 kr.</p>
+        </div>
+
+        <h2>Lokal SEO: Bliv fundet i dit nærområde</h2>
+        <p>Den vigtigste ting ved en frisør-hjemmeside er at den dukker op når folk i dit område søger. Det kræver lokal SEO — og det behøver ikke være kompliceret.</p>
+        <p>Nævn din by, dit kvarter og dine ydelser på siden. Opret en Google Business-profil (det er gratis). Sørg for at din adresse og telefonnummer er konsistente overalt. Med ren, hurtig kode og de rigtige søgeord er du allerede foran de fleste konkurrenter.</p>
+
+        <h2>Hvordan kommer du i gang?</h2>
+        <p>Det tager 30 minutter at fortælle os om din salon, og 5-7 dage at bygge din side. Du behøver ikke levere tekst eller billeder fra start — vi hjælper dig med at strukturere indholdet. Send os bare dine bedste fotos fra salonen, din prisliste og dit logo, og så klarer vi resten.</p>
+
+      </div>
+    </div>
+  </article>
+
+  </style>
+<!-- CTA -->
+  <section class="article-cta">
+    <div class="container">
+      <h2>Klar til din egen frisør-hjemmeside?</h2>
+      <p>Book en gratis afklaring på 30 minutter. Vi gennemgår hvad du har brug for og giver dig et præcist tilbud.</p>
+      <a href="/bestil-hjemmeside/" class="btn-primary" onclick="gtag('event','calendly_click')">Book gratis afklaring →</a>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related">
+    <div class="container">
+      <h3>Læs også</h3>
+      <div class="related-grid">
+        <a href="/blog/billig-hjemmeside-til-din-virksomhed/" class="related-card">
+          <h4>Billig hjemmeside til din virksomhed — uden at gå på kompromis</h4>
+          <p>Professionel hjemmeside fra 10.000 kr. Ingen abonnement, du ejer koden.</p>
+        </a>
+        <a href="/blog/hvad-koster-en-hjemmeside-2026/" class="related-card">
+          <h4>Hvad koster en hjemmeside i 2026?</h4>
+          <p>Komplet prisoversigt fra gratis gør-det-selv til professionelt bureau.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Byg<span>Med</span>AI</div>
+    <div class="footer-links">
+      <a href="/services/">Ydelser</a>
+      <a href="/priser/">Priser</a>
+      <a href="/foer-efter/">Før &amp; Efter</a>
+      <a href="/ai-assistent/">AI-Assistent</a>
+      <a href="/blog/">Blog</a>
+      <a href="/om/">Om</a>
+      <a href="/afklaring/">Kontakt</a>
+      <a href="/privatlivspolitik/">Privatlivspolitik</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 BygMedAI · CVR 37244449 · steven@bygmedai.dk · +45 5388 6061</div>
+</footer>
+
+
+
+
+<!-- Frontend toolkit (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" defer></script>
+
+<script>
+// Reduced motion check
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Scroll reveal — IntersectionObserver (Lenis-safe, pure inline styles)
+function revealElement(el) {
+  el.classList.add('revealed');
+  // Force a paint frame at opacity:0, then transition to opacity:1
+  requestAnimationFrame(() => {
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+  });
+}
+if (!prefersReducedMotion) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('stagger-item')) {
+          const parent = entry.target.parentElement;
+          const siblings = [...parent.querySelectorAll('.stagger-item')];
+          const idx = siblings.indexOf(entry.target);
+          setTimeout(() => revealElement(entry.target), idx * 100);
+        } else {
+          revealElement(entry.target);
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-reveal], .stagger-item').forEach(el => observer.observe(el));
+}
+
+// Lenis smooth scroll + GSAP sync
+try {
+  if (typeof Lenis !== 'undefined' && !prefersReducedMotion) {
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    }
+  }
+} catch(e) {}
+
+// GSAP parallax on [data-parallax]
+try {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !prefersReducedMotion) {
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const img = el.querySelector('.parallax-bg');
+      if (img) {
+        gsap.fromTo(img, { y: '-15%' }, {
+          y: '15%', ease: 'none',
+          scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true }
+        });
+      }
+    });
+  }
+} catch(e) {}
+</script>
+
+</body>
+</html>

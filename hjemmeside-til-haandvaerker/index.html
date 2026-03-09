@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
+<title>Håndværker hjemmeside — fra 10.000 kr · SEO + Design · BygMedAI — BygMedAI</title>
+<meta name="description" content="Professionel hjemmeside bygget til håndværkere. Fra 10.000 kr, færdig på 5-7 dage. Portfolio, lokal SEO og kontaktformular. Du ejer alt. Gratis afklaring — book nu.">
+<meta property="og:title" content="Håndværker hjemmeside — fra 10.000 kr · BygMedAI — BygMedAI">
+<meta property="og:description" content="Professionel hjemmeside til håndværkere. Portfolio, lokal SEO, kontaktformular. Fra 10.000 kr. Du ejer alt.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bygmedai.dk/hjemmeside-til-haandvaerker/">
+<meta property="og:locale" content="da_DK">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Håndværker hjemmeside — fra 10.000 kr · BygMedAI — BygMedAI">
+<meta name="twitter:description" content="Professionel hjemmeside til håndværkere. Portfolio, lokal SEO, kontaktformular. Fra 10.000 kr. Du ejer alt.">
+<link rel="canonical" href="https://bygmedai.dk/hjemmeside-til-haandvaerker/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- View Transitions API -->
+<meta name="view-transition" content="same-origin">
+
+<style>
+/* ============================================================
+   BygMedAI v7 — Sophia Art Direction
+   Dusty Pink → Warm Orange · Cinematic · Nordic Elegance
+   Montserrat + Space Grotesk
+   ============================================================ */
+:root {
+  --black: #0A0C12;
+  --black-light: #12151D;
+  --pink: #C4A0A0;
+  --pink-light: #D4B0B0;
+  --orange: #D4956A;
+  --orange-hover: #E0A57A;
+  --gradient: linear-gradient(135deg, #C4A0A0, #D4956A);
+  --gradient-subtle: linear-gradient(135deg, rgba(196,160,160,0.15), rgba(212,149,106,0.15));
+  --text: #F0F2F5;
+  --text-muted: #9CA8B7;
+  --text-dim: #6B7580;
+  --radius: 12px;
+  --max-w: 1100px;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  /* v6 backward compatibility — maps old variable names to v7 palette */
+  --blue: #0A0C12;
+  --white: #FFFFFF;
+  --accent: #D4956A;
+  --accent-light: #E0A57A;
+  --accent-bg: rgba(212,149,106,0.06);
+  --navy: #0A0C12;
+  --navy-light: #12151D;
+  --bg: #0A0C12;
+  --surface: #12151D;
+  --warm: #D4956A;
+  /* Semantic colors used across subpages */
+  --red: #EF4444;
+  --green: #38A169;
+  --grey: #6B7580;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0 32px;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(10, 12, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 149, 106, 0.15);
+  transition: all 0.3s;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-phone {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  font-weight: 500;
+}
+.nav-cta {
+  background: var(--orange) !important;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--orange-hover) !important; }
+
+/* ---------- BUTTONS ---------- */
+.btn-primary {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,149,106,0.3); }
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+.btn-secondary {
+  display: inline-block;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.btn-secondary:hover { color: #fff; }
+
+/* ---------- PAGE HEADER ---------- */
+.page-header {
+  padding: 100px 24px 60px;
+  text-align: center;
+  background: var(--black);
+  color: #fff;
+}
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.page-header p {
+  color: var(--text-muted);
+  font-size: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- SECTIONS ---------- */
+section { padding: 100px 40px; }
+
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+
+/* Section headings */
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 600px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.accent { color: var(--orange); }
+.pink { color: var(--pink); }
+
+/* ---------- CARDS ---------- */
+.card {
+  background: var(--black-light);
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s;
+}
+.card:hover { border-color: rgba(212,149,106,0.2); transform: translateY(-4px); }
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--black);
+  padding: 48px 24px 24px;
+  color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.footer-logo span { color: var(--orange); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: #fff; }
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+/* Animation handled via inline styles in JS (immune to Lenis/GSAP interference) */
+[data-reveal], .stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: rgba(10, 12, 18, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 20px 32px 30px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(212,149,106,0.15);
+  }
+  .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+  .hamburger span { width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
+  .nav-phone { display: none; }
+  section { padding: 60px 20px; }
+  .page-header { padding: 80px 20px 40px; }
+  .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+@media (min-width: 681px) { .hamburger { display: none; } }
+
+@media (max-width: 900px) {
+  section { padding: 60px 20px; }
+}
+
+/* ---------- View Transitions ---------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: fade-out 0.2s ease-out; }
+::view-transition-new(root) { animation: fade-in 0.3s ease-in; }
+@keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- prefers-reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], .stagger-item { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Byg<span>Med</span>AI</a>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="/services/">Ydelser</a>
+    <a href="/priser/">Priser</a>
+    <a href="/foer-efter/">Før &amp; Efter</a>
+    <a href="/ai-assistent/">AI-Assistent</a>
+    <a href="/blog/">Blog</a>
+    <a href="/om/">Om</a>
+<a href="/afklaring/" class="nav-cta" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'nav_afklaring'})">Gratis Briefing</a>
+  </div>
+</nav>
+
+
+<style>
+/*------ NAV ---------- */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(10, 12, 18, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(212, 149, 106, 0.15);
+    transition: all 0.3s;
+  }
+  
+  /* ---------- BUTTONS ---------- */
+  .btn-primary {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  /* ---------- PAGE HEADER ---------- */
+  .page-header {
+    padding: 140px 40px 60px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
+  }
+  
+  /* ---------- SECTIONS ---------- */
+  section { padding: 80px 40px; }
+  
+  /* ---------- CARDS ---------- */
+  .card {
+    background: rgba(18,21,29,0.2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 32px;
+    transition: all 0.3s;
+  }
+  
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 48px 40px;
+  }
+  
+  /* ---------- SCROLL REVEAL ---------- */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,12,18,0.97); padding: 20px 40px 30px; gap: 16px; border-bottom: 1px solid rgba(212,149,106,0.2); }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 101; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+    section { padding: 60px 20px; }
+    .page-header { padding: 120px 20px 40px; }
+    .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+  
+  @media (min-width: 901px) { .hamburger { display: none; } }
+  
+  /* ---------- PAGE-SPECIFIC ---------- */
+  
+  .segment-hero {
+    padding: 140px 40px 80px;
+    background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
+    text-align: center;
+  }
+  
+  .segment-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+  
+  .segment-hero .badge {
+    display: inline-block; background: var(--orange); color: var(--white);
+    padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; margin-bottom: 16px;
+  }
+  
+  .segment-hero p { color: var(--text-muted); font-size: 17px; max-width: 650px; margin: 0 auto 32px; }
+  
+  .pain-section { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  
+  .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 32px auto 0; }
+  
+  .pain-card {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 12px; padding: 24px;
+  }
+  
+  .pain-card .icon { font-size: 28px; margin-bottom: 8px; }
+  
+  .pain-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #EF4444; }
+  
+  .pain-card p { font-size: 14px; color: var(--text-muted); }
+  
+  .solution-section { padding: 80px 40px; }
+  
+  .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+  
+  .case-section { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  
+  .case-content { max-width: 900px; margin: 0 auto; }
+  
+  .case-browser { border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 24px; }
+  
+  .case-browser iframe { width: 100%; height: 400px; border: none; }
+  
+  .case-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(212,149,106,0.3); }
+  
+  .case-features { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 16px; }
+  
+  .case-features li { font-size: 14px; color: var(--text-muted); display: flex; gap: 8px; }
+  
+  .faq-section { padding: 80px 40px; max-width: 800px; margin: 0 auto; }
+  
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+  
+  .faq-question {
+    padding: 20px 0; font-weight: 600; font-size: 16px;
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    transition: color 0.3s;
+  }
+  
+  .faq-question:hover { color: var(--orange); }
+  
+  .faq-answer { padding: 0 0 20px; color: var(--text-muted); font-size: 15px; line-height: 1.7; display: none; }
+  
+  .faq-item.open .faq-answer { display: block; }
+  
+  .pricing-section { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  
+  .segment-pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+  
+  .process-section { padding: 80px 40px; }
+  
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+  
+  .process-step { text-align: center; }
+  
+  .process-step .num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--orange); color: var(--white);
+    font-weight: 800; display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 12px;
+  }
+  
+  .cta-section { padding: 80px 40px; text-align: center; background: var(--blue); }
+  
+  .cta-section h2 { font-family: var(--font-display); font-size: 32px; margin-bottom: 12px; }
+  
+  .cta-section p { color: var(--text-muted); margin-bottom: 32px; }
+  
+  @media (max-width: 900px) {
+    .pain-grid { grid-template-columns: 1fr; }
+    .solution-grid { grid-template-columns: 1fr; }
+    .segment-pricing { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .case-features { grid-template-columns: 1fr; }
+  }---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,12,18,0.97); padding: 20px 40px 30px; gap: 16px; border-bottom: 1px solid rgba(212,149,106,0.2); }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 101; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+    section { padding: 60px 20px; }
+    .page-header { padding: 120px 20px 40px; }
+    .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+  @media (min-width: 901px) { .hamburger { display: none; } }
+  
+  /* ---------- PAGE-SPECIFIC ---------- */
+  
+  .segment-hero {
+    padding: 140px 40px 80px;
+    background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
+    text-align: center;
+  }
+  .segment-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
+  .segment-hero .badge {
+    display: inline-block; background: var(--orange); color: var(--white);
+    padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; margin-bottom: 16px;
+  }
+  .segment-hero p { color: var(--text-muted); font-size: 17px; max-width: 650px; margin: 0 auto 32px; }
+  
+  .pain-section { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 32px auto 0; }
+  .pain-card {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 12px; padding: 24px;
+  }
+  .pain-card .icon { font-size: 28px; margin-bottom: 8px; }
+  .pain-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #EF4444; }
+  .pain-card p { font-size: 14px; color: var(--text-muted); }
+  
+  .solution-section { padding: 80px 40px; }
+  .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+  
+  .case-section { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  .case-content { max-width: 900px; margin: 0 auto; }
+  .case-browser { border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 24px; }
+  .case-browser iframe { width: 100%; height: 400px; border: none; }
+  .case-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(212,149,106,0.3); }
+  .case-features { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 16px; }
+  .case-features li { font-size: 14px; color: var(--text-muted); display: flex; gap: 8px; }
+  
+  .faq-section { padding: 80px 40px; max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .faq-question {
+    padding: 20px 0; font-weight: 600; font-size: 16px;
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    transition: color 0.3s;
+  }
+  .faq-question:hover { color: var(--orange); }
+  .faq-answer { padding: 0 0 20px; color: var(--text-muted); font-size: 15px; line-height: 1.7; display: none; }
+  .faq-item.open .faq-answer { display: block; }
+  
+  .pricing-section { padding: 80px 40px; background: rgba(18,21,29,0.1); }
+  .segment-pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+  
+  .process-section { padding: 80px 40px; }
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+  .process-step { text-align: center; }
+  .process-step .num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--orange); color: var(--white);
+    font-weight: 800; display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 12px;
+  }
+  
+  .cta-section { padding: 80px 40px; text-align: center; background: var(--blue); }
+  .cta-section h2 { font-family: var(--font-display); font-size: 32px; margin-bottom: 12px; }
+  .cta-section p { color: var(--text-muted); margin-bottom: 32px; }
+  
+  @media (max-width: 900px) {
+    .pain-grid { grid-template-columns: 1fr; }
+    .solution-grid { grid-template-columns: 1fr; }
+    .segment-pricing { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .case-features { grid-template-columns: 1fr; }
+  }
+jsonLd: |
+  {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Professionel hjemmeside til håndværkere",
+      "description": "Hjemmeside designet specifikt til håndværkere — med portfolio, lokal SEO og kontaktformular.",
+      "areaServed": "DK",
+      "provider": {
+        "@type": "Organization",
+        "name": "BygMedAI",
+        "url": "https://bygmedai.dk"
+      },
+      "offers": [
+        { "@type": "Offer", "name": "Lille", "price": "10000", "priceCurrency": "DKK", "description": "1 side, 5-7 dage" },
+        { "@type": "Offer", "name": "Mellem", "price": "15000", "priceCurrency": "DKK", "description": "Op til 5 sider, 7-10 dage" },
+        { "@type": "Offer", "name": "Stor", "price": "25000", "priceCurrency": "DKK", "description": "Op til 10 sider, 10-15 dage, inkl. AI-Assistent" }
+      ]
+    }
+
+</style>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/Splitting.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js"></script>
+<!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">For håndværkere · Malere · Tømrere · Elektrikere</div>
+      <h1>Dit <mark>håndværk</mark> fortjener en hjemmeside der <mark>arbejder</mark> for dig</h1>
+      <p>Når folk har brug for en maler, elektriker eller tømrer, søger de på Google. Med en professionel hjemmeside bliver du synlig lokalt, viser dit arbejde og gør det nemt at få et tilbud — også efter fyraften.</p>
+      <div class="hero-cta">
+        <a href="/bestil-hjemmeside/" class="btn-primary" onclick="gtag('event','segment_hero_cta_click',{event_category:'conversion',segment_type:'haandvaerker'});">Book gratis afklaring →</a>
+        <a href="#priser" class="btn-teal">Se priser ↓</a>
+      </div>
+      <div class="hero-checks">
+        <span>✓ Portfolio af dit arbejde</span>
+        <span>✓ Lokal SEO — synlig i dit område</span>
+        <span>✓ Kontaktformular til tilbud</span>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">10K</div><div class="stat-label">Hjemmeside fra</div></div>
+        <div class="stat"><div class="stat-num">5-7</div><div class="stat-label">Dages levering</div></div>
+        <div class="stat"><div class="stat-num">0 kr</div><div class="stat-label">Månedligt gebyr</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Dit ejerskab</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS — Neubrutalism Bento -->
+  <section class="pain">
+    <div class="container">
+      <div class="section-label">Udfordringerne</div>
+      <h2>Kender du det her?</h2>
+      <p class="subtitle">De fleste håndværkere vi taler med har de samme frustrationer — og det er ikke fordi de ikke er dygtige.</p>
+      <div class="pain-bento">
+        <div class="pain-card pain-card--wide">
+          <div class="pain-icon">🔍</div>
+          <div>
+            <h3>Du er usynlig lokalt — konkurrenter med dårligere arbejde overtager</h3>
+            <p>Kunder søger "maler Roskilde" eller "elektriker nær mig" — og finder de store bureauer i stedet for dig. Du laver fantastisk håndværk men ingen kan se det. Uden en professionel side taber du opgaver til firmaer med bedre Google-ranking.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">📸</div>
+          <div>
+            <h3>Dit arbejde er skjult</h3>
+            <p>Portfolio sælger. Uden det mister du 50%+ af potentielle kunder før de ringer.</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">💸</div>
+          <div>
+            <h3>Tabte opgaver</h3>
+            <p>Ingen nem booking, ingen kontaktformular, ingen anmeldelser — konkurrenter får jobbet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution">
+    <div class="container">
+      <div class="section-label">Løsningen</div>
+      <h2>Sådan hjælper BygMedAI dig</h2>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <div class="solution-icon">📍</div>
+          <h3>Lokal SEO der virker</h3>
+          <p>Din side ranker når folk i dit område søger. Google My Business-klar fra dag 1. Du vises før konkurrenterne.</p>
+        </div>
+        <div class="solution-card">
+          <div class="solution-icon">📸</div>
+          <h3>Portfolio der sælger</h3>
+          <p>Før-og-efter billeder. Potentielle kunder ser kvaliteten før de ringer. Bevis slår løfter.</p>
+        </div>
+        <div class="solution-card">
+          <div class="solution-icon">📋</div>
+          <h3>Nemt tilbudsystem</h3>
+          <p>Kontaktformular hvor kunder beskriver deres projekt. Du får anmodningerne i indbakken. Ventetid væk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section class="case-study">
+    <div class="container">
+      <div class="section-label">Ægte eksempel</div>
+      <h2>Se hvordan vi gjorde det</h2>
+      <div class="case-card">
+        <div class="case-badge">✓ 3 kundeprojekter live — se dem selv</div>
+        <blockquote>Vi har bygget hjemmesider for små virksomheder i hele Danmark. Hver side er skræddersyet til kundens branche og inkluderer portfolio, kontaktformular og SEO-optimering fra dag 1.</blockquote>
+        <div class="case-cite">Se vores arbejde: <a href="https://vendhjem.dk" target="_blank" rel="noopener">vendhjem.dk</a> · <a href="https://nordisign.dk" target="_blank" rel="noopener">nordisign.dk</a> · <a href="https://emilsalzer.dk" target="_blank" rel="noopener" onclick="gtag('event','segment_case_study_click',{event_category:'engagement',segment_type:'haandvaerker'});">emilsalzer.dk</a></div>
+        <div class="case-meta">
+          <div class="case-meta-item"><strong>3</strong> kunder live</div>
+          <div class="case-meta-item"><strong>5-7</strong> dages levering</div>
+          <div class="case-meta-item"><strong>100%</strong> ejerskab</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-label">Spørgsmål &amp; svar</div>
+      <h2>Ofte stillede spørgsmål</h2>
+      <div class="faq-list">
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:1});">
+          <summary>Hvad skal en håndværker-hjemmeside indeholde?</summary>
+          <div class="faq-answer">En god håndværker-hjemmeside bør have en klar beskrivelse af dine ydelser, en portfolio med billeder af dit arbejde, kontaktformular til tilbudsanmodninger, kundeanmeldelser, praktisk info som dækningsområde og åbningstider. Visuelt bevis for kvalitet er det vigtigste — vis hvad du kan.</div>
+        </details>
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:2});">
+          <summary>Hvor meget koster en håndværker-hjemmeside?</summary>
+          <div class="faq-answer">Hos BygMedAI koster en professionel håndværker-hjemmeside fra 10.000 kr ekskl. moms for en single-page løsning. Medium-pakke med op til 5 sider koster 15.000 kr. Komplet løsning med op til 10 sider koster 25.000 kr. Alle pakker inkluderer responsivt design, SEO og fuld kildekode.</div>
+        </details>
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:3});">
+          <summary>Hvordan viser jeg mit arbejde på hjemmesiden?</summary>
+          <div class="faq-answer">Vi bygger en portfolio-sektion med billeder af dine projekter — gerne som før-og-efter visninger. Du sender fotos fra din telefon, vi optimerer og placerer dem professionelt. Vi anbefaler minimum 6-8 gode billeder til at starte med.</div>
+        </details>
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:4});">
+          <summary>Hvad er lokal SEO og hvorfor betyder det noget?</summary>
+          <div class="faq-answer">Lokal SEO handler om at din hjemmeside dukker op når folk i dit område søger efter dine ydelser — fx "maler Roskilde" eller "elektriker nær mig". Vi optimerer din side med lokale søgeord, korrekt schema markup og Google My Business-integration, så du bliver synlig for kunderne i dit nærområde.</div>
+        </details>
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:5});">
+          <summary>Skal jeg have priser på hjemmesiden?</summary>
+          <div class="faq-answer">Det afhænger af din forretning. Mange håndværkere viser startpriser eller prisintervaller for at tiltrække de rigtige kunder. Du kan også have en "Få et tilbud"-formular i stedet. Vi rådgiver om hvad der fungerer bedst for din branche.</div>
+        </details>
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:6});">
+          <summary>Hvem ejer hjemmesiden efterfølgende?</summary>
+          <div class="faq-answer">Det gør du. Du får fuld kildekode, teknisk dokumentation og hosting-vejledning. Du er aldrig låst til os — du kan tage din hjemmeside med til en anden leverandør når som helst. Vi anbefaler GitHub Pages (gratis hosting), men du vælger hvad der passer dig.</div>
+        </details>
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:7});">
+          <summary>Kan jeg selv tilføje nye projekter og billeder?</summary>
+          <div class="faq-answer">Ja. Vi leverer en indholdsvejledning der viser dig trin-for-trin hvordan du tilføjer nye billeder og projekter til din portfolio. Alternativt kan vi tilbyde løbende vedligeholdelse eller en AI-assistent der hjælper dig.</div>
+        </details>
+        <details class="faq-item" onclick="gtag('event','segment_faq_expand',{event_category:'engagement',segment_type:'haandvaerker',question_index:8});">
+          <summary>Kan I hjælpe med at fotografere mit arbejde?</summary>
+          <div class="faq-answer">Vi kan give dig gode tips til at tage effektive fotos med din smartphone. De behøver ikke være professionelle for at virke overbevisende. Alternativt kan vi anbefale en lokal fotograf hvis du ønsker professionelle billeder.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="priser">
+    <div class="container">
+      <div class="section-label">Priser</div>
+      <h2>Vælg den rigtige pakke</h2>
+      <p class="subtitle">Fast pris. Ingen timepris der løber. Alt inkluderet.</p>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Lille</h3>
+          <div class="pages">1 side (landingpage)</div>
+          <div class="price">10.000 kr</div>
+          <div class="price-sub">ekskl. moms · 5-7 dage</div>
+          <ul>
+            <li>Responsivt design (mobil + desktop)</li>
+            <li>Kontaktformular</li>
+            <li>Grundlæggende SEO</li>
+            <li>Fuld kildekode + dokumentation</li>
+            <li>30 dages e-mail-support</li>
+          </ul>
+          <a href="/bestil-hjemmeside/" class="btn-outline" onclick="gtag('event','segment_pricing_click',{event_category:'conversion',segment_type:'haandvaerker',package:'small'});">Start med Lille →</a>
+        </div>
+        <div class="price-card featured">
+          <h3>Mellem</h3>
+          <div class="pages">Op til 5 sider</div>
+          <div class="price">15.000 kr</div>
+          <div class="price-sub">ekskl. moms · 7-10 dage</div>
+          <ul>
+            <li>Alt i Lille +</li>
+            <li>Google Analytics 4</li>
+            <li>Blog- eller nyhedssektion</li>
+            <li>Optimeret SEO med schema markup</li>
+            <li>Google Search Console opsætning</li>
+          </ul>
+          <a href="/bestil-hjemmeside/" class="btn-teal" onclick="gtag('event','segment_pricing_click',{event_category:'conversion',segment_type:'haandvaerker',package:'medium'});">Vælg Mellem →</a>
+        </div>
+        <div class="price-card">
+          <h3>Stor</h3>
+          <div class="pages">Op til 10 sider</div>
+          <div class="price">25.000 kr</div>
+          <div class="price-sub">ekskl. moms · 10-15 dage</div>
+          <ul>
+            <li>Alt i Mellem +</li>
+            <li>Booking-integration</li>
+            <li>Cookie-consent</li>
+            <li>AI-Assistent Basic inkluderet</li>
+            <li>2 timers personlig oplæring</li>
+          </ul>
+          <a href="/bestil-hjemmeside/" class="btn-outline" onclick="gtag('event','segment_pricing_click',{event_category:'conversion',segment_type:'haandvaerker',package:'large'});">Start med Stor →</a>
+        </div>
+      </div>
+      <div class="offer-badge">
+        <p>Lanceringstilbud: Gratis AI-Assistent + 2t konsultation (værdi 5.000 kr) inkluderet</p>
+        <span class="small">Gælder de første 10 kunder · 7 pladser tilbage</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="section-label">Processen</div>
+      <h2>Sådan foregår det</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Gratis samtale</h3>
+          <p>30 min om dit arbejde og dine behov</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Vi bygger</h3>
+          <p>AI + erfaren konsulent, 5-10 dage</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Du godkender</h3>
+          <p>Preview-link + 2 feedback-runder</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Du ejer det</h3>
+          <p>Kildekode, dokumentation, alt dit</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="urgency-badge"><span class="urgency-dot"></span> Kun 3 projekter ad gangen</div>
+        <h2>Klar til at blive synlig i dit område?</h2>
+        <p>Book en gratis afklaring på 30 minutter. Vi taler om din forretning, dit arbejde og finder den rigtige løsning. Ingen binding, ingen pres.</p>
+        <a href="/bestil-hjemmeside/" class="btn-outline" style="padding: 18px 48px; font-size: 16px; background: var(--navy); color: var(--accent); border-color: var(--navy);" onclick="gtag('event','segment_cta_final_click',{event_category:'conversion',segment_type:'haandvaerker'});">Book gratis afklaring →</a>
+      </div>
+    </div>
+  </section>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Byg<span>Med</span>AI</div>
+    <div class="footer-links">
+      <a href="/services/">Ydelser</a>
+      <a href="/priser/">Priser</a>
+      <a href="/foer-efter/">Før &amp; Efter</a>
+      <a href="/ai-assistent/">AI-Assistent</a>
+      <a href="/blog/">Blog</a>
+      <a href="/om/">Om</a>
+      <a href="/afklaring/">Kontakt</a>
+      <a href="/privatlivspolitik/">Privatlivspolitik</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 BygMedAI · CVR 37244449 · steven@bygmedai.dk · +45 5388 6061</div>
+</footer>
+
+
+
+
+<!-- Frontend toolkit (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" defer></script>
+
+<script>
+// Reduced motion check
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Scroll reveal — IntersectionObserver (Lenis-safe, pure inline styles)
+function revealElement(el) {
+  el.classList.add('revealed');
+  // Force a paint frame at opacity:0, then transition to opacity:1
+  requestAnimationFrame(() => {
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+  });
+}
+if (!prefersReducedMotion) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('stagger-item')) {
+          const parent = entry.target.parentElement;
+          const siblings = [...parent.querySelectorAll('.stagger-item')];
+          const idx = siblings.indexOf(entry.target);
+          setTimeout(() => revealElement(entry.target), idx * 100);
+        } else {
+          revealElement(entry.target);
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-reveal], .stagger-item').forEach(el => observer.observe(el));
+}
+
+// Lenis smooth scroll + GSAP sync
+try {
+  if (typeof Lenis !== 'undefined' && !prefersReducedMotion) {
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    }
+  }
+} catch(e) {}
+
+// GSAP parallax on [data-parallax]
+try {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !prefersReducedMotion) {
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const img = el.querySelector('.parallax-bg');
+      if (img) {
+        gsap.fromTo(img, { y: '-15%' }, {
+          y: '15%', ease: 'none',
+          scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true }
+        });
+      }
+    });
+  }
+} catch(e) {}
+</script>
+
+</body>
+</html>
