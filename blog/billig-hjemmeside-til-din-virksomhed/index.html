@@ -97,6 +97,7 @@ a { color: inherit; text-decoration: none; }
 .nav-logo span { color: var(--orange); }
 .nav-links { display: flex; gap: 24px; align-items: center; }
 .nav-links a {
+    font-family: var(--font-display);
   font-size: 14px; font-weight: 500;
   color: rgba(255,255,255,0.7);
   transition: color 0.3s;
@@ -415,52 +416,52 @@ footer {
   
   /* ---------- PAGE-SPECIFIC ---------- */
   
-  .article-hero {
+  .article-header {
     padding: 140px 40px 60px;
     background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
     text-align: center;
   }
   
-  .article-hero .tag {
+  .article-header .tag {
     font-size: 12px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 1px; color: var(--orange); margin-bottom: 12px;
   }
   
-  .article-hero h1 {
+  .article-header h1 {
     font-family: var(--font-display);
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     max-width: 800px; margin: 0 auto 16px;
   }
   
-  .article-hero .meta { color: var(--text-muted); font-size: 14px; }
+  .article-header .meta { color: var(--text-muted); font-size: 14px; }
   
-  .article-content {
+  .article-body {
     max-width: 720px; margin: 0 auto; padding: 60px 24px;
   }
   
-  .article-content h2 {
+  .article-body h2 {
     font-family: var(--font-display);
     font-size: 24px; margin: 40px 0 16px;
     color: var(--white);
   }
   
-  .article-content h3 {
+  .article-body h3 {
     font-family: var(--font-display);
     font-size: 20px; margin: 32px 0 12px;
     color: var(--white);
   }
   
-  .article-content p {
+  .article-body p {
     color: var(--text-muted); font-size: 16px; line-height: 1.8;
     margin-bottom: 16px;
   }
   
-  .article-content ul, .article-content ol {
+  .article-body ul, .article-body ol {
     color: var(--text-muted); margin: 16px 0 16px 24px;
     font-size: 16px; line-height: 1.8;
   }
   
-  .article-content blockquote {
+  .article-body blockquote {
     border-left: 3px solid var(--orange);
     padding: 16px 24px; margin: 24px 0;
     font-style: italic; color: var(--text-muted);
@@ -468,9 +469,9 @@ footer {
     border-radius: 0 8px 8px 0;
   }
   
-  .article-content strong { color: var(--white); }
+  .article-body strong { color: var(--white); }
   
-  .article-content a { color: var(--orange); text-decoration: underline; }
+  .article-body a { color: var(--orange); text-decoration: underline; }
   
   .related-articles { padding: 60px 40px; background: rgba(18,21,29,0.1); }
   
@@ -495,52 +496,52 @@ footer {
   
   /* ---------- PAGE-SPECIFIC ---------- */
   
-  .article-hero {
+  .article-header {
     padding: 140px 40px 60px;
     background: linear-gradient(180deg, var(--blue) 0%, var(--black) 100%);
     text-align: center;
   }
-  .article-hero .tag {
+  .article-header .tag {
     font-size: 12px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 1px; color: var(--orange); margin-bottom: 12px;
   }
-  .article-hero h1 {
+  .article-header h1 {
     font-family: var(--font-display);
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     max-width: 800px; margin: 0 auto 16px;
   }
-  .article-hero .meta { color: var(--text-muted); font-size: 14px; }
+  .article-header .meta { color: var(--text-muted); font-size: 14px; }
   
-  .article-content {
+  .article-body {
     max-width: 720px; margin: 0 auto; padding: 60px 24px;
   }
-  .article-content h2 {
+  .article-body h2 {
     font-family: var(--font-display);
     font-size: 24px; margin: 40px 0 16px;
     color: var(--white);
   }
-  .article-content h3 {
+  .article-body h3 {
     font-family: var(--font-display);
     font-size: 20px; margin: 32px 0 12px;
     color: var(--white);
   }
-  .article-content p {
+  .article-body p {
     color: var(--text-muted); font-size: 16px; line-height: 1.8;
     margin-bottom: 16px;
   }
-  .article-content ul, .article-content ol {
+  .article-body ul, .article-body ol {
     color: var(--text-muted); margin: 16px 0 16px 24px;
     font-size: 16px; line-height: 1.8;
   }
-  .article-content blockquote {
+  .article-body blockquote {
     border-left: 3px solid var(--orange);
     padding: 16px 24px; margin: 24px 0;
     font-style: italic; color: var(--text-muted);
     background: rgba(18,21,29,0.15);
     border-radius: 0 8px 8px 0;
   }
-  .article-content strong { color: var(--white); }
-  .article-content a { color: var(--orange); text-decoration: underline; }
+  .article-body strong { color: var(--white); }
+  .article-body a { color: var(--orange); text-decoration: underline; }
   
   .related-articles { padding: 60px 40px; background: rgba(18,21,29,0.1); }
   .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 24px auto 0; }
@@ -548,6 +549,9 @@ footer {
   .cta-section { padding: 80px 40px; text-align: center; background: var(--blue); }
   .cta-section h2 { font-family: var(--font-display); font-size: 28px; margin-bottom: 12px; }
   .cta-section p { color: var(--text-muted); margin-bottom: 32px; }
+
+  /* Global heading font */
+  h1, h2, h3 { font-family: var(--font-display); }
 </style>
 
 <article>
