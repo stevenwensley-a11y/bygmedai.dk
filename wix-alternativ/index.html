@@ -6,16 +6,21 @@
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
-<title>Flyt fra Wix — Professionel hjemmeside uden abonnement | BygMedAI — BygMedAI</title>
+<title>Flyt fra Wix — Professionel hjemmeside uden abonnement | BygMedAI</title>
 <meta name="description" content="Træt af Wix-abonnement? Vi migrerer din hjemmeside til en lynhurtig side du selv ejer. SEO bevaret, alle billeder med. Fra 15.000 kr.">
-<meta property="og:title" content="Flyt fra Wix — Professionel hjemmeside uden abonnement | BygMedAI — BygMedAI">
+<meta property="og:title" content="Flyt fra Wix — Professionel hjemmeside uden abonnement | BygMedAI">
 <meta property="og:description" content="Træt af Wix-abonnement? Vi migrerer din hjemmeside til en lynhurtig side du selv ejer. SEO bevaret, alle billeder med. Fra 15.000 kr.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bygmedai.dk/wix-alternativ/">
 <meta property="og:locale" content="da_DK">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Flyt fra Wix — Professionel hjemmeside uden abonnement | BygMedAI — BygMedAI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Flyt fra Wix — Professionel hjemmeside uden abonnement | BygMedAI">
 <meta name="twitter:description" content="Træt af Wix-abonnement? Vi migrerer din hjemmeside til en lynhurtig side du selv ejer. SEO bevaret, alle billeder med. Fra 15.000 kr.">
+<meta property="og:image" content="https://bygmedai.dk/assets/dancer-leap.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="785">
+<meta property="og:image:alt" content="BygMedAI — professionelle hjemmesider bygget med AI">
+<meta name="twitter:image" content="https://bygmedai.dk/assets/dancer-leap.jpg">
 <link rel="canonical" href="https://bygmedai.dk/wix-alternativ/">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,6 +122,66 @@ a { color: inherit; text-decoration: none; }
   transition: all 0.3s;
 }
 .nav-cta:hover { background: var(--orange-hover) !important; }
+/* ---------- NAV DROPDOWN (Brancher) ---------- */
+.nav-dropdown { position: relative; }
+.nav-dropdown > .nav-dropdown-toggle {
+  font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.nav-dropdown > .nav-dropdown-toggle::after {
+  content: '\25BE';
+  font-size: 10px;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.nav-dropdown:hover > .nav-dropdown-toggle,
+.nav-dropdown:focus-within > .nav-dropdown-toggle { color: #fff; }
+.nav-dropdown:hover > .nav-dropdown-toggle::after,
+.nav-dropdown:focus-within > .nav-dropdown-toggle::after { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; left: 0;
+  margin-top: 8px;
+  background: rgba(10, 12, 18, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212,149,106,0.2);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 220px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  z-index: 1001;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { color: #fff; background: rgba(212,149,106,0.1); }
+@media (max-width: 680px) {
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown-menu {
+    position: static;
+    display: block;
+    margin: 4px 0 0 16px;
+    padding: 4px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    min-width: 0;
+  }
+  .nav-dropdown-menu a { padding: 6px 0; font-size: 13px; }
+  .nav-dropdown > .nav-dropdown-toggle::after { display: none; }
+}
+
 
 /* ---------- BUTTONS ---------- */
 .btn-primary {
@@ -330,6 +395,16 @@ footer {
   <div class="nav-links">
     <a href="/services/">Ydelser</a>
     <a href="/priser/">Priser</a>
+    <div class="nav-dropdown">
+      <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Brancher</a>
+      <div class="nav-dropdown-menu">
+        <a href="/hjemmeside-til-haandvaerker/">Håndværkere</a>
+        <a href="/hjemmeside-til-terapeut/">Terapeuter</a>
+        <a href="/hjemmeside-til-konsulent/">Konsulenter</a>
+        <a href="/hjemmeside-til-restaurant/">Restauranter</a>
+        <a href="/hjemmeside-til-kunstner/">Kunstnere</a>
+      </div>
+    </div>
     <a href="/foer-efter/">Før &amp; Efter</a>
     <a href="/ai-assistent/">AI-Assistent</a>
     <a href="/blog/">Blog</a>
@@ -905,6 +980,59 @@ jsonLd: |
 
   <!-- Footer -->
 
+
+
+<!-- ============================================================
+     RELATED PAGES (cross-link hub for SEO + UX)
+     Niche pages were previously orphaned from each other.
+     ============================================================ -->
+<style>
+  .related-pages { padding: 72px 24px; background: var(--bg, #0A0C12); border-top: 1px solid rgba(255,255,255,0.06); }
+  .related-pages-inner { max-width: 1100px; margin: 0 auto; }
+  .related-pages .related-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent, #D4956A); margin-bottom: 8px; }
+  .related-pages h2 { font-family: var(--font-display, 'Montserrat', sans-serif); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; color: #fff; margin: 0 0 28px; line-height: 1.2; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .related-card { display: block; padding: 20px 22px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; text-decoration: none; transition: border-color 0.25s, transform 0.25s, background 0.25s; }
+  .related-card:hover { border-color: rgba(212,149,106,0.35); background: rgba(212,149,106,0.05); transform: translateY(-2px); }
+  .related-card-title { font-family: var(--font-display, 'Montserrat', sans-serif); font-weight: 600; font-size: 15px; color: #fff; margin-bottom: 4px; }
+  .related-card-sub { font-size: 13px; color: var(--text-muted, #9CA8B7); line-height: 1.5; }
+</style>
+<section class="related-pages" aria-label="Relaterede sider">
+  <div class="related-pages-inner">
+    <div class="related-eyebrow">Se også</div>
+    <h2>Andre løsninger fra BygMedAI</h2>
+    <div class="related-grid">
+        <a class="related-card" href="/hjemmeside-til-haandvaerker/">
+          <div class="related-card-title">Hjemmeside til håndværkere</div>
+          <div class="related-card-sub">Lokal SEO, portfolio, kontaktflow</div>
+        </a>
+        <a class="related-card" href="/hjemmeside-til-terapeut/">
+          <div class="related-card-title">Hjemmeside til terapeuter</div>
+          <div class="related-card-sub">Online booking, GDPR, profil-fokus</div>
+        </a>
+        <a class="related-card" href="/hjemmeside-til-konsulent/">
+          <div class="related-card-title">Hjemmeside til konsulenter</div>
+          <div class="related-card-sub">Autoritet, cases, lead-magnet</div>
+        </a>
+        <a class="related-card" href="/hjemmeside-til-restaurant/">
+          <div class="related-card-title">Hjemmeside til restauranter</div>
+          <div class="related-card-sub">Menu, booking, billeder der sælger</div>
+        </a>
+        <a class="related-card" href="/hjemmeside-til-kunstner/">
+          <div class="related-card-title">Hjemmeside til kunstnere</div>
+          <div class="related-card-sub">Galleri, salg, personlig branding</div>
+        </a>
+        <a class="related-card" href="/wordpress-alternativ/">
+          <div class="related-card-title">Skifter du fra WordPress?</div>
+          <div class="related-card-sub">Migration uden plugins eller bøvl</div>
+        </a>
+        <a class="related-card" href="/squarespace-alternativ/">
+          <div class="related-card-title">Skifter du fra Squarespace?</div>
+          <div class="related-card-sub">Lynhurtig side du selv ejer</div>
+        </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-inner">
