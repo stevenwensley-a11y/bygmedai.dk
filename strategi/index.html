@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
+<title>BygMedAI · Tre Strategiske Retninger — S396</title>
+<meta name="description" content="Tre strategiske retninger for BygMedAI's forside: Atelier-Rolle, Ledger og Workshop-Notebook. Greenfield-koncepter med Stevens skrivestemme som anker.">
+<meta property="og:title" content="BygMedAI · Tre Strategiske Retninger">
+<meta property="og:description" content="Tre greenfield-koncepter for fabrikkens forside — Atelier-Rolle, Ledger og Workshop-Notebook.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bygmedai.dk/strategi/">
+<meta property="og:locale" content="da_DK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BygMedAI · Tre Strategiske Retninger">
+<meta name="twitter:description" content="Tre greenfield-koncepter for fabrikkens forside.">
+<link rel="canonical" href="https://bygmedai.dk/strategi/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Space+Grotesk:wght@300;400;500;600;700&family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   BygMedAI · /strategi/
+   Wraps site nav + footer (Sophia art direction) around the
+   strategi.html canvas (Claude Design S396 presentation).
+   ============================================================ */
+:root {
+  --black: #0A0C12;
+  --black-light: #12151D;
+  --pink: #C4A0A0;
+  --orange: #D4956A;
+  --orange-hover: #E0A57A;
+  --text: #F0F2F5;
+  --text-muted: #9CA8B7;
+  --text-dim: #6B7580;
+  --white: #FFFFFF;
+  --max-w: 1320px;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 16px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(10, 12, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 149, 106, 0.15);
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 20px; font-weight: 700; color: #fff;
+}
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-cta {
+  background: var(--orange) !important;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute; top: 100%; left: 0;
+  background: rgba(10,12,18,0.97);
+  border: 1px solid rgba(212,149,106,0.2);
+  border-radius: 8px;
+  padding: 8px 0; min-width: 200px;
+}
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a { display: block; padding: 8px 16px; font-size: 14px; }
+.hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+.hamburger span { width: 22px; height: 2px; background: #fff; }
+
+/* ---------- STRATEGI CANVAS ---------- */
+.strategi-page {
+  padding-top: 64px;
+  background: #1a1714;
+}
+.strategi-canvas {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* All artboards share full-bleed treatment within canvas width */
+.artboard { display: block; }
+.artboard-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(241,235,224,0.55);
+  padding: 24px 56px 12px;
+  background: #1a1714;
+}
+
+/* ---- INTRO (dark) ---- */
+.intro {
+  padding: 48px 56px;
+  background: #1a1612;
+  color: #f1ebe0;
+  font-family: 'Source Serif Pro', Georgia, serif;
+}
+.intro-eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b8884a;
+  margin-bottom: 12px;
+}
+.intro-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(48px, 7vw, 80px);
+  line-height: 1.02;
+  font-weight: 400;
+  margin: 0 0 24px;
+  letter-spacing: -0.02em;
+}
+.intro-lead {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 920px;
+  color: #d9c4a3;
+  margin: 0 0 32px;
+}
+.intro-lead em { font-style: italic; }
+.intro-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  font-size: 14px;
+  border-top: 1px solid rgba(241,235,224,0.2);
+  padding-top: 24px;
+}
+.intro-meta-label {
+  color: #b8884a;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+/* ---- SCOPE SPEC (light) ---- */
+.scope {
+  padding: 40px 56px;
+  background: #f4f1ea;
+  color: #0d0d0d;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  border-left: 6px solid #bc2a1f;
+}
+.scope-eyebrow {
+  font-size: 11px; letter-spacing: 2px;
+  color: #bc2a1f;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.scope-title {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+.scope-lead {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #3a3530;
+  margin: 0 0 20px;
+  max-width: 960px;
+}
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  font-size: 13px;
+}
+.scope-item {
+  border-top: 2px solid #bc2a1f;
+  padding-top: 12px;
+}
+.scope-item-title {
+  color: #bc2a1f;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.scope-item-body {
+  color: #3a3530;
+  line-height: 1.5;
+}
+
+/* ---- STRATEGIES SECTION HEADER ---- */
+.section-head {
+  padding: 56px 56px 24px;
+  background: #1a1714;
+  color: #f1ebe0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+.section-head-eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b8884a;
+  margin-bottom: 8px;
+}
+.section-head-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+/* ---- STRATEGY CARD ---- */
+.card {
+  padding: 48px 56px;
+  background: #f1ebe0;
+  color: #1a1612;
+  font-family: 'Source Serif Pro', Georgia, serif;
+  border-left: 6px solid transparent;
+}
+.card.is-recommended {
+  border-left-color: #8a3a26;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 360px;
+  gap: 40px;
+  align-items: start;
+}
+.card-num {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  color: #8a3a26;
+}
+.card-rec-ribbon {
+  margin-top: 12px;
+  padding: 6px 10px;
+  background: #8a3a26;
+  color: #f1ebe0;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.card-eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a3a26;
+  margin-bottom: 8px;
+}
+.card-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(36px, 4.5vw, 48px);
+  line-height: 1.05;
+  font-weight: 400;
+  margin: 0 0 16px;
+  letter-spacing: -0.015em;
+}
+.card-frame {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #3d342a;
+  margin: 0 0 18px;
+}
+.card-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  font-size: 14px;
+}
+.card-meta-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #8a3a26;
+  margin-bottom: 4px;
+}
+.card-meta-value { color: #1a1612; }
+.card-meta-value.is-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+}
+.card-risk {
+  background: #1a1612;
+  color: #f1ebe0;
+  padding: 24px;
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card-risk-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #b8884a;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* ---- RECOMMENDATION ARTBOARD ---- */
+.recommend {
+  padding: 48px 64px;
+  background: #f5efe1;
+  color: #1a1c2a;
+  font-family: 'Source Serif Pro', Georgia, serif;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 31px,
+    rgba(58,83,120,0.18) 31px 32px
+  );
+}
+.recommend-eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a8362b;
+  margin-bottom: 12px;
+}
+.recommend-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(40px, 5vw, 56px);
+  line-height: 1.05;
+  font-weight: 400;
+  margin: 0 0 24px;
+  letter-spacing: -0.015em;
+}
+.recommend-title em { color: #a8362b; font-style: italic; }
+.recommend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.recommend-grid p { margin: 0 0 14px; }
+.recommend-grid ul { margin: 0 0 14px; padding-left: 20px; }
+.recommend-grid li { margin-bottom: 8px; }
+.recommend-coda {
+  margin: 0;
+  font-style: italic;
+  color: #a8362b;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--black);
+  border-top: 1px solid rgba(212,149,106,0.15);
+  padding: 40px;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 700; color: #fff;
+}
+.footer-logo span { color: var(--orange); }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+.footer-links a:hover { color: #fff; }
+.footer-copy {
+  max-width: 1100px; margin: 24px auto 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(10,12,18,0.97);
+    padding: 20px 40px 30px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(212,149,106,0.2);
+  }
+  .nav-links.open { display: flex; }
+
+  .intro, .scope, .card, .recommend, .section-head { padding-left: 24px; padding-right: 24px; }
+  .artboard-label { padding-left: 24px; padding-right: 24px; }
+  .intro-meta { grid-template-columns: 1fr 1fr; }
+  .scope-grid { grid-template-columns: 1fr; }
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .card-num { font-size: 48px; }
+  .recommend-grid { grid-template-columns: 1fr; gap: 16px; }
+  .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 560px) {
+  .intro-meta { grid-template-columns: 1fr; }
+  .card-meta { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Byg<span>Med</span>AI</a>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="/services/">Ydelser</a>
+    <a href="/priser/">Priser</a>
+    <div class="nav-dropdown">
+      <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Brancher</a>
+      <div class="nav-dropdown-menu">
+        <a href="/hjemmeside-til-haandvaerker/">Håndværkere</a>
+        <a href="/hjemmeside-til-terapeut/">Terapeuter</a>
+        <a href="/hjemmeside-til-konsulent/">Konsulenter</a>
+        <a href="/hjemmeside-til-restaurant/">Restauranter</a>
+        <a href="/hjemmeside-til-kunstner/">Kunstnere</a>
+      </div>
+    </div>
+    <a href="/foer-efter/">Før &amp; Efter</a>
+    <a href="/ai-assistent/">AI-Assistent</a>
+    <a href="/blog/">Blog</a>
+    <a href="/om/">Om</a>
+    <a href="/afklaring/" class="nav-cta" onclick="gtag('event','cta_click',{event_category:'conversion',event_label:'nav_afklaring'})">Gratis Briefing</a>
+  </div>
+</nav>
+
+<main class="strategi-page">
+  <div class="strategi-canvas">
+
+    <!-- INTRO ARTBOARD -->
+    <div class="artboard-label">Brief · Brand-essens · Constraints</div>
+    <section class="artboard intro">
+      <div class="intro-eyebrow">BygMedAI · S396 · pilot for nyt aktør-flow</div>
+      <h1 class="intro-title">Tre retninger for fabrikkens forside.</h1>
+      <p class="intro-lead">
+        Alle tre er greenfield, alle tre bruger Stevens skrivestemme som anker, alle tre viser
+        ensemblet ved navn. De adskiller sig på <em>hvor langt fra konvention</em> de tør gå.
+        Atelier-Rolle er trygt-distinkt, Ledger er teknisk-elsket, Workshop-Notebook er
+        polariserende — og hvor BygMedAI kan vinde fordi det forsikrer ingen anden tør.
+      </p>
+      <div class="intro-meta">
+        <div>
+          <div class="intro-meta-label">BRAND-ESSENS</div>
+          <div>Et agentic atelier der leverer kommerciel-kvalitet på dage, ikke uger.</div>
+        </div>
+        <div>
+          <div class="intro-meta-label">CYCLE-CLAIM</div>
+          <div>24–72 timer (scope-defineret: MVP / Standard / Bespoke).</div>
+        </div>
+        <div>
+          <div class="intro-meta-label">STEVEN</div>
+          <div>Tungt synlig. Skrivestemme = produkt.</div>
+        </div>
+        <div>
+          <div class="intro-meta-label">PRIS</div>
+          <div>Bag afklaring. Portfolio + skrift præ-filtrerer.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCOPE-SPEC ARTBOARD -->
+    <div class="artboard-label">Scope-spec · "24–72 timer" defineret</div>
+    <section class="artboard scope">
+      <div class="scope-eyebrow"># SCOPE-SPEC · "hvad live betyder"</div>
+      <h2 class="scope-title">24–48–72 timer · forklaret så claim'et ikke bliver overpromise</h2>
+      <p class="scope-lead">
+        Du flagsignaler at "live på 24–48 timer" risikerer at lyde overpromise hvis vi ikke
+        scope-definerer. Min foreslåede triade — som indlejres som ribbon på alle tre retninger:
+      </p>
+      <div class="scope-grid">
+        <div class="scope-item">
+          <div class="scope-item-title">24t · MVP</div>
+          <div class="scope-item-body">
+            1-side landing · DNS · cert · cookies · grundlæggende SEO.<br>
+            Beviset: Inkandart S395 (8 timer faktisk).
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-item-title">48t · STANDARD</div>
+          <div class="scope-item-body">
+            3–5 sider · CMS-data · kontaktform · social cards · GDPR.<br>
+            Beviset: emilsalzer.dk, nordisign.dk.
+          </div>
+        </div>
+        <div class="scope-item">
+          <div class="scope-item-title">72t · BESPOKE</div>
+          <div class="scope-item-body">
+            Custom design · galleri · booking-integration · portal.<br>
+            Beviset: klamsine.at, leadflow-assurance.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRATEGIES SECTION HEAD -->
+    <div class="section-head">
+      <div class="section-head-eyebrow">Sammenfatning</div>
+      <h2 class="section-head-title">Strategiske retninger</h2>
+    </div>
+
+    <!-- STRATEGY 01 -->
+    <div class="artboard-label">01 · Atelier-Rolle</div>
+    <article class="artboard card">
+      <div class="card-grid">
+        <div>
+          <div class="card-num">01</div>
+        </div>
+        <div>
+          <div class="card-eyebrow">Strategisk retning</div>
+          <h3 class="card-title">Atelier-Rolle</h3>
+          <p class="card-frame">
+            Steven som værkfører i et navngivet ensemble. Editorial-warm palette,
+            serif-display, mono-eyebrows. Cast-listen er hovedforside-element.
+            Kunsthåndværk-atelier, anti-tech-bro.
+          </p>
+          <div class="card-meta">
+            <div>
+              <div class="card-meta-label">Målgruppe</div>
+              <div class="card-meta-value">Selvstændige &amp; SMV der vil have kvalitet og personlig hånd. Konkurrerer mod traditional bureauer på relation, ikke pris.</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Visual hook</div>
+              <div class="card-meta-value">Cast-listen som forside-element — ensemblet vises ved navn med karakter-citater.</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Palette</div>
+              <div class="card-meta-value is-mono">cremepapir #f1ebe0 · tegl #8a3a26 · okker #b8884a · sort #1a1612</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Hvorfor virker den</div>
+              <div class="card-meta-value">Mest direkte oversættelse af 'atelier'-essensen. Lav risiko at det virker for-pænt-til-fabrik.</div>
+            </div>
+          </div>
+        </div>
+        <aside class="card-risk">
+          <div class="card-risk-label">Risiko</div>
+          <div>
+            Mest forudsigelig af de tre. Kan virke "for-pænt-til-fabrik". Differentierer
+            ikke aggressivt nok mod andre håndværker-positionerings-sites.
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- STRATEGY 02 -->
+    <div class="artboard-label">02 · Ledger</div>
+    <article class="artboard card">
+      <div class="card-grid">
+        <div>
+          <div class="card-num">02</div>
+        </div>
+        <div>
+          <div class="card-eyebrow">Strategisk retning</div>
+          <h3 class="card-title">Ledger</h3>
+          <p class="card-frame">
+            Sitet AS produktions-ledger. Maskinrumsdokument-æstetik. Mono-tung,
+            monospace-grid, timestamps, line-numbers, S-numre. Live ledger-feed med
+            faktiske builds. Receipts not rhetoric.
+          </p>
+          <div class="card-meta">
+            <div>
+              <div class="card-meta-label">Målgruppe</div>
+              <div class="card-meta-value">Tekniske købere — startup-CTO'er, indie hackers, agency-tilkøbere der bliver overbevist af receipts.</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Visual hook</div>
+              <div class="card-meta-value">Live-ledger-feed med faktiske session-numre og kommando-style headlines.</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Palette</div>
+              <div class="card-meta-value is-mono">halv-creme #f4f1ea · sort #0d0d0d · ledger-red #bc2a1f · verifikations-grøn #2d5a32</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Hvorfor virker den</div>
+              <div class="card-meta-value">Mest distinkt visuelt sprog — ingen anden dansk konsulent gør det her. Skarp filter på tech-affinitet.</div>
+            </div>
+          </div>
+        </div>
+        <aside class="card-risk">
+          <div class="card-risk-label">Risiko</div>
+          <div>
+            Tech-affinitet kan skubbe ikke-tekniske købere væk. Kommando-syntax læses
+            cold af nogle kunder. Lever af at receipts er sjove at læse.
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- STRATEGY 03 — RECOMMENDED -->
+    <div class="artboard-label">03 · Workshop-Notebook · ★ ANBEFALES</div>
+    <article class="artboard card is-recommended">
+      <div class="card-grid">
+        <div>
+          <div class="card-num">03</div>
+          <div class="card-rec-ribbon">★ Min anbefaling</div>
+        </div>
+        <div>
+          <div class="card-eyebrow">Strategisk retning</div>
+          <h3 class="card-title">Workshop-Notebook</h3>
+          <p class="card-frame">
+            Stevens skitsebog som hele sitet. Cremet papir, blå linjer, røde marginer,
+            håndskrevne glosser, indskannede typografi-prøver, in-progress. Noveller
+            og essays er FØRSTE-IMPRESSION — projekterne er marginalia.
+          </p>
+          <div class="card-meta">
+            <div>
+              <div class="card-meta-label">Målgruppe</div>
+              <div class="card-meta-value">Købere der allerede er trætte af AI-startup-marketing og ville købe Craig Mod's services hvis han boede i København.</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Visual hook</div>
+              <div class="card-meta-value">Skriftens primat. Essays + noveller står over portfolio. Margin-noter, kanji-kapitelmærker, håndskreven Caveat-font på blue-line paper.</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Palette</div>
+              <div class="card-meta-value is-mono">papir #f5efe1 · ink #1a1c2a · margenrød #a8362b · pen-blå #3a5378</div>
+            </div>
+            <div>
+              <div class="card-meta-label">Hvorfor virker den</div>
+              <div class="card-meta-value">Ingen anden dansk konsulent kan kopiere det. Det er Stevens stemme materialiseret. Stærkest match til Craig Mod-koordinaten.</div>
+            </div>
+          </div>
+        </div>
+        <aside class="card-risk">
+          <div class="card-risk-label">Risiko</div>
+          <div>
+            Polariserende. Mister browsers der ville have klikket-og-lukket. Vinder dem
+            der bliver hængende — og det er dem der konverterer.
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- RECOMMENDATION ARTBOARD -->
+    <div class="artboard-label">Min anbefaling · hvorfor V3 vinder</div>
+    <section class="artboard recommend">
+      <div class="recommend-eyebrow">Claude Design · anbefaling til Steven</div>
+      <h2 class="recommend-title">Vælg <em>Workshop-Notebook</em>.</h2>
+      <div class="recommend-grid">
+        <div>
+          <p>
+            Du har bedt om <em>distinkt og polariserende fremfor smooth og glemmelig</em>.
+            V3 er den eneste der opfylder begge:
+          </p>
+          <ul>
+            <li><strong>Stevens skrift bliver hovedprodukt-differentation</strong> — essays og noveller er placeret før portfolio, ikke som blog-bilag.</li>
+            <li><strong>Den passer Craig Mod-koordinaten præcist.</strong> Notebook-vokabular, håndskrevne marginer, kanji-kapitelmærker, papir-tekstur.</li>
+            <li><strong>Den er umulig at kopiere</strong> — formatet er bundet til Stevens stemme. Konkurrenter må bygge noget andet.</li>
+          </ul>
+        </div>
+        <div>
+          <p>
+            Risikoen — at tech-affine købere finder den for "skole-bog-agtig" — håndteres ved at
+            Ledger-DNA <em>kan injiceres</em> som secondary surface (et live-ledger-widget i sidefod,
+            S-numre i meta-strip). Vi får mest signal fra V3, mest receipts fra V2.
+          </p>
+          <p class="recommend-coda">
+            Hvis du siger ja, leverer jeg komplet drop-in til Eleventy-repoet
+            i næste session: alle partials, komplet stylesheet, fonts self-hostet,
+            scope-spec-ribbon indbygget, Datatilsynet-compliant cookie-banner.
+            ~6 timer arbejde.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Byg<span>Med</span>AI</div>
+    <div class="footer-links">
+      <a href="/services/">Ydelser</a>
+      <a href="/priser/">Priser</a>
+      <a href="/foer-efter/">Før &amp; Efter</a>
+      <a href="/ai-assistent/">AI-Assistent</a>
+      <a href="/blog/">Blog</a>
+      <a href="/om/">Om</a>
+      <a href="/afklaring/">Kontakt</a>
+      <a href="/privatlivspolitik/">Privatlivspolitik</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 BygMedAI · CVR 37244449 · steven@bygmedai.dk · +45 5388 6061</div>
+</footer>
+
+</body>
+</html>
