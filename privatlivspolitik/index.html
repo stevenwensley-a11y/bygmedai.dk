@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZME709L33"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BZME709L33');</script>
+<!-- Cookie consent + conditional Google Analytics (Datatilsynet-compliant — issue #3) -->
+<link rel="stylesheet" href="/assets/cookie-consent.css">
+<script defer src="/assets/cookie-consent.js" data-ga-id="G-BZME709L33"></script>
 <title>Privatlivspolitik — BygMedAI</title>
 <meta name="description" content="BygMedAIs privatlivspolitik. Læs om hvordan vi indsamler, bruger og beskytter dine personoplysninger.">
 <meta property="og:title" content="Privatlivspolitik — BygMedAI">
@@ -645,14 +645,17 @@ footer {
     </div>
 
     <div class="policy-section">
-      <h2>6. Cookies</h2>
-      <p>Vi bruger cookies til at analysere trafik på vores hjemmeside via Google Analytics 4. GA4 bruger førsteparts-cookies til at:</p>
+      <h2>6. Cookies og samtykke</h2>
+      <p>Vi bruger Google Analytics 4 til at forstå, hvordan vores hjemmeside bruges. <strong>GA4 indlæses først, når du har givet samtykke</strong> via vores cookie-banner — som vises ved første besøg.</p>
+      <p>Hvis du vælger "Accepter", sætter GA4 førsteparts-cookies til at:</p>
       <ul>
         <li>Skelne mellem unikke brugere</li>
         <li>Forstå brugeradfærd (hvilke sider der besøges, hvor længe)</li>
-        <li>Måle effektiviteten af vores Google Ads-kampagner</li>
+        <li>Måle effektiviteten af vores marketing</li>
       </ul>
-      <p>IP-adresser anonymiseres som standard i GA4. Du kan fravælge cookies ved at justere dine browserindstillinger eller installere <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Googles opt-out-tilføjelse</a>.</p>
+      <p>IP-adresser anonymiseres som standard i GA4 (<code>anonymize_ip: true</code>). Vi bruger Google Consent Mode V2: ved "Afvis" sættes <code>analytics_storage</code>, <code>ad_storage</code>, <code>ad_user_data</code> og <code>ad_personalization</code> til <em>denied</em> — og GA-scriptet indlæses ikke.</p>
+      <p>Dit valg gemmes i din browsers <code>localStorage</code> (ikke en cookie) i 12 måneder. Du kan til enhver tid trække dit samtykke tilbage ved at klikke på linket nedenfor — eller ved at rydde din browsers <code>localStorage</code> for dette site.</p>
+      <p><a href="#" onclick="if(window.bygmedaiCookieConsent){window.bygmedaiCookieConsent.revoke();}return false;">Træk samtykke tilbage og vis cookie-banner igen</a></p>
     </div>
 
     <div class="policy-section">
